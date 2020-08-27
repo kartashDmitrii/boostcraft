@@ -9,113 +9,118 @@
   &_logo
     width: 14%
     margin-right: 2%
-    &_image
-      width: 124px
-      height: 22px
+    .logo
+      &_image
+        width: 124px
+        height: 22px
   &_toggle-version
     display: flex
     align-items: center
     height: 100%
     margin: 0 10px
-    &_version
-      display: flex
-      justify-content: center
-      align-items: center
-      height: 100%
-      margin-right: 12px
-      &:last-child
-        margin-right: 0
-      &.current
-        position: relative
-        &:after
-          content: ''
-          position: absolute
-          bottom: 0
-          left: 0
-          width: 100%
-          height: 2px
-          background: $second-color
+    .toggle-version
+      &_version
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        margin-right: 12px
+        &:last-child
+          margin-right: 0
+        &.current
+          position: relative
+          &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 2px
+            background: $second-color
   &_menu
     height: 100%
     flex: 1
     display: flex
     justify-content: center
-    &_list
-      padding: 0
-      margin: 0
-      height: 100%
-      display: flex
-      list-style: none
-    &_ref
-      display: flex
-      text-transform: uppercase
-      color: $text-color-grey
-      margin-right: 32px
-      font-weight: 500
-      font-size: 13px
-      line-height: 16px
-      &:last-child
-        margin-right: 0
-      &.current
-        color: $text-color-dark
-        position: relative
-        &:after
-          content: ''
-          position: absolute
-          bottom: 0
-          left: 0
-          width: 100%
-          height: 2px
-          background: $second-color
-    &_link
-      height: 100%
-      display: flex
-      align-items: center
-      text-align: center
-      text-decoration: none
-      color: inherit
+    .menu
+      &_list
+        padding: 0
+        margin: 0
+        height: 100%
+        display: flex
+        list-style: none
+      &_href
+        display: flex
+        text-transform: uppercase
+        color: $text-color-grey
+        margin-right: 32px
+        font-weight: 500
+        font-size: 13px
+        line-height: 16px
+        &:last-child
+          margin-right: 0
+        &.current
+          color: $text-color-dark
+          position: relative
+          &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 2px
+            background: $second-color
+      &_link
+        height: 100%
+        display: flex
+        align-items: center
+        text-align: center
+        text-decoration: none
+        color: inherit
   &_social
     display: flex
     align-items: center
     margin-right: 44px
-    &_link
-      width: 30px
-      height: 30px
-      margin-right: 4px
-      display: flex
-      align-items: center
-      justify-content: center
-      &:last-child
-        margin-right: 0
-    &_image
-      width: auto
-      height: auto
+    .social
+      &_link
+        width: 30px
+        height: 30px
+        margin-right: 4px
+        display: flex
+        align-items: center
+        justify-content: center
+        &:last-child
+          margin-right: 0
+      &_image
+        width: auto
+        height: auto
   &_user-menu
     display: flex
     align-items: center
-    &_button
-      margin-right: 12px
-      border: none
-      background: transparent
-      cursor: pointer
-      box-sizing: border-box
-      &:last-child
-        margin-right: 0
-    &_cart
-      position: relative
-    &_count
-      position: absolute
-      border-radius: 50%
-      background: $second-color
-      top: 0
-      right: 0
-      width: 17px
-      height: 17px
-      text-align: center
-      display: flex
-      align-items: center
-      justify-content: center
-      color: $text-color-white
-      font-weight: 500
-      font-size: 10px
-      line-height: 12px
+    .user-menu
+      &_button
+        margin-right: 12px
+        border: none
+        background: transparent
+        cursor: pointer
+        box-sizing: border-box
+        &:last-child
+          margin-right: 0
+      &_cart
+        position: relative
+      &_count
+        position: absolute
+        border-radius: 50%
+        background: $second-color
+        top: 0
+        right: 0
+        width: 17px
+        height: 17px
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $text-color-white
+        font-weight: 500
+        font-size: 10px
+        line-height: 12px
