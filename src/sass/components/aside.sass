@@ -1,0 +1,71 @@
+.aside
+  background: $aside-color
+  width: 16%
+  &_wrapper
+    position: sticky
+    top: 0
+  &_menu
+    padding: 40px 20px 34px 40px
+    border-bottom: 2px solid $border-color
+    margin-bottom: 19px
+    &_list
+      padding: 0
+      margin: 0
+      list-style: none
+    &_ref
+      color: $text-color-dark
+      font-weight: 500
+      font-size: 13px
+      line-height: 16px
+      margin-bottom: 18px
+      &:last-child
+        margin-bottom: 0
+    &_link
+      text-decoration: none
+      color: inherit
+      position: relative
+      width: 100%
+      display: inline-block
+      &:after
+        content: ''
+        width: 8px
+        height: 15px
+        position: absolute
+        top: 0
+        bottom: 0
+        right: -5px
+        background: url("../img/svg/arrow.svg") center center / 100% 100% no-repeat
+  &_login
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 40px
+    &_link
+      font-weight: 500
+      padding: 3px
+      font-size: 13px
+      line-height: 16px
+      text-decoration: none
+      color: $text-color-dark
+    &_separate
+      font-size: 13px
+      line-height: 16px
+      color: $text-color-grey
+      margin: 0 7px
+  &_review
+    display: flex
+    flex-direction: column
+    align-items: center
+    &_logo
+      width: 118px
+      height: 29px
+      margin-bottom: 19px
+    &_rating
+      width: 89px
+      height: 15px
+      margin-bottom: 19px
+    &_text
+      margin: 0
+      font-size: 12px
+      line-height: 15px
+      color: $text-color-dark
