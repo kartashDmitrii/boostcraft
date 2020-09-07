@@ -1,0 +1,323 @@
+.tovar_main
+  padding: 20px 40px 60px
+  .tovar
+    &_content
+      display: flex
+      align-items: flex-start
+      margin-bottom: 62px
+      .content
+        &_left
+          width: 41.5%
+          padding-right: 40px
+          box-sizing: border-box
+          display: flex
+          flex-direction: column
+          .left
+            &_image
+              width: 100%
+              height: 0
+              padding-bottom: 71%
+              position: relative
+              overflow: hidden
+              margin-bottom: 40px
+              img
+                position: absolute
+                top: 0
+                left: 0
+                object-fit: cover
+                object-position: center
+                border-radius: 5px
+            &_description
+              display: flex
+              flex-direction: column
+              margin-bottom: 32px
+              .description
+                &_text
+                  margin-bottom: 14px
+                  *
+                    margin: 0 0 5px
+                    font-size: 16px
+                    line-height: 140%
+                    color: $text-color-dark
+                    &:last-child
+                      margin-bottom: 0
+                &_revelation
+                  display: flex
+                  align-self: flex-start
+                  align-items: center
+                  border: none
+                  background: transparent
+                  font-weight: 500
+                  font-size: 13px
+                  line-height: 16px
+                  color: $text-color-dark
+                  cursor: pointer
+                  text-transform: uppercase
+                  padding: 0
+                  img
+                    padding-bottom: 8px
+                    height: 12px
+                    width: 23px
+                    transform: rotate(90deg)
+            &_boosting-steps
+              display: flex
+              flex-direction: column
+              .boosting-steps
+                &_title
+                  font-weight: 500
+                  font-size: 24px
+                  line-height: 30px
+                  color: $text-color-dark
+                  margin: 0 0 22px
+                &_border
+                  border: 1px solid #D8D8D8
+                  box-sizing: border-box
+                  border-radius: 5px
+                  padding: 0 30px
+                &_step
+                  display: flex
+                  align-items: center
+                  padding: 15.75px 10px 15.75px 4.5px
+                  box-shadow: 0 1px 0 #D8D8D8
+                  position: relative
+                  &:before
+                    content: ''
+                    position: absolute
+                    left: -42px
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    width: 24px
+                    height: 24px
+                    background: url("../img/svg/arrow-down-circle.svg") center center / 100% 100% no-repeat
+                  &:first-child
+                    &:before
+                      width: 9px
+                      height: 9px
+                      left: -34.5px
+                      border-radius: 50%
+                      background-image: none
+                      box-sizing: border-box
+                      border: 2px solid $text-color-dark
+                  &:last-child
+                    &:before
+                      width: 9px
+                      height: 9px
+                      left: -34.5px
+                      border-radius: 50%
+                      background-image: none
+                      box-sizing: border-box
+                      background-color: $second-color
+                &_image
+                  width: 48px
+                  height: 48px
+                  margin-right: 24px
+                &_text
+                  font-weight: 500
+                  font-size: 18px
+                  line-height: 140%
+                  color: $text-color-dark
+                  margin: 0
+                  span
+                    margin-right: 5px
+        &_right
+          width: 48.5%
+          background: #FFFFFF
+          box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+          border-radius: 5px
+          padding: 34px 40px 34px 34px
+          flex: 1
+          .right
+            &_features
+              display: flex
+              flex-wrap: wrap
+              margin-bottom: 22px
+              .features
+                &_feature
+                  padding: 4px 8px 4px 4px
+                  border: 1px solid $second-color
+                  box-sizing: border-box
+                  border-radius: 5px
+                  display: flex
+                  align-items: center
+                  margin-right: 8px
+                  &:last-child
+                    margin-right: 0
+                &_image
+                  width: 24px
+                  height: 24px
+                  margin-right: 2px
+                &_text
+                  font-size: 11px
+                  line-height: 140%
+                  color: $text-color-dark
+                  margin: 0
+            &_title
+              font-weight: 700
+              font-size: 33px
+              line-height: 42px
+              color: $text-color-dark
+              padding-bottom: 16px
+              margin: 0 0 16px
+              border-bottom: 1px solid #efefef
+            &_payment
+              display: flex
+              justify-content: space-between
+              align-items: center
+              margin-bottom: 30px
+              .payment
+                &_price
+                  display: flex
+                  flex-direction: column
+                  align-items: flex-start
+                  margin-top: 8px
+                  .price
+                    &_old
+                      font-weight: 500
+                      font-size: 14px
+                      line-height: 140%
+                      color: $text-color-grey
+                      margin: 0 0 -3px
+                      position: relative
+                      &:before
+                        content: ''
+                        height: 1px
+                        width: 100%
+                        position: absolute
+                        top: 0
+                        bottom: 0
+                        left: 0
+                        margin: auto
+                        background: $text-color-grey
+                    &_new
+                      font-weight: 500
+                      font-size: 24px
+                      line-height: 140%
+                      margin: 0
+                      span
+                        margin-right: -6px
+                &_methods
+                  display: flex
+                  align-items: center
+                &_method
+                  max-height: 20px
+                  width: auto
+                  margin-right: 25.75px
+                  &:last-child
+                    margin-right: 0
+                &_trust-score
+                  display: flex
+                  flex-direction: column
+                  .trust-score
+                    &_stars
+                      width: 82px
+                      height: 15px
+                      margin-bottom: 8px
+                  p
+                    margin: 0
+                    font-size: 12px
+                    line-height: 15px
+                    color: $text-color-grey
+                    span
+                      font-weight: 700
+                      color: $text-color-dark
+            &_tabs
+              display: flex
+              flex-direction: column
+              .tabs
+                &_links
+                  display: flex
+                  list-style: none
+                  padding: 0
+                  margin: 0 0 28px
+                &_link
+                  font-weight: 500
+                  font-size: 14px
+                  line-height: 18px
+                  color: $text-color-grey
+                  padding-bottom: 8px
+                  box-sizing: border-box
+                  border-bottom: 2px solid $text-color-grey
+                  margin-right: 33px
+                  text-transform: uppercase
+                  cursor: pointer
+                  &:last-child
+                    margin-right: 0
+                  &.current
+                    color: $text-color-dark
+                    border-color: $second-color
+                &_tab
+                  .tab
+                    display: none
+                    &.current
+                      display: block
+    &_tabs
+      display: flex
+      flex-direction: column
+      margin-bottom: 60px
+      .tabs
+        &_links
+          display: flex
+          list-style: none
+          padding: 0
+          margin: 0 0 38px
+          flex-wrap: wrap
+        &_link
+          font-weight: 500
+          font-size: 14px
+          line-height: 18px
+          color: $text-color-grey
+          margin: 0 32px 0 0
+          padding-bottom: 8px
+          text-transform: uppercase
+          border-bottom: 2px solid $text-color-grey
+          cursor: pointer
+          &.current
+            border-color: $second-color
+            color: $text-color-dark
+          &:last-child
+            margin-right: 0
+        &_tab
+          .tab
+            &_description
+              display: flex
+              justify-content: space-between
+              .description
+                &_image
+                  width: 38%
+                &_left
+                  width: 62%
+                  padding-right: 40px
+                  box-sizing: border-box
+                &_title
+                  font-weight: 500
+                  font-size: 18px
+                  line-height: 140%
+                  color: $text-color-dark
+                  margin: 0 0 12px
+                &_text
+                  *
+                    font-size: 16px
+                    line-height: 140%
+                    margin: 0 0 20px
+                    color: $text-color-dark
+                    &:last-child
+                      margin-bottom: 0
+    &_related-prod
+      display: flex
+      flex-direction: column
+      margin-bottom: 32px
+      .related-prod
+        &_title
+          margin: 0 0 23px
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+    &_boosting-steps
+      align-items: center
+      .boosting-steps
+        &_title
+          padding: 18px 32px 0
+          box-sizing: border-box
+          border-top: 1px solid $second-color

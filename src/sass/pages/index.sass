@@ -1,8 +1,6 @@
 .index_main
-  width: 84%
   padding: 40px 0 100px
   box-sizing: border-box
-  background: $body-color
   .main
     &_top-info
       display: flex
@@ -309,124 +307,9 @@
               text-decoration: none
               color: inherit
         &_grid
-          box-sizing: border-box
           padding: 0 40px
           margin-bottom: 55px
-          width: 100%
-          display: grid
-          grid-template-columns: repeat(5,1fr)
-          grid-auto-rows: 1fr
-          grid-column-gap: 20px
-          grid-row-gap: 35px
-          .grid
-            &_elem
-              background: #fff
-              border-radius: 6px
-              box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
-              opacity: 0.9
-              .elem
-                &_ref
-                  padding: 28px 35px 0
-                  display: flex
-                  flex-direction: column
-                  align-items: center
-                  text-decoration: none
-                  color: #000
-                &_image
-                  width: 100%
-                  min-width: 120px
-                  height: 0
-                  padding-bottom: 100%
-                  margin-bottom: 10px
-                  position: relative
-                &_img
-                  position: absolute
-                  top: 0
-                  left: 0
-                  max-width: 100%
-                  max-height: 100%
-                  object-fit: cover
-                  object-position: center
-                &_name
-                  font-weight: 500
-                  font-size: 13px
-                  line-height: 16px
-                  text-align: center
-                  color: $text-color-dark
-                  margin: 0 0 11px
-                &_price
-                  font-weight: 500
-                  font-size: 17px
-                  line-height: 21px
-                  text-align: center
-                  color: $text-color-dark
-                  margin: 0 0 18px
-                &_btn
-                  border-radius: 0 0 6px 6px
-                  width: 100%
-                  padding: 14px
     &_boosting-steps
-      display: flex
-      flex-direction: column
       padding: 0 40px
-      .boosting-steps
-        &_title
-          font-weight: 500
-          font-size: 24px
-          line-height: 30px
-          color: $text-color-dark
-          text-align: center
-          margin: 0 0 34px
-        &_wrapper
-          display: grid
-          grid-template-columns: repeat(4, 1fr)
-          grid-column-gap: 45px
-          background: url("../img/boosting-steps_BG.png") center center / cover no-repeat
-          border-radius: 5px
-          padding: 85px 31px 42px
-        &_step
-          display: flex
-          flex-direction: column
-          justify-content: flex-end
-          position: relative
-          color: #fff
-          &:first-child
-            .step
-              &_number
-                right: 20px
-          .step
-            &_number
-              position: absolute
-              top: -43px
-              right: 0
-              width: 32px
-              height: 32px
-              background: #fff
-              display: flex
-              justify-content: center
-              align-items: center
-              font-size: 14px
-              line-height: 18px
-              font-weight: 700
-              color: $second-color
-              border-radius: 50%
-            &_image
-              width: 50px
-              height: 50px
-              margin-bottom: 7px
-            &_img
-              max-width: 100%
-              max-height: 100%
-            &_name
-              font-size: 15px
-              font-weight: 500
-              line-height: 19px
-              text-transform: uppercase
-              margin: 0 0 16px
-            &_description
-              color: $text-boosting-steps
-              font-size: 13px
-              line-height: 18px
-              margin: 0
 
 

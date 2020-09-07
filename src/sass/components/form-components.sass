@@ -1,0 +1,206 @@
+.form-components
+  form
+    display: flex
+    flex-direction: column
+    .line
+      display: flex
+      margin-bottom: 27px
+      &>*
+        width: 50%
+        &:nth-child(even)
+          padding-left: 45px
+    .line-3
+      display: flex
+      align-items: center
+      &>*
+        width: calc(33% - 8px)
+        margin-right: 8px
+        box-sizing: border-box
+        &:last-child
+          margin-right: 0
+    .radio-choose
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      .radio_label
+        display: flex
+        margin-right: 9px
+        cursor: pointer
+        &:last-child
+          margin-right: 16px
+        input
+          opacity: 0
+          display: none
+          &:checked ~ img
+            filter: none
+        img
+          width: 37px
+          height: auto
+          max-height: 37px
+          box-sizing: border-box
+          filter: grayscale(100%)
+          padding-bottom: 7.2px
+          border-bottom: 2px solid $second-color
+    .select-choose
+      display: flex
+      flex-direction: column
+      .form-title
+        margin-bottom: 10px
+      .select-wrapper
+        position: relative
+        img
+          position: absolute
+          top: 20px
+          right: 20px
+          width: 12px
+          height: 8px
+          background: url("../../img/svg/arrow_black.svg") center right / 100% 100% no-repeat transparent
+          transition: all .3s
+      .select
+        position: relative
+        .selected
+          width: 100%
+          padding: 15px 20px
+          border: 1px solid #EFEFEF
+          box-sizing: border-box
+          border-radius: 5px
+          font-weight: 500
+          font-size: 13px
+          line-height: 140%
+          color: $text-color-dark
+          outline: none
+          margin: 0 0 7px
+        &.active ~ img
+          transform: rotate(180deg)
+        .selected
+          margin: 0
+          cursor: pointer
+        .options
+          display: none
+          position: absolute
+          top: 100%
+          width: 100%
+          left: 0
+          background: #fff
+          border: 1px solid #EFEFEF
+          box-sizing: border-box
+          border-radius: 5px
+          z-index: 1
+          .option
+            cursor: pointer
+            padding: 15px 20px
+            margin: 0
+            font-weight: 500
+            font-size: 13px
+            line-height: 140%
+            &:hover
+              background: rgba(67,200,192,.2)
+          &.active
+            display: block
+    .color-radio-choose
+      display: flex
+      flex-direction: column
+      .form-title
+        margin-bottom: 12px
+      .color-radio-choose_labels
+        margin-bottom: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 5px
+        label
+          flex: 1
+          display: flex
+          cursor: pointer
+          &:first-child
+            border-radius: 5px 0 0 5px
+            span
+              border-radius: 5px 0 0 5px
+          &:last-child
+            border-radius: 0 5px 5px 0
+            span
+              border-radius: 0 5px 5px 0
+          input
+            opacity: 0
+            display: none
+            &:checked ~ span
+              background: $second-color
+              color: $text-color-white
+          span
+            text-align: center
+            vertical-align: center
+            margin: 0
+            padding: 14px
+            width: 100%
+            height: 100%
+            font-weight: 500
+            font-size: 13px
+            line-height: 140%
+            color: $text-color-dark
+            box-sizing: border-box
+            background: #EDEDED
+    .form-title
+      max-width: 120px
+      margin: 0
+      text-transform: uppercase
+      font-weight: 500
+      font-size: 12px
+      line-height: 140%
+      color: $text-color-grey
+    .form-text
+      font-size: 11px
+      line-height: 140%
+      color: $text-color-grey
+      margin: 0
+    .qty
+      display: flex
+      align-items: center
+      .form-title
+        margin-right: 14px
+      .counter
+        display: flex
+        align-items: center
+        button
+          padding: 15px
+          border: none
+          background: #EFEFEF
+          border-radius: 5px
+          font-size: 12px
+          cursor: pointer
+          outline: none
+        input
+          width: 55px
+          height: 100%
+          margin: 0 3px
+          border-radius: 5px
+          outline: none
+          border: none
+          text-align: center
+          -moz-appearance: textfield
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button
+            appearance: none
+            margin: 0
+    .line-3
+      a
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 12px
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+        color: #fff
+        text-decoration: none
+        border-radius: 5px
+        text-transform: uppercase
+        img
+          max-width: 30px
+          max-height: 20px
+          margin-right: 20px
+        &.buy-now
+          background: $second-color
+        &.add-to-cart
+          background: $text-color-dark
+

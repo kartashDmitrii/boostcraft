@@ -1,0 +1,28 @@
+.breadcrumbs
+  margin-bottom: 17px
+  ul
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      font-size: 12px
+      line-height: 15px
+      color: $text-color-grey
+      padding-right: 13px
+      position: relative
+      a
+        text-decoration: none
+        color: inherit
+      span
+        color: $text-color-dark
+      &:after
+        content: '/'
+        padding-right: 3px
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+      &:last-child
+        &:after
+          content: none
