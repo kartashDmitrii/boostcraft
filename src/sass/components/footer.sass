@@ -3,11 +3,22 @@
   padding: 35px 40px 35px 45px
   background: url("../img/footer_image.png") 42% bottom no-repeat$footer-color
   box-sizing: border-box
+  position: relative
+  @media (max-width: 1024px)
+    padding: 25px 20px
   .footer
     &_left
       display: flex
       flex-direction: column
       width: 17%
+      @media (max-width: 1024px)
+        width: auto
+      @media (max-width: 767px)
+        margin-right: 10px
+      @media (max-width: 576px)
+        position: absolute
+        top: 25px
+        left: 20px
     &_logo
       width: 142px
       height: auto
@@ -25,15 +36,24 @@
       flex-direction: column
       width: 83%
       box-sizing: border-box
+      @media (max-width: 576px)
+        width: 100%
       .right
         &_top
           display: flex
           justify-content: space-between
           margin-bottom: 20px
+          @media (max-width: 767px)
+            flex-direction: column
     &_review
       display: flex
       flex-direction: column
       align-items: center
+      @media (max-width: 767px)
+        margin-bottom: 10px
+      @media (max-width: 576px)
+        align-items: flex-end
+        margin-bottom: 32px
       .review
         &_logo
           width: 118px
@@ -48,8 +68,12 @@
           font-size: 12px
           line-height: 15px
           color: $text-color-grey
+          text-align: center
     &_menus
       display: flex
+      @media (max-width: 767px)
+        flex-wrap: wrap
+        justify-content: space-around
       .menus
         &_menu
           display: flex
@@ -58,6 +82,8 @@
           margin-right: 140px
           &:last-child
             margin-right: 0
+          @media (max-width: 1024px)
+            margin-right: 20px
         &_title
           font-weight: 500
           font-size: 13px

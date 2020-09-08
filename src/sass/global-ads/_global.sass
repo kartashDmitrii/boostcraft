@@ -5,11 +5,29 @@ body
   flex-direction: column
   &>.content
     flex: 1
+    @media (max-width: 767px)
+      position: relative
     main
       width: 83%
       background: $body-color
+      box-sizing: border-box
+      @media (max-width: 1265px)
+        width: 80%
+      @media (max-width: 1024px)
+        width: 77.5%
+      @media (max-width: 767px)
+        width: 100%
     aside
       width: 17%
+      box-sizing: border-box
+      @media (max-width: 1265px)
+        width: 20%
+      @media (max-width: 1024px)
+        width: 22.5%
+      @media (max-width: 767px)
+        width: 220px
+      @media (max-width: 576px)
+        width: 100%
 img
   width: 100%
   height: auto

@@ -1,10 +1,14 @@
 .tovar_main
   padding: 20px 40px 60px
+  @media (max-width: 1024px)
+    padding: 20px 20px 40px
   .tovar
     &_content
       display: flex
       align-items: flex-start
       margin-bottom: 62px
+      @media (max-width: 1200px)
+        flex-direction: column
       .content
         &_left
           width: 41.5%
@@ -12,6 +16,10 @@
           box-sizing: border-box
           display: flex
           flex-direction: column
+          @media (max-width: 1200px)
+            width: 100%
+            margin-bottom: 20px
+            padding-right: 0
           .left
             &_image
               width: 100%
@@ -20,6 +28,12 @@
               position: relative
               overflow: hidden
               margin-bottom: 40px
+              align-self: center
+              @media (max-width: 1200px)
+                max-width: 430px
+                height: auto
+                padding-bottom: 0
+                position: static
               img
                 position: absolute
                 top: 0
@@ -27,6 +41,8 @@
                 object-fit: cover
                 object-position: center
                 border-radius: 5px
+                @media (max-width: 1200px)
+                  position: static
             &_description
               display: flex
               flex-direction: column
@@ -127,11 +143,21 @@
           border-radius: 5px
           padding: 34px 40px 34px 34px
           flex: 1
+          @media (max-width: 1200px)
+            width: 100%
+            box-sizing: border-box
+          @media (max-width: 576px)
+            padding: 15px
           .right
             &_features
               display: flex
-              flex-wrap: wrap
               margin-bottom: 22px
+              @media (max-width: 576px)
+                flex-wrap: wrap
+                justify-content: space-around
+              @media (max-width: 480px)
+                justify-content: center
+                margin-bottom: 0
               .features
                 &_feature
                   padding: 4px 8px 4px 4px
@@ -141,17 +167,30 @@
                   display: flex
                   align-items: center
                   margin-right: 8px
+                  @media (max-width: 1440px)
+                    padding: 4px 16px
+                    flex-direction: column
+                  @media (max-width: 576px)
+                    margin-bottom: 10px
+                    margin-right: 0
+                  @media (max-width: 480px)
+                    width: 100%
+                    margin-bottom: 5px
                   &:last-child
                     margin-right: 0
                 &_image
                   width: 24px
                   height: 24px
                   margin-right: 2px
+                  @media (max-width: 1440px)
+                    margin-right: 0
                 &_text
                   font-size: 11px
                   line-height: 140%
                   color: $text-color-dark
                   margin: 0
+                  @media (max-width: 1440px)
+                    text-align: center
             &_title
               font-weight: 700
               font-size: 33px
@@ -160,11 +199,16 @@
               padding-bottom: 16px
               margin: 0 0 16px
               border-bottom: 1px solid #efefef
+              @media (max-width: 480px)
+                font-size: 24px
+                line-height: 28px
             &_payment
               display: flex
               justify-content: space-between
               align-items: center
               margin-bottom: 30px
+              @media (max-width: 480px)
+                flex-wrap: wrap
               .payment
                 &_price
                   display: flex
@@ -199,6 +243,11 @@
                 &_methods
                   display: flex
                   align-items: center
+                  @media (max-width: 480px)
+                    margin-top: 15px
+                    order: 1
+                    width: 100%
+                    justify-content: center
                 &_method
                   max-height: 20px
                   width: auto
@@ -230,6 +279,8 @@
                   list-style: none
                   padding: 0
                   margin: 0 0 28px
+                  @media (max-width: 480px)
+                    flex-wrap: wrap
                 &_link
                   font-weight: 500
                   font-size: 14px
@@ -246,6 +297,13 @@
                   &.current
                     color: $text-color-dark
                     border-color: $second-color
+                  @media (max-width: 480px)
+                    margin-right: 0
+                    margin-bottom: 15px
+                    width: 100%
+                    text-align: center
+                    &:last-child
+                      margin-bottom: 0
                 &_tab
                   .tab
                     display: none
@@ -262,6 +320,8 @@
           padding: 0
           margin: 0 0 38px
           flex-wrap: wrap
+          @media (max-width: 1024px)
+            margin-bottom: 28px
         &_link
           font-weight: 500
           font-size: 14px
@@ -272,6 +332,10 @@
           text-transform: uppercase
           border-bottom: 2px solid $text-color-grey
           cursor: pointer
+          @media (max-width: 1200px)
+            margin-right: 24px
+          @media (max-width: 1024px)
+            margin-bottom: 10px
           &.current
             border-color: $second-color
             color: $text-color-dark
@@ -282,13 +346,20 @@
             &_description
               display: flex
               justify-content: space-between
+              @media (max-width: 1024px)
+                flex-direction: column-reverse
               .description
                 &_image
                   width: 38%
+                  @media (max-width: 1024px)
+                    width: 60%
+                    margin: 0 auto 10px
                 &_left
                   width: 62%
                   padding-right: 40px
                   box-sizing: border-box
+                  @media (max-width: 1024px)
+                    width: 100%
                 &_title
                   font-weight: 500
                   font-size: 18px

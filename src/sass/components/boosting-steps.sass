@@ -12,14 +12,18 @@
     &_wrapper
       display: grid
       grid-template-columns: repeat(4, 1fr)
-      grid-column-gap: 45px
+      grid-gap: 45px
       background: url("../img/boosting-steps_BG.png") center center / cover no-repeat
       border-radius: 5px
       padding: 85px 31px 42px
+      @media (max-width: 1200px)
+        grid-template-columns: 1fr 1fr
+      @media (max-width: 480px)
+        grid-template-columns: 1fr
     &_step
       display: flex
       flex-direction: column
-      justify-content: flex-end
+      justify-content: flex-start
       position: relative
       color: #fff
       &:first-child

@@ -1,0 +1,124 @@
+.events-calendar
+  .calendar
+    margin-top: -16px
+    display: flex
+    flex-direction: column
+    @media (max-width: 576px)
+      margin-top: 0
+    .calendar
+      &_logo
+        width: 26px
+        height: 23px
+        padding-left: 18px
+        margin-bottom: 5px
+      &_title
+        font-weight: 500
+        font-size: 24px
+        line-height: 30px
+        color: $text-color-dark
+        margin: 0 0 3px
+      &_date-name
+        font-weight: 500
+        font-size: 12px
+        line-height: 140%
+        color: $text-color-grey
+        text-transform: uppercase
+        margin: 0 0 10px
+      &_dates
+        display: flex
+        align-items: center
+        margin-bottom: 15px
+        @media (max-width: 480px)
+          flex-direction: column
+        .custom-select
+          width: 50%
+          margin-right: 34px
+          @media (max-width: 480px)
+            width: 100%
+            margin-right: 0
+            margin-bottom: 5px
+        .dates_label
+          margin-right: 24px
+          @media (max-width: 480px)
+            width: 100%
+            margin-bottom: 15px
+            margin-right: 0
+          &:last-child
+            margin-right: 0
+          span
+            font-weight: 500
+            font-size: 14px
+            line-height: 18px
+            color: $text-color-grey
+            padding-bottom: 8px
+            -webkit-box-sizing: border-box
+            box-sizing: border-box
+            border-bottom: 2px solid $text-color-grey
+            text-transform: uppercase
+            cursor: pointer
+          input
+            opacity: 0
+            display: none
+            &:checked ~ span
+              color: $text-color-dark
+              border-color: $second-color
+      &_raids
+        display: flex
+        margin-bottom: 26px
+        @media (max-width: 576px)
+          flex-direction: column
+        .raids
+          &_raid
+            width: calc(50% - 15px)
+            display: grid
+            grid-gap: 5px
+            grid-auto-rows: 1fr
+            grid-template-columns: 1fr 1fr
+            @media (max-width: 576px)
+              width: 100%
+              &:last-child
+                margin-bottom: 0
+            &:first-child
+              margin-right: 30px
+              @media (max-width: 576px)
+                margin-right: 0
+          &_horde
+            .raids_time
+              border-color: $horde-color
+              &.active
+                background: $horde-color
+                color: #FFFFFF
+                img
+                  filter: brightness(0) invert(1)
+            img
+              width: 16px
+          &_alliance
+            .raids_time
+              border-color: $alliance-color
+              &.active
+                background: $alliance-color
+                color: #FFFFFF
+                img
+                  filter: brightness(0) invert(1)
+            img
+              width: 22px
+          &_time
+            padding: 9px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 500
+            font-size: 16px
+            line-height: 140%
+            text-transform: uppercase
+            border: 1px solid
+            border-radius: 5px
+            cursor: pointer
+            img
+              margin-right: 20px
+            &.disabled
+              background: #EDEDED
+              border-color: #BDBDBD
+              color: #737373
+              img
+                filter: grayscale(100%)

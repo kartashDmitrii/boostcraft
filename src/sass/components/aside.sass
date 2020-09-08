@@ -1,5 +1,14 @@
 .aside
   background: $aside-color
+  @media (max-width: 767px)
+    position: absolute
+    top: 0
+    left: -120%
+    height: 100%
+    z-index: 10
+    transition: all .3s
+    &.active
+      left: 0
   &_wrapper
     position: sticky
     top: 0
@@ -7,6 +16,8 @@
     padding: 40px 20px 34px 40px
     border-bottom: 2px solid $border-color
     margin-bottom: 19px
+    @media (max-width: 1265px)
+      padding: 20px 20px 15px 20px
     .menu
       &_list
         padding: 0
@@ -33,13 +44,15 @@
           position: absolute
           top: 0
           bottom: 0
-          right: -5px
+          right: -8px
           background: url("../img/svg/arrow.svg") center center / 100% 100% no-repeat
   &_login
     display: flex
     justify-content: center
     align-items: center
     margin-bottom: 40px
+    @media (max-width: 1024px)
+      margin-bottom: 5px
     .login
       &_link
         font-weight: 500

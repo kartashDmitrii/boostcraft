@@ -11,8 +11,12 @@
 </head>
 <body>
 <header class="header">
-    <div class="header_logo">
+    <a href="/" class="header_logo">
         <img class="logo_image" src="img/logo.svg" alt="logo">
+        <img class="logo_mobile-image" src="img/logo-mobile.svg" alt="logo">
+    </a>
+    <div class="header_mobile-sidebar-switcher">
+        <img src="img/svg/mobile-sidebar-switcher.svg" alt="mob-switcher">
     </div>
     <div class="header_toggle-version">
         <a href="#" class="toggle-version_version">
@@ -22,40 +26,48 @@
             <img class="toggle-version_image" src="img/svg/logo-actual.svg" alt="actual">
         </a>
     </div>
-    <div class="header_menu">
-        <ul class="menu_list">
-            <li class="menu_href"><a class="menu_link" href="#">RAID CALENDAR</a></li>
-            <li class="menu_href"><a class="menu_link" href="#">How to buy</a></li>
-            <li class="menu_href current"><a class="menu_link" href="#">ABOUT US</a></li>
-            <li class="menu_href"><a class="menu_link" href="#">guarantees</a></li>
-            <li class="menu_href"><a class="menu_link" href="#">FAQ</a></li>
-            <li class="menu_href"><a class="menu_link" href="#">CONTACT US</a></li>
-        </ul>
+    <div class="header_mobile-menu">
+        <div class="header_menu">
+            <ul class="menu_list">
+                <li class="menu_href"><a class="menu_link" href="#">RAID CALENDAR</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">How to buy</a></li>
+                <li class="menu_href current"><a class="menu_link" href="#">ABOUT US</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">guarantees</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">FAQ</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="header_social">
+            <a href="#" class=" social_email social_link">
+                <img class="social_image" src="img/svg/email.svg" alt="email">
+            </a>
+            <a href="#" class=" social_skype social_link">
+                <img class="social_image" src="img/svg/skype.svg" alt="skype">
+            </a>
+            <a href="#" class=" social_discord social_link">
+                <img class="social_image" src="img/svg/discord.svg" alt="discord">
+            </a>
+        </div>
+        <div class="header_user-menu">
+            <button class="user-menu_color-theme user-menu_button">
+                <img class="user-menu_image" src="img/svg/color-theme-empty.svg" alt="color-theme">
+            </button>
+            <div class="user-menu_search user-menu_button active">
+                <input class="search_field" type="text" name="search" placeholder="Search">
+                <a class="search_button"><img class="user-menu_image" src="img/svg/search.svg" alt="search"></a>
+            </div>
+        </div>
     </div>
-    <div class="header_social">
-        <a href="#" class=" social_email social_link">
-            <img class="social_image" src="img/svg/email.svg" alt="email">
-        </a>
-        <a href="#" class=" social_skype social_link">
-            <img class="social_image" src="img/svg/skype.svg" alt="skype">
-        </a>
-        <a href="#" class=" social_discord social_link">
-            <img class="social_image" src="img/svg/discord.svg" alt="discord">
-        </a>
-    </div>
-    <div class="header_user-menu">
-        <button class="user-menu_color-theme user-menu_button">
-            <img class="user-menu_image" src="img/svg/color-theme-empty.svg" alt="color-theme">
-        </button>
-        <button class="user-menu_search user-menu_button">
-            <img class="user-menu_image" src="img/svg/search.svg" alt="search">
-        </button>
+    <div class="header_user-menu static">
         <button class="user-menu_user user-menu_button">
             <img class="user-menu_image" src="img/svg/user.svg" alt="user">
         </button>
         <button class="user-menu_cart user-menu_button">
             <img class="user-menu_image" src="img/svg/cart.svg" alt="cart">
             <span class="user-menu_count">0</span>
+        </button>
+        <button class="user-menu_mobile-switch user-menu_button">
+            <div class="switch"></div>
         </button>
     </div>
 </header>
@@ -177,8 +189,8 @@
                 </div>
                 <div class="right_tabs tabs">
                     <ul class="tabs_links links">
-                        <li class="tabs_link current">Regular order</li>
-                        <li class="tabs_link">Events Calendar</li>
+                        <li class="tabs_link">Regular order</li>
+                        <li class="tabs_link current">Events Calendar</li>
                     </ul>
                     <div class="tabs_tab tab-field">
                         <div class="tab order-form form-components">
@@ -329,7 +341,7 @@
                             </form>
                         </div>
                         <div class="tab events-calendar form-components current">
-                            <form action="">
+                            <form action="" name="eventsCalendar">
                                 <div class="line">
                                     <div class="order-form_region radio-choose">
                                         <label class="radio_label">
@@ -387,21 +399,19 @@
                                     </div>
                                 </div>
                                 <div class="line">
-                                    <div class="order-form_dungeon-option select-choose">
-                                        <p class="form-title">DUNGEON OPTION:</p>
-                                        <div class="select-wrapper custom-select">
-                                            <select name="key-level">
-                                                <option value="Random dungeon1">Random dungeon1</option>
-                                                <option value="Random dungeon2">Random dungeon2</option>
-                                                <option value="Random dungeon3">Random dungeon3</option>
-                                                <option value="Random dungeon4">Random dungeon4</option>
-                                                <option value="Random dungeon5">Random dungeon5</option>
-                                                <option value="Random dungeon6">Random dungeon6</option>
-                                            </select>
-                                            <img src="img/svg/arrow_black.svg" alt="arr">
+                                    <div class="order-form_play-method color-radio-choose">
+                                        <p class="key-level_text form-title">TIMER OPTION:</p>
+                                        <div class="color-radio-choose_labels">
+                                            <label>
+                                                <input type="radio" name="timer-option" value="not in time" checked>
+                                                <span>not in time</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="timer-option" value="in time">
+                                                <span>in time</span>
+                                            </label>
                                         </div>
-                                        <p class="form-text">Random Mythic Plus Dungeons selected Level.
-                                            Specific Dungeons are available for 14-17 Keys.</p>
+                                        <p class="form-text">We will run Mythic+ dungeon guaranteed within timer</p>
                                     </div>
                                     <div class="order-form_loot-trading color-radio-choose">
                                         <p class="form-title">LOOT TRADING:</p>
@@ -430,7 +440,7 @@
                                     <h4 class="calendar_title">Book your slot</h4>
                                     <p class="calendar_date-name">PICK A DATE:</p>
                                     <div class="calendar_dates">
-                                        <div class="select-wrapper custom-select">
+                                        <div class=" dates_select select-wrapper custom-select">
                                             <select name="date">
                                                 <option value="05.08.2020">05.08.2020</option>
                                                 <option value="06.08.2020">06.08.2020</option>
@@ -441,20 +451,44 @@
                                             </select>
                                             <img src="img/svg/arrow_black.svg" alt="arr">
                                         </div>
-                                        <label>
+                                        <label class="dates_label dates_today">
                                             <input type="radio" name="date" value="today">
-                                            Today
+                                            <span>Today</span>
                                         </label>
-                                        <label>
+                                        <label class="dates_label dates_tomorrow">
                                             <input type="radio" name="date" value="tomorrow">
-                                            Tomorrow
+                                            <span>Tomorrow</span>
                                         </label>
                                     </div>
                                     <div class="calendar_raids">
-                                        <div class="raids_horde">
-                                            <input type="radio" name="time" value="">
+                                        <div class="raids_horde raids_raid">
+                                            <div class="raids_time disabled"><img src="img/svg/horde-emblem.svg" alt="horde">11:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">12:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">13:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">14:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">15:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">16:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">17:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">18:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">19:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">20:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">21:00</div>
+                                            <div class="raids_time"><img src="img/svg/horde-emblem.svg" alt="horde">22:00</div>
                                         </div>
-                                        <div class="raids_alliance"></div>
+                                        <div class="raids_alliance raids_raid">
+                                            <div class="raids_time disabled"><img src="img/svg/alliance-emblem.svg" alt="alliance">11:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">12:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">13:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">14:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">15:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">16:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">17:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">18:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">19:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">20:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">21:00</div>
+                                            <div class="raids_time"><img src="img/svg/alliance-emblem.svg" alt="alliance">22:00</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="line-3">
