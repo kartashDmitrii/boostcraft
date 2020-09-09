@@ -1,21 +1,29 @@
 .index_main
-  padding: 40px 0 100px
+  padding: 40px 40px 100px
   box-sizing: border-box
+  @media (max-width: 767px)
+    padding: 15px 15px 30px
   .main
     &_top-info
-      display: flex
+      display: grid
+      grid-template-columns: 50% 50%
       margin-bottom: 51px
-      padding: 0 40px
+      @media (max-width: 1380px)
+        grid-template-columns: 40% 60%
+      @media (max-width: 1280px)
+        grid-template-columns: 100%
+        grid-auto-rows: auto
+        grid-row-gap: 20px
+      @media (max-width: 767px)
+        margin-bottom: 20px
       .top-info
         &_attention
-          width: calc(50% - 6.5px)
           margin-right: 6.5px
-          background: url("../img/attention-slider_bg.png") center center / cover no-repeat
           border-radius: 5px
-          display: flex
-          align-items: center
           position: relative
-          padding: 66px 42px
+          @media (max-width: 1280px)
+            width: 100%
+            margin-right: 0
         &_slider
           width: 100%
           height: 100%
@@ -25,6 +33,10 @@
               display: flex
               flex-direction: column
               align-items: center
+              position: relative
+              padding: 66px 42px
+              @media (max-width: 767px)
+                padding: 32px 24px
               .slide
                 &_marks
                   display: flex
@@ -54,9 +66,22 @@
                   font-weight: 700
                   text-align: center
                   margin: 0 0 50px
+                  @media (max-width: 576px)
+                    font-size: 23px
+                    line-height: 27px
+                    margin-bottom: 24px
                 &_btn
                   width: 200px
                   padding: 16px 30px
+                &_img
+                  position: absolute
+                  top: 0
+                  left: 0
+                  width: 100%
+                  height: 100%
+                  z-index: -1
+                  object-fit: cover
+                  object-position: center
         &_arrows
           position: absolute
           top: 0
@@ -79,16 +104,24 @@
               background: url("../img/svg/arrow.svg") center center / 100% 100% no-repeat
               user-select: auto
               pointer-events: auto
+              @media (max-width: 576px)
+                width: 16px
+                height: 30px
             &_prev
               left: 42px
               transform: rotate(180deg)
+              @media (max-width: 576px)
+                left: 24px
             &_next
               right: 42px
+              @media (max-width: 576px)
+                right: 24px
         &_right
-          width: calc(50% - 20.5px)
           margin-left: 20.5px
           display: flex
           flex-direction: column
+          @media (max-width: 1280px)
+            margin-left: 0
         &_block
           position: relative
           background: #FFFFFF
@@ -113,11 +146,13 @@
         &_calendar
           padding: 12px 20px
           margin-bottom: 9px
-          .slider
-            &_slide
+          @media (max-width: 576px)
+            padding: 10px
+          .calendar
+            &_slider
               display: flex
               flex-direction: column
-              .slide
+              .slider
                 &_date
                   font-weight: 500
                   font-size: 13px
@@ -139,13 +174,11 @@
                       width: 35px
                       height: 35px
                       margin: 0 10px 0 0
-                &_grid
-                  display: grid
-                  grid-template-columns: repeat(5, 1fr)
-                  grid-auto-rows: 1fr
-                  grid-column-gap: 4px
-                  grid-row-gap: 4px
+                &_wrapper
                   .grid
+                    &_row
+                      display: flex
+                      flex-direction: column
                     &_elem
                       display: flex
                       justify-content: center
@@ -183,6 +216,12 @@
                         background: url("../img/svg/horde-emblem.svg") center center / 100% 100% no-repeat
         &_boost-timers
           padding: 11px 18px 22px
+          box-sizing: border-box
+          display: flex
+          flex-direction: column
+          margin-bottom: 15px
+          @media (max-width: 1500px)
+            padding: 10px 10px 15px
           .boost-timers
             &_title
               margin: 0 0 13px
@@ -197,23 +236,23 @@
               height: 24px
               margin-right: 10px
             &_slider
-              display: flex
-              justify-content: space-between
+              width: 100%
               .slider
                 &_slide
                   display: flex
                   justify-content: flex-start
-                  width: 48%
+                  padding: 5px
                   .slide
                     &_image
                       width: 36%
                       height: 100%
                       margin-right: 12px
-                      object-fit: cover
-                      object-position: center center
+                      position: relative
                     &_img
                       width: auto
                       height: auto
+                      max-width: 100%
+                      max-height: 100%
                     &_text-field
                       width: calc(66% - 18px)
                       display: flex
@@ -263,6 +302,222 @@
                             content: none
                     &_btn
                       width: 90%
+        &_boost-timers2
+          display: flex
+          flex-direction: column
+          padding: 11px 18px 22px
+          box-sizing: border-box
+          .boost-timers
+            &_title
+              margin: 0 0 13px
+              font-weight: 500
+              font-size: 24px
+              line-height: 30px
+              color: $text-color-dark
+              display: flex
+              align-items: center
+            &_title-image
+              width: 24px
+              height: 24px
+              margin-right: 10px
+            &_slide
+              @media (max-width: 1280px)
+                padding: 0 15px
+              .slide
+                &_title
+                  display: flex
+                  align-items: center
+                  font-weight: 500
+                  font-size: 16px
+                  line-height: 20px
+                  color: $text-color-dark
+                  margin: 0 0 12px
+                  .title
+                    &_text
+                      margin: 0
+                    &_image
+                      width: 35px
+                      height: 35px
+                      margin: 0 10px 0 0
+                &_info
+                  display: flex
+                  align-items: center
+                  @media (max-width: 1280px)
+                    flex-wrap: wrap
+                  .info
+                    &_text
+                      font-weight: 500
+                      font-size: 16px
+                      line-height: 20px
+                      color: $text-color-dark
+                      margin: 0 26px 0 0
+                    &_timer
+                      display: flex
+                      margin-right: 30px
+                      @media (max-width: 1280px)
+                        flex: 1
+                        margin-right: 0
+                      div
+                        width: 48px
+                        margin-right: 5px
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        p
+                          color: $second-color
+                          margin: 0
+                          font-size: 36px
+                          line-height: 34px
+                          text-align: center
+                        span
+                          color: $text-color-dark
+                          font-size: 11px
+                          line-height: 14px
+                          text-align: center
+                        &:after
+                          content: ':'
+                          position: absolute
+                          top: 0
+                          bottom: 0
+                          right: -3px
+                          margin: 0 auto 16px
+                          display: flex
+                          align-items: center
+                          font-size: 14px
+                        &:last-child
+                          margin-right: 0
+                          &:after
+                            content: none
+                    &_btn
+                      flex: 1
+                      max-width: 265px
+                      font-size: 14px
+                      line-height: 18px
+                      padding: 10px
+                      @media (max-width: 1280px)
+                        margin-top: 10px
+                        min-width: 100%
+    &_best-sellers
+      display: flex
+      background: #FFFFFF
+      padding: 20px 20px 0
+      box-sizing: border-box
+      margin-bottom: 38px
+      border-radius: 5px
+      @media (max-width: 576px)
+        flex-direction: column
+        padding: 20px 0 0
+      .best-sellers
+        &_info-block
+          display: flex
+          flex-direction: column
+          position: relative
+          padding: 18px 0
+          width: 20%
+          @media (max-width: 1024px)
+            width: 25%
+          @media (max-width: 576px)
+            box-sizing: border-box
+            width: 100%
+            padding: 18px 20px 30px
+        &_title
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+          margin: 0 0 16px
+          @media (max-width: 1024px)
+            font-size: 18px
+            line-height: 21px
+            margin-bottom: 12px
+        &_text
+          font-size: 13px
+          line-height: 140%
+          color: $text-color-dark
+          margin: 0
+        &_arrows
+          position: absolute
+          left: 0
+          bottom: 25px
+          display: flex
+          @media (max-width: 576px)
+            bottom: 0
+            left: 20px
+          .arrow
+            width: 16px
+            height: 9px
+            padding: 5px
+            cursor: pointer
+            background: url("../img/svg/arrow_black.svg") center center / 16px 9px no-repeat
+            margin-right: 23px
+            &:last-child
+              margin-right: 0
+            &.prev
+              transform: rotate(90deg)
+            &.next
+              transform: rotate(-90deg)
+        &_slider-wrapper
+          width: 80%
+          @media (max-width: 1024px)
+            width: 75%
+          @media (max-width: 576px)
+            width: 100%
+        &_slider
+          .slider
+            &_elem
+              display: flex
+              justify-content: center
+              padding: 23px 32px
+              box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+              border-radius: 6px
+              margin: 20px
+              position: relative
+              overflow: hidden
+              @media (max-width: 1280px)
+                padding: 20px 10px
+              @media (max-width: 576px)
+                align-items: center
+              &:before
+                content: ''
+                position: absolute
+                left: -57px
+                bottom: -146px
+                width: 203px
+                height: 203px
+                background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%)
+                transform: rotate(27deg)
+                z-index: -1
+              .elem
+                &_image
+                  width: 120px
+                  margin-right: 45px
+                  @media (max-width: 1380px)
+                    margin-right: 20px
+                  @media (max-width: 360px)
+                    margin-right: 5px
+                &_info
+                  display: flex
+                  flex-direction: column
+                &_name
+                  font-weight: 500
+                  font-size: 13px
+                  line-height: 16px
+                  color: $text-color-dark
+                  margin: 0 0 10px
+                  text-transform: uppercase
+                &_price
+                  font-weight: 500
+                  font-size: 17px
+                  line-height: 21px
+                  color: $text-color-dark
+                  margin: 0 0 16px
+                &_add-to-cart
+                  padding: 14px
+                  font-size: 14px
+                  line-height: 18px
+                  @media (max-width: 360px)
+                    padding: 10px
     &_shop
       display: flex
       flex-direction: column
@@ -274,12 +529,31 @@
           font-size: 24px
           line-height: 30px
           color: $text-color-dark
-          margin: 0 0 35px
+          padding: 17px 32px
+          margin: 0 0 18px
+          box-shadow: 0px -1px 0px $second-color
         &_menu
           width: 100%
+          max-width: 100%
           margin-bottom: 26px
-          padding: 0 60px
+          padding: 0 20px
           box-sizing: border-box
+          overflow-x: scroll
+          &::-webkit-scrollbar
+            display: none
+          @media (max-width: 1320px)
+            padding: 0
+          &.shadow
+            position: relative
+            &:before
+              content: ''
+              height: 100%
+              width: 0
+              position: absolute
+              left: 100%
+              top: 0
+              box-shadow: 0 0 22px 40px #ededed
+              z-index: 1
           .menu
             &_list
               padding: 0
@@ -287,6 +561,8 @@
               display: flex
               justify-content: space-between
               list-style: none
+              width: max-content
+              min-width: 100%
             &_href
               padding: 0 0 8px
               margin-right: 16px
@@ -307,9 +583,123 @@
               text-decoration: none
               color: inherit
         &_grid
-          padding: 0 40px
           margin-bottom: 55px
     &_boosting-steps
-      padding: 0 40px
-
+      margin-bottom: 38px
+    &_advantages
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 80px
+      .advantages
+        &_title
+          box-shadow: 0px -1px 0px $second-color
+          padding: 17px
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+          margin: 0 0 15px
+        &_wrapper
+          width: 100%
+          display: grid
+          grid-template-columns: repeat(4, 1fr)
+          grid-gap: 10px
+          background: $second-color
+          border-radius: 5px
+          padding: 48px 0
+          justify-content: space-between
+          @media (max-width: 1024px)
+            grid-template-columns: 1fr 1fr
+          @media (max-width: 400px)
+            grid-template-columns: 1fr
+        &_advantage
+          display: flex
+          flex-direction: column
+          align-items: center
+          color: $text-color-white
+          .advantage
+            &_image
+              width: 65px
+              height: 65px
+              position: relative
+              z-index: 1
+              display: flex
+              align-items: center
+              justify-content: center
+              margin-bottom: 25px
+              img
+                max-width: 58px
+                max-height: 65px
+              &:before
+                content: ''
+                width: 60px
+                height: 60px
+                border-radius: 50%
+                background: $second-color-light
+                position: absolute
+                bottom: -12px
+                left: -12px
+                z-index: -1
+            &_title
+              font-weight: 500
+              font-size: 14px
+              line-height: 18px
+              color: #FFFFFF
+              margin: 0 0 16px
+              text-transform: uppercase
+            &_text
+              font-size: 14px
+              line-height: 140%
+              margin: 0
+              text-align: center
+              max-width: 250px
+    &_seo-text
+      display: flex
+      flex-direction: column
+      .seo-text
+        &_title
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+          margin: 0 0 15px
+        &_block
+          display: flex
+          flex-direction: column
+          position: relative
+          height: 88px
+          transition: all .3s
+          overflow: hidden
+          &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            width: 100%
+            left: 0
+            z-index: 1
+            transition: all .3s
+          &.shadow
+            &:before
+              box-shadow: 0 0 88px 88px #efefef
+          *
+            font-size: 17px
+            line-height: 140%
+            margin: 0 0 15px
+            *:last-child
+              margin-bottom: 0
+        &_button
+          padding-bottom: 4px
+          border: none
+          outline: none
+          background: transparent
+          cursor: pointer
+          border-bottom: 1px solid $second-color
+          box-sizing: border-box
+          font-weight: 500
+          font-size: 13px
+          line-height: 16px
+          color: $text-color-dark
+          text-transform: uppercase
+          align-self: flex-start
 

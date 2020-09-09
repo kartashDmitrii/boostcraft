@@ -297,11 +297,6 @@
                   &.current
                     color: $text-color-dark
                     border-color: $second-color
-                  @media (max-width: 480px)
-                    margin-right: 0
-                    margin-bottom: 15px
-                    width: 100%
-                    text-align: center
                     &:last-child
                       margin-bottom: 0
                 &_tab
@@ -336,6 +331,11 @@
             margin-right: 24px
           @media (max-width: 1024px)
             margin-bottom: 10px
+          @media (max-width: 480px)
+            margin-right: 0
+            margin-bottom: 15px
+            width: 100%
+            text-align: center
           &.current
             border-color: $second-color
             color: $text-color-dark
@@ -343,23 +343,25 @@
             margin-right: 0
         &_tab
           .tab
-            &_description
-              display: flex
+            &_description, &_loot-info
               justify-content: space-between
               @media (max-width: 1024px)
                 flex-direction: column-reverse
-              .description
+              .description, .loot-info
                 &_image
                   width: 38%
                   @media (max-width: 1024px)
                     width: 60%
                     margin: 0 auto 10px
+                  @media (max-width: 480px)
+                    width: 100%
                 &_left
                   width: 62%
                   padding-right: 40px
                   box-sizing: border-box
                   @media (max-width: 1024px)
                     width: 100%
+                    padding-right: 0
                 &_title
                   font-weight: 500
                   font-size: 18px
@@ -374,6 +376,24 @@
                     color: $text-color-dark
                     &:last-child
                       margin-bottom: 0
+                &_text-line
+                  margin: 40px 0 30px
+                  display: flex
+                  justify-content: space-between
+                  @media (max-width: 1024px)
+                    flex-direction: column
+                &_text-block
+                  display: flex
+                  flex-direction: column
+                  width: calc(50% - 20px)
+                  @media (max-width: 1024px)
+                    width: 100%
+                    margin-bottom: 25px
+                    &:last-child
+                      margin-bottom: 0
+            display: none
+            &.current
+              display: flex
     &_related-prod
       display: flex
       flex-direction: column

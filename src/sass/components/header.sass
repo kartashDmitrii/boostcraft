@@ -226,7 +226,7 @@
           left: 20px
           width: 55px
           height: 30px
-          background: $text-color-white
+          background: $second-color-light
           border-radius: 30px
           transition: all .3s
           outline: none
@@ -239,13 +239,13 @@
             padding: 5px
             box-sizing: border-box
             border-radius: 50%
-            border: 1px solid $text-color-grey
+            border: 1px solid $text-color-white
+            filter: brightness(0) invert(1)
             transition: all .3s
           &.active
             background: $text-color-dark
             img
               left: calc(100% - 30px)
-              filter: brightness(0) invert(1)
               border-color: #FFFFFF
       &_mobile-switch
         width: 24px
