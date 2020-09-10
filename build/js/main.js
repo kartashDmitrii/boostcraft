@@ -239,19 +239,48 @@ if (document.querySelector('.user-menu_color-theme')) {
 
 /* open/hide seo-text   */
 
-document.querySelector('.seo-text_button').addEventListener('click', function(){
-    let seoBlock = document.querySelector('.seo-text_block')
-    let seoBlockHeight = parseInt(window.getComputedStyle(seoBlock).getPropertyValue('height'))
-    if (seoBlockHeight === 88){
-        seoBlock.classList.remove('shadow')
-        seoBlock.style.height = `${ seoBlock.scrollHeight }px`
-    } else {
-        seoBlock.classList.add('shadow')
-        seoBlock.style.height = `88px`
-    }
-})
+if (document.querySelector('.seo-text_button')) {
+    document.querySelector('.seo-text_button').addEventListener('click', function () {
+        let seoBlock = document.querySelector('.seo-text_block')
+        let seoBlockHeight = parseInt(window.getComputedStyle(seoBlock).getPropertyValue('height'))
+        if (seoBlockHeight === 88) {
+            seoBlock.classList.remove('shadow')
+            seoBlock.style.height = `${seoBlock.scrollHeight}px`
+        } else {
+            seoBlock.classList.add('shadow')
+            seoBlock.style.height = `88px`
+        }
+    })
+}
 
 /* open/hide seo-text   */
+
+/* open/hide on full-size filters  */
+if (document.querySelector('.category_filters')) {
+    document.querySelectorAll('.filters_filter').forEach( filter => {
+        filter.querySelector('.filter_name').addEventListener('click', function () {
+            let filterLinks = filter.querySelector('.filter_links')
+            let filterLinksHeight = parseInt(window.getComputedStyle(filterLinks).getPropertyValue('height'))
+            document.querySelectorAll('.filters_filter').forEach( elem => {
+                if (elem.classList.contains('active')) {
+                    elem.classList.remove('active')
+                    elem.querySelector('.filter_links').style.height = '0'
+                    elem.querySelector('.filter_links').style.padding = '0 20px 0'
+                }
+            })
+            filter.classList.toggle('active')
+            if (filterLinksHeight === 0) {
+                filterLinks.style.height = `${filterLinks.scrollHeight}px`
+                filterLinks.style.padding = '15px 20px 10px'
+            } else {
+                filterLinks.style.height = '0'
+                filterLinks.style.padding = '0 20px 0'
+            }
+        })
+    })
+}
+
+/* open/hide on full-size   */
 
 /* best-sellers slider  */
 
@@ -360,19 +389,19 @@ if (document.querySelector('.top-info_boost-timers2')){
 if (document.querySelector('.shop_menu .menu_list')){
     let menuList = document.querySelector('.shop_menu .menu_list'),
         shopMenu = document.querySelector('.shop_menu'),
+        menuWrapper = document.querySelector('.shop_menu .menu_wrapper'),
         startCordX = 0
     let addShadowToMenuList = function (){
-        menuList.offsetWidth > shopMenu.offsetWidth ?
+        menuList.offsetWidth > menuWrapper.offsetWidth ?
             shopMenu.classList.add('shadow', 'shadow-right', 'shadow-left'):
             shopMenu.classList.remove('shadow', 'shadow-right', 'shadow-left');
-        shopMenu.scrollLeft === 0 ?
+        menuWrapper.scrollLeft <= 10 ?
             shopMenu.classList.remove('shadow-left') :
             shopMenu.classList.add('shadow-left')           ;
-        let shopMenuScrollRight = shopMenu.scrollWidth - (shopMenu.scrollLeft + shopMenu.clientWidth);
-        shopMenuScrollRight === 0 ?
+        let shopMenuScrollRight = menuWrapper.scrollWidth - (menuWrapper.scrollLeft + menuWrapper.clientWidth);
+        shopMenuScrollRight <= 10 ?
             shopMenu.classList.remove('shadow-right') :
             shopMenu.classList.add('shadow-right')           ;
-        console.log(1)
     }
     addShadowToMenuList()
     window.addEventListener('resize', addShadowToMenuList)
@@ -401,3 +430,23 @@ if (document.querySelector('.shop_menu .menu_list')){
 }
 
 /*  menu_list scroll horizontal */
+
+/* open/hide on full-size   */
+
+if (document.querySelector('.fz_block')) {
+    document.querySelectorAll('.fz_block').forEach( fz_block => {
+        fz_block.querySelector('.fz_button').addEventListener('click', function () {
+            let fz_component = fz_block.querySelector('.fz_component')
+            let fz_component_height = parseInt(window.getComputedStyle(fz_component).getPropertyValue('height'))
+            if (fz_component_height === 0) {
+                fz_component.style.height = `${fz_component.scrollHeight}px`
+                fz_block.classList.add('active')
+            } else {
+                fz_component.style.height = '0'
+                fz_block.classList.remove('active')
+            }
+        })
+    })
+}
+
+/* open/hide on full-size   */

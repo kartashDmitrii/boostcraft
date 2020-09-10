@@ -3,17 +3,21 @@ body
   min-height: 100vh
   display: flex
   flex-direction: column
+  *
+    -webkit-tap-highlight-color: transparent
   &>.content
     flex: 1
     @media (max-width: 767px)
       position: relative
     main
       width: 83%
-      background: $body-color
+      background-color: $body-color
       box-sizing: border-box
+      padding: 40px 40px 100px
       @media (max-width: 1265px)
         width: 80%
       @media (max-width: 1024px)
+        padding: 20px 20px 40px
         width: 77.5%
       @media (max-width: 767px)
         width: 100%
@@ -50,3 +54,10 @@ img
   text-transform: uppercase
   text-decoration: none
   box-sizing: border-box
+
+.block_title
+  font-weight: 700
+  font-size: 24px
+  line-height: 30px
+  margin: 0 0 18px
+  color: $text-color-dark

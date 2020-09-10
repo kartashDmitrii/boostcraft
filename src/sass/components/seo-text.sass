@@ -1,0 +1,48 @@
+.seo-text
+  display: flex
+  flex-direction: column
+  .seo-text
+    &_title
+      font-weight: 500
+      font-size: 24px
+      line-height: 30px
+      color: $text-color-dark
+      margin: 0 0 15px
+    &_block
+      display: flex
+      flex-direction: column
+      position: relative
+      height: 88px
+      transition: all .3s
+      overflow: hidden
+      &:before
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 100%
+        left: 0
+        z-index: 1
+        transition: all .3s
+      &.shadow
+        &:before
+          box-shadow: 0 0 88px 88px #efefef
+      *
+        font-size: 17px
+        line-height: 140%
+        margin: 0 0 15px
+        *:last-child
+          margin-bottom: 0
+    &_button
+      padding-bottom: 4px
+      border: none
+      outline: none
+      background: transparent
+      cursor: pointer
+      border-bottom: 1px solid $second-color
+      box-sizing: border-box
+      font-weight: 500
+      font-size: 13px
+      line-height: 16px
+      color: $text-color-dark
+      text-transform: uppercase
+      align-self: flex-start

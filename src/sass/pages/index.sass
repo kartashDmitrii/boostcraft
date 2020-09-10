@@ -1,6 +1,4 @@
 .index_main
-  padding: 40px 40px 100px
-  box-sizing: border-box
   @media (max-width: 767px)
     padding: 15px 15px 30px
   .main
@@ -407,7 +405,7 @@
       border-radius: 5px
       @media (max-width: 576px)
         flex-direction: column
-        padding: 20px 0 0
+        padding: 16px 0 0
       .best-sellers
         &_info-block
           display: flex
@@ -420,7 +418,7 @@
           @media (max-width: 576px)
             box-sizing: border-box
             width: 100%
-            padding: 18px 20px 30px
+            padding: 0 16px
         &_title
           font-weight: 500
           font-size: 24px
@@ -444,6 +442,11 @@
           @media (max-width: 576px)
             bottom: 0
             left: 20px
+          @media (max-width: 576px)
+            bottom: auto
+            top: 0
+            left: auto
+            right: 20px
           .arrow
             width: 16px
             height: 9px
@@ -534,172 +537,75 @@
           box-shadow: 0px -1px 0px $second-color
         &_menu
           width: 100%
-          max-width: 100%
           margin-bottom: 26px
           padding: 0 20px
           box-sizing: border-box
-          overflow-x: scroll
-          &::-webkit-scrollbar
-            display: none
           @media (max-width: 1320px)
             padding: 0
           &.shadow
             position: relative
+            overflow: hidden
+            &:after
+              content: ''
+              height: 100%
+              width: 0
+              position: absolute
+              right: 0
+              top: 0
+              z-index: 1
+              transition: all .1s
             &:before
               content: ''
               height: 100%
               width: 0
               position: absolute
-              left: 100%
+              left: 0
               top: 0
-              box-shadow: 0 0 22px 40px #ededed
               z-index: 1
+              transition: all .1s
+            &.shadow-left
+              &:before
+                box-shadow: 0 0 22px 40px #ededed
+            &.shadow-right
+              &:after
+                box-shadow: 0 0 22px 40px #ededed
           .menu
-            &_list
-              padding: 0
-              margin: 0
-              display: flex
-              justify-content: space-between
-              list-style: none
-              width: max-content
-              min-width: 100%
-            &_href
-              padding: 0 0 8px
-              margin-right: 16px
-              font-weight: 500
-              font-size: 14px
-              line-height: 18px
-              color: $text-color-grey
-              text-align: center
-              text-transform: uppercase
-              display: flex
-              border-bottom: 2px solid $text-color-grey
-              &.current
-                border-color: $second-color
-                color: $text-color-dark
-              &:last-child
-                margin-right: 0
-            &_link
-              text-decoration: none
-              color: inherit
+            &_wrapper
+              width: 100%
+              max-width: 100%
+              overflow-x: scroll
+              &::-webkit-scrollbar
+                display: none
+              .menu
+                &_list
+                  padding: 0
+                  margin: 0
+                  display: flex
+                  justify-content: space-between
+                  list-style: none
+                  width: max-content
+                  min-width: 100%
+                &_href
+                  padding: 0 0 8px
+                  margin-right: 16px
+                  font-weight: 500
+                  font-size: 14px
+                  line-height: 18px
+                  color: $text-color-grey
+                  text-align: center
+                  text-transform: uppercase
+                  display: flex
+                  border-bottom: 2px solid $text-color-grey
+                  &.current
+                    border-color: $second-color
+                    color: $text-color-dark
+                  &:last-child
+                    margin-right: 0
+                &_link
+                  text-decoration: none
+                  color: inherit
         &_grid
           margin-bottom: 55px
     &_boosting-steps
       margin-bottom: 38px
-    &_advantages
-      display: flex
-      flex-direction: column
-      align-items: center
-      margin-bottom: 80px
-      .advantages
-        &_title
-          box-shadow: 0px -1px 0px $second-color
-          padding: 17px
-          font-weight: 500
-          font-size: 24px
-          line-height: 30px
-          color: $text-color-dark
-          margin: 0 0 15px
-        &_wrapper
-          width: 100%
-          display: grid
-          grid-template-columns: repeat(4, 1fr)
-          grid-gap: 10px
-          background: $second-color
-          border-radius: 5px
-          padding: 48px 0
-          justify-content: space-between
-          @media (max-width: 1024px)
-            grid-template-columns: 1fr 1fr
-          @media (max-width: 400px)
-            grid-template-columns: 1fr
-        &_advantage
-          display: flex
-          flex-direction: column
-          align-items: center
-          color: $text-color-white
-          .advantage
-            &_image
-              width: 65px
-              height: 65px
-              position: relative
-              z-index: 1
-              display: flex
-              align-items: center
-              justify-content: center
-              margin-bottom: 25px
-              img
-                max-width: 58px
-                max-height: 65px
-              &:before
-                content: ''
-                width: 60px
-                height: 60px
-                border-radius: 50%
-                background: $second-color-light
-                position: absolute
-                bottom: -12px
-                left: -12px
-                z-index: -1
-            &_title
-              font-weight: 500
-              font-size: 14px
-              line-height: 18px
-              color: #FFFFFF
-              margin: 0 0 16px
-              text-transform: uppercase
-            &_text
-              font-size: 14px
-              line-height: 140%
-              margin: 0
-              text-align: center
-              max-width: 250px
-    &_seo-text
-      display: flex
-      flex-direction: column
-      .seo-text
-        &_title
-          font-weight: 500
-          font-size: 24px
-          line-height: 30px
-          color: $text-color-dark
-          margin: 0 0 15px
-        &_block
-          display: flex
-          flex-direction: column
-          position: relative
-          height: 88px
-          transition: all .3s
-          overflow: hidden
-          &:before
-            content: ''
-            position: absolute
-            bottom: 0
-            width: 100%
-            left: 0
-            z-index: 1
-            transition: all .3s
-          &.shadow
-            &:before
-              box-shadow: 0 0 88px 88px #efefef
-          *
-            font-size: 17px
-            line-height: 140%
-            margin: 0 0 15px
-            *:last-child
-              margin-bottom: 0
-        &_button
-          padding-bottom: 4px
-          border: none
-          outline: none
-          background: transparent
-          cursor: pointer
-          border-bottom: 1px solid $second-color
-          box-sizing: border-box
-          font-weight: 500
-          font-size: 13px
-          line-height: 16px
-          color: $text-color-dark
-          text-transform: uppercase
-          align-self: flex-start
 
