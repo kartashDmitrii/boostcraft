@@ -1,0 +1,104 @@
+.how-to-buy_main
+  .how-to-buy
+    &_note
+      padding: 18px 24px
+      background: #FFFFFF
+      box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+      border-radius: 5px
+      margin-bottom: 64px
+      @media (max-width: 768px)
+        margin-bottom: 56px
+      .note
+        &_text
+          padding-left: 40px
+          margin: 0
+          font-size: 16px
+          line-height: 140%
+          color: $text-color-dark
+          position: relative
+          &:before
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            margin: auto
+            width: 24px
+            height: 24px
+            background: url("../img/svg/how-to-buy_note.svg") center center / 100% 100% no-repeat
+    &_steps
+      display: flex
+      @media (max-width: 1350px)
+        flex-direction: column
+      .steps
+        &_step
+          display: flex
+          flex-direction: column
+          position: relative
+          margin-right: 20px
+          box-sizing: border-box
+          background: rgba(255, 255, 255, 0.5)
+          backdrop-filter: blur(10px)
+          border-radius: 5px
+          padding: 48px 16px 24px
+          width: calc(20% - 20px)
+          @media (max-width: 1350px)
+            width: 100%
+            margin-right: 0
+            margin-bottom: 48px
+          &:after
+            content: ''
+            position: absolute
+            top: -24px
+            right: -24px
+            width: 24px
+            height: 24px
+            background: url("../img/svg/how-to-buy_arrow.svg") center center / 100% 100% no-repeat
+            @media (max-width: 1350px)
+              right: 0
+              top: auto
+              bottom: -36px
+              transform: rotate(90deg)
+          &:last-child
+            &:after
+              content: none
+          .step
+            &_number
+              width: 32px
+              height: 32px
+              position: absolute
+              top: -16px
+              left: 72px
+              border-radius: 50%
+              background: #FFFFFF
+              display: flex
+              align-items: center
+              justify-content: center
+              font-size: 15px
+              line-height: 19
+              color: $text-color-dark
+              z-index: 2
+            &_image
+              position: absolute
+              top: -32px
+              left: 16px
+              width: 64px
+              height: 64px
+              display: flex
+              align-items: center
+              justify-content: center
+              border-radius: 50%
+              background: $second-color
+              img
+                width: 24px
+                height: 24px
+            &_text
+              display: flex
+              flex-direction: column
+              *
+                margin: 0 0 5px
+                font-size: 16px
+                line-height: 140%
+                color: $text-color-dark
+                &:last-child
+                  margin-bottom: 0

@@ -1,0 +1,154 @@
+.about-us_main
+  background: none
+  background-color: #FFFFFF !important
+  .about-us
+    &_top-block
+      display: flex
+      align-items: flex-start
+      margin-bottom: 40px
+      .top-block
+        &_image
+          min-width: 427px
+          margin-right: 40px
+        &_content
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+        &_text
+          display: flex
+          flex-direction: column
+          margin-bottom: 10px
+        &_duty
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          .duty
+            &_title
+              font-weight: 500
+              font-size: 24px
+              line-height: 30px
+              color: $text-color-dark
+              margin: 0 0 16px
+            &_blocks
+              display: flex
+              flex-direction: column
+              margin-bottom: 20px
+            &_block
+              padding: 15px 16px 15px 52px
+              position: relative
+              background-color: #FFFFFF
+              box-shadow: -1px 0px 0px #43C8C0, 0px 0px 22px rgba(0, 0, 0, 0.07)
+              border-radius: 5px
+              margin: 0 0 8px
+              min-width: 310px
+              font-weight: 700
+              font-size: 16px
+              line-height: 140%
+              color: $text-color-dark
+              &:last-child
+                margin-bottom: 0
+              &:before
+                content: ''
+                position: absolute
+                left: 14px
+                top: 0
+                bottom: 0
+                margin: auto
+                width: 24px
+                height: 24px
+            &_integrity
+              &:before
+                background: url("../img/svg/duty1.svg") center center / 100% 100% no-repeat
+            &_security
+              &:before
+                background: url("../img/svg/duty2.svg") center center / 100% 100% no-repeat
+            &_efficiency
+              &:before
+                background: url("../img/svg/duty3.svg") center center / 100% 100% no-repeat
+            &_afterword
+              width: 310px
+              font-size: 16px
+              line-height: 140%
+              color: $text-color-dark
+              margin: 0
+    &_company
+      display: flex
+      margin-bottom: 48px
+      .company
+        &_image
+          width: 310px
+          margin-left: 40px
+          position: relative
+          img
+            position: absolute
+            width: 310px
+            height: auto
+            bottom: 0
+        &_title
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+          margin: 0 0 24px
+        &_text
+          margin-bottom: 10px
+        &_tabs
+          display: flex
+          flex-direction: column
+          width: 100%
+        &_tab
+          padding: 15px 24px 15px 52px
+          margin: 0 0 8px
+          border: 1px solid #CFDDDD
+          box-sizing: border-box
+          border-radius: 5px
+          position: relative
+          &:before
+            content: ''
+            width: 24px
+            height: 24px
+            position: absolute
+            left: 14px
+            top: 0
+            bottom: 0
+            margin: auto
+            background: url("../img/svg/about-us_arrow.svg") center center / 100% 100% no-repeat
+    &_goals
+      display: flex
+      .goals
+        &_image
+          min-width: 660px
+          margin-left: 40px
+        &_content
+          display: flex
+          flex-direction: column
+        &_title
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+          margin: 0 0 24px
+        &_list
+          padding: 0
+          margin: 0 0 28px
+          list-style: none
+        &_goal
+          font-size: 16px
+          line-height: 140%
+          color: $text-color-dark
+          padding-bottom: 16px
+          margin-bottom: 16px
+          border-bottom: 1px solid #CFDDDD
+          &:last-child
+            margin-bottom: 0
+            padding-bottom: 0
+            border-bottom: none
+        &_count
+          margin-right: 5px
+          font-weight: 700
+        &_afterword
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          color: $text-color-dark
+          margin: 0

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BoostCraft my-account</title>
+    <link rel="stylesheet" href="css/lib.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <a href="/" class="header_logo">
+        <img class="logo_image" src="img/logo.svg" alt="logo">
+        <img class="logo_mobile-image" src="img/logo-mobile.svg" alt="logo">
+    </a>
+    <div class="header_mobile-sidebar-switcher">
+        <img src="img/svg/mobile-sidebar-switcher.svg" alt="mob-switcher">
+    </div>
+    <div class="header_toggle-version">
+        <a href="#" class="toggle-version_version">
+            <img class="toggle-version_image" src="img/svg/logo-classic.svg" alt="classic">
+        </a>
+        <a href="#" class="toggle-version_version current">
+            <img class="toggle-version_image" src="img/svg/logo-actual.svg" alt="actual">
+        </a>
+    </div>
+    <div class="header_mobile-menu">
+        <div class="header_menu">
+            <ul class="menu_list">
+                <li class="menu_href"><a class="menu_link" href="#">RAID CALENDAR</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">How to buy</a></li>
+                <li class="menu_href current"><a class="menu_link" href="#">ABOUT US</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">guarantees</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">FAQ</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="header_social">
+            <a href="#" class=" social_email social_link">
+                <img class="social_image" src="img/svg/email.svg" alt="email">
+            </a>
+            <a href="#" class=" social_skype social_link">
+                <img class="social_image" src="img/svg/skype.svg" alt="skype">
+            </a>
+            <a href="#" class=" social_discord social_link">
+                <img class="social_image" src="img/svg/discord.svg" alt="discord">
+            </a>
+        </div>
+        <div class="header_user-menu">
+            <button class="user-menu_color-theme user-menu_button">
+                <img class="user-menu_image" src="img/svg/color-theme-empty.svg" alt="color-theme">
+            </button>
+            <div class="user-menu_search user-menu_button">
+                <input class="search_field" type="text" name="search" placeholder="Search">
+                <a class="search_button"><img class="user-menu_image" src="img/svg/search.svg" alt="search"></a>
+            </div>
+        </div>
+    </div>
+    <div class="header_user-menu static">
+        <button class="user-menu_user user-menu_button">
+            <img class="user-menu_image" src="img/svg/user.svg" alt="user">
+        </button>
+        <button class="user-menu_cart user-menu_button">
+            <img class="user-menu_image" src="img/svg/cart.svg" alt="cart">
+            <span class="user-menu_count">0</span>
+        </button>
+        <button class="user-menu_mobile-switch user-menu_button">
+            <div class="switch"></div>
+        </button>
+    </div>
+</header>
+<div class="content index">
+    <aside class="aside">
+        <div class="aside_wrapper">
+            <div class="aside_menu">
+                <ul class="menu_list">
+                    <li class="menu_href"><a class="menu_link" href="#">BFA OFFERS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">NEW 8.3 OFFERS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">PVP SERVICES</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">PVE SERVICES</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">POWERLEVELING</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">FARMING</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">ACHIEVEMENTS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">MOUNTS</a></li>
+                </ul>
+            </div>
+            <div class="aside_login">
+                <a class="login_link" href="#">Register</a>
+                <span class="login_separate">or</span>
+                <a class="login_link" href="#">Log in</a>
+            </div>
+            <div class="aside_review">
+                <img class="review_logo" src="img/star-logo.svg" alt="star-logo">
+                <img class="review_rating" src="img/small-stars.svg" alt="small-stars">
+                <p class="review_text">Check out our 191 reviews</p>
+            </div>
+        </div>
+    </aside>
+    <main class="my-account_main main">
+        <div class="my-account_breadcrumbs breadcrumbs">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="current"><span>Some page</span></li>
+            </ul>
+        </div>
+        <div class="my-account_title block_title">My account</div>
+        <div class="my-account_info">
+            <form class="my-account_details edit">
+                <h2 class="details_title">Account details</h2>
+                <div class="details_line">
+                    <label class="details_name details_block">
+                        <span class="block_name">Name</span>
+                        <input class="block_field" type="text" name="name" value="Bogdan Slomchinskiy">
+                    </label>
+                    <label class="details_company details_block">
+                        <span class="block_name">Company</span>
+                        <input class="block_field" type="text" name="company" value="BoostCraft">
+                    </label>
+                </div>
+                <div class="details_line">
+                    <label class="details_email details_block">
+                        <span class="block_name">Email</span>
+                        <input class="block_field" type="email" name="email" value="bogdan@gmail.com">
+                    </label>
+                    <label class="details_phone details_block">
+                        <span class="block_name">Phone</span>
+                        <input class="block_field" type="tel" name="phone" value="+17603498892">
+                    </label>
+                </div>
+                <div class="details_line">
+                    <div class="details_city details_block">
+                        <span class="block_name">Country</span>
+                        <div class="select-wrapper custom-select">
+                            <select name="key-level">
+                                <option value="Mythic+10">Ukraine</option>
+                                <option value="Mythic+11">Ukraine</option>
+                                <option value="Mythic+12">Ukraine</option>
+                                <option value="Mythic+13">China</option>
+                                <option value="Mythic+14">Ukraine</option>
+                                <option value="Mythic+15">Ukraine</option>
+                            </select>
+                            <img src="img/svg/arrow_black.svg" alt="arr">
+                        </div>
+                    </div>
+                    <label class="details_country details_block">
+                        <span class="block_name">City</span>
+                        <input class="block_field" type="text" name="city" value="Berlin">
+                    </label>
+                </div>
+                <div class="details_line">
+                    <label class="details_skype details_block">
+                        <span class="block_name"><img src="img/svg/skype.svg" alt="skype">Skype</span>
+                        <input class="block_field" type="text" name="skype" value="slomchinskiy">
+                    </label>
+                    <label class="details_discord details_block">
+                        <span class="block_name"><img src="img/svg/discord.svg" alt="discord">Discord (#TAG)</span>
+                        <input class="block_field" type="text" name="discord" value="slomchinskiy">
+                    </label>
+                </div>
+                <div class="details_line">
+                    <label class="details_battlenet details_block">
+                        <span class="block_name"><img src="img/svg/battlenet.svg" alt="battlenet">Battle (#TAG)</span>
+                        <input class="block_field" type="text" name="battlenet" value="#slomchinskiy">
+                    </label>
+                    <div class="details_buttons">
+                        <a href="#" class="details_btn-white btn">cancel</a>
+                        <a href="#" class="details_btn-black btn">save</a>
+                    </div>
+                </div>
+            </form>
+            <div class="my-account_history">
+                <h2 class="history_title">Order history</h2>
+                <div class="history_order">
+                    <div class="order_desc">
+                        <p class="desc_text desc_product">PRODUCT</p>
+                        <p class="desc_text desc_price">PRICE</p>
+                        <p class="desc_text desc_quantity">QUANTITY</p>
+                        <p class="desc_text desc_total">TOTAL</p>
+                    </div>
+                    <div class="order_products">
+                        <div class="order_product">
+                            <div class="product_image">
+                                <img src="img/boost_run.png" alt="br">
+                            </div>
+                            <a href="#" class="product_name">
+                                <span class="product_number">№7845 /</span>Ny'alotha, The Waking City Heroic Boost Run
+                            </a>
+                            <p class="product_price">
+                                <span>Price</span>
+                                €17.95
+                            </p>
+                            <p class="product_quantity">
+                                <span>Quantity</span>
+                                2
+                            </p>
+                            <p class="product_total">
+                                <span>Total</span>
+                                €35.90
+                            </p>
+                        </div>
+                        <div class="order_product">
+                            <div class="product_image">
+                                <img src="img/boost_run.png" alt="br">
+                            </div>
+                            <a href="#" class="product_name">
+                                <span class="product_number">№7845 /</span>Ny'alotha, The Waking City Heroic Boost Run
+                            </a>
+                            <p class="product_price">
+                                <span>Price</span>
+                                €17.95
+                            </p>
+                            <p class="product_quantity">
+                                <span>Quantity</span>
+                                2
+                            </p>
+                            <p class="product_total">
+                                <span>Total</span>
+                                €35.90
+                            </p>
+                        </div>
+                        <div class="order_product">
+                            <div class="product_image">
+                                <img src="img/boost_run.png" alt="br">
+                            </div>
+                            <a href="#" class="product_name">
+                                <span class="product_number">№7845 /</span>Ny'alotha, The Waking City Heroic Boost Run
+                            </a>
+                            <p class="product_price">
+                                <span>Price</span>
+                                €17.95
+                            </p>
+                            <p class="product_quantity">
+                                <span>Quantity</span>
+                                2
+                            </p>
+                            <p class="product_total">
+                                <span>Total</span>
+                                €35.90
+                            </p>
+                        </div>
+                        <div class="order_product">
+                            <div class="product_image">
+                                <img src="img/boost_run.png" alt="br">
+                            </div>
+                            <a href="#" class="product_name">
+                                <span class="product_number">№7845 /</span>Ny'alotha, The Waking City Heroic Boost Run
+                            </a>
+                            <p class="product_price">
+                                <span>Price</span>
+                                €17.95
+                            </p>
+                            <p class="product_quantity">
+                                <span>Quantity</span>
+                                2
+                            </p>
+                            <p class="product_total">
+                                <span>Total</span>
+                                €35.90
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="history_show-more btn">SHOW MORE</a>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class="footer">
+    <div class="footer_left">
+        <div class="footer_logo">
+            <img src="img/logo-white.svg" alt="logo">
+        </div>
+        <div class="footer_socials">
+            <a href="" class="footer_social">
+                <img src="img/svg/footer_social_fb.svg" alt="fb">
+            </a>
+            <a href="" class="footer_social">
+                <img src="img/svg/footer_social_inst.svg" alt="inst">
+            </a>
+        </div>
+    </div>
+    <div class="footer_right">
+        <div class="right_top">
+            <div class="footer_review">
+                <img class="review_logo" src="img/star-logo-white.svg" alt="star-logo">
+                <img class="review_rating" src="img/small-stars.svg" alt="small-stars">
+                <p class="review_text">Check out our 191 reviews</p>
+            </div>
+            <div class="footer_menus">
+                <div class="menus_our-policies menus_menu">
+                    <p class="menus_title">OUR POLICIES</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="">Privacy policy</a></li>
+                        <li class="menus_href"><a class="menus_link" href="">Refund policy</a></li>
+                        <li class="menus_href"><a class="menus_link" href="">Terms & conditions</a></li>
+                    </ul>
+                </div>
+                <div class="menus_get-in-touch menus_menu">
+                    <p class="menus_title">GET IN TOUCH</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="">Contact us</a></li>
+                        <li class="menus_href"><a class="menus_link" href="">Work with us</a></li>
+                    </ul>
+                </div>
+                <div class="menus_navigation menus_menu">
+                    <p class="menus_title">NAVIGATION</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right_bottom">
+            <p class="footer_term-of-use">
+                World of Warcraft tm and Blizzard Entertainment are registered trademarks of Blizzard Entertainment
+                Inc. In U.S.A. and/or other countries.These terms and all related materials, logos, and images are
+                copyright © Blizzard Entertainment. Boostcraft is in no way associated with or endorsed by Blizzard
+                Entertainment™. Boostcraft is not selling wow ingame items, only offers you diffirent services to
+                make your ingame skill better and gifting you ingame items.Boostcraft.net 2013 - 2020 . All Rights
+                Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="js/lib.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

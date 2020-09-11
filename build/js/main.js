@@ -423,9 +423,11 @@ if (document.querySelector('.shop_menu .menu_list')){
     })
     menuList.addEventListener('mouseup', function (){
         menuList.removeEventListener('mousemove', mouseMoveMenuList)
+        addShadowToMenuList()
     })
     menuList.addEventListener('touchend', function (){
         menuList.removeEventListener('touchmove', touchMoveMenuList)
+        addShadowToMenuList()
     })
 }
 
