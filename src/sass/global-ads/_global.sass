@@ -11,29 +11,34 @@ body
     flex: 1
     @media (max-width: 767px)
       position: relative
+    &.bg
+      background: url("../img/bolvar.png") center right / auto 100% no-repeat $second-color
+      @media (max-width: 605px)
+        background-position: center left
     main
-      width: 83%
       background-color: $body-color
-      box-sizing: border-box
-      padding: 40px 40px 100px
-      @media (max-width: 1265px)
-        width: 80%
-      @media (max-width: 1024px)
-        padding: 20px 20px 40px
-        width: 77.5%
-      @media (max-width: 767px)
-        width: 100%
-    aside
-      width: 17%
-      box-sizing: border-box
-      @media (max-width: 1265px)
-        width: 20%
-      @media (max-width: 1024px)
-        width: 22.5%
-      @media (max-width: 767px)
-        width: 220px
-      @media (max-width: 576px)
-        width: 100%
+main
+  width: 83%
+  box-sizing: border-box
+  padding: 20px 40px 100px
+  @media (max-width: 1265px)
+    width: 80%
+  @media (max-width: 1024px)
+    padding: 20px 20px 40px
+    width: 77.5%
+  @media (max-width: 767px)
+    width: 100%
+aside
+  width: 17%
+  box-sizing: border-box
+  @media (max-width: 1265px)
+    width: 20%
+  @media (max-width: 1024px)
+    width: 22.5%
+  @media (max-width: 767px)
+    width: 220px
+  @media (max-width: 576px)
+    width: 100%
 img
   width: 100%
   height: auto
@@ -73,4 +78,36 @@ img
     font-size: 16px
     line-height: 140%
     color: $text-color-dark
-    margin: 0 0 15px
+    margin: 0 0 32px
+  h2
+    font-weight: 700
+    font-size: 24px
+    line-height: 30px
+  h4
+    font-weight: 500
+    font-size: 18px
+    line-height: 140%
+  b
+    display: block
+    font-weight: 700
+    font-size: 16px
+    line-height: 140%
+    margin: 16px 0
+  ul
+    margin: 0 0 32px
+    font-size: 16px
+    line-height: 140
+    list-style: none
+    padding: 0
+    &>li
+      text-indent: 12px
+      position: relative
+      &:before
+        content: ''
+        width: 8px
+        height: 8px
+        position: absolute
+        top: 8px
+        left: 0
+        border-radius: 50%
+        background: $second-color

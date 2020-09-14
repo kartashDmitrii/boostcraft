@@ -147,36 +147,44 @@ body {
     @media (max-width: 767px) {
       body > .content {
         position: relative; } }
+    body > .content.bg {
+      background: url("../img/bolvar.png") center right/auto 100% no-repeat #43C8C0; }
+      @media (max-width: 605px) {
+        body > .content.bg {
+          background-position: center left; } }
     body > .content main {
-      width: 83%;
-      background-color: #EFEFEF;
-      box-sizing: border-box;
-      padding: 40px 40px 100px; }
-      @media (max-width: 1265px) {
-        body > .content main {
-          width: 80%; } }
-      @media (max-width: 1024px) {
-        body > .content main {
-          padding: 20px 20px 40px;
-          width: 77.5%; } }
-      @media (max-width: 767px) {
-        body > .content main {
-          width: 100%; } }
-    body > .content aside {
-      width: 17%;
-      box-sizing: border-box; }
-      @media (max-width: 1265px) {
-        body > .content aside {
-          width: 20%; } }
-      @media (max-width: 1024px) {
-        body > .content aside {
-          width: 22.5%; } }
-      @media (max-width: 767px) {
-        body > .content aside {
-          width: 220px; } }
-      @media (max-width: 576px) {
-        body > .content aside {
-          width: 100%; } }
+      background-color: #EFEFEF; }
+
+main {
+  width: 83%;
+  box-sizing: border-box;
+  padding: 20px 40px 100px; }
+  @media (max-width: 1265px) {
+    main {
+      width: 80%; } }
+  @media (max-width: 1024px) {
+    main {
+      padding: 20px 20px 40px;
+      width: 77.5%; } }
+  @media (max-width: 767px) {
+    main {
+      width: 100%; } }
+
+aside {
+  width: 17%;
+  box-sizing: border-box; }
+  @media (max-width: 1265px) {
+    aside {
+      width: 20%; } }
+  @media (max-width: 1024px) {
+    aside {
+      width: 22.5%; } }
+  @media (max-width: 767px) {
+    aside {
+      width: 220px; } }
+  @media (max-width: 576px) {
+    aside {
+      width: 100%; } }
 
 img {
   width: 100%;
@@ -217,7 +225,39 @@ img {
     font-size: 16px;
     line-height: 140%;
     color: #3A3B3E;
-    margin: 0 0 15px; }
+    margin: 0 0 32px; }
+  .text h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px; }
+  .text h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%; }
+  .text b {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    margin: 16px 0; }
+  .text ul {
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 140;
+    list-style: none;
+    padding: 0; }
+    .text ul > li {
+      text-indent: 12px;
+      position: relative; }
+      .text ul > li:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        border-radius: 50%;
+        background: #43C8C0; }
 
 .header {
   background: #FFFFFF;
@@ -1089,6 +1129,9 @@ img {
     margin: 0 0 18px;
     box-shadow: 0px -1px 0px #43C8C0;
     align-self: center; }
+    @media (max-width: 576px) {
+      .boosting-steps .boosting-steps_title {
+        padding: 17px 0; } }
   .boosting-steps .boosting-steps_wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1099,6 +1142,9 @@ img {
     @media (max-width: 1200px) {
       .boosting-steps .boosting-steps_wrapper {
         grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 576px) {
+      .boosting-steps .boosting-steps_wrapper {
+        padding: 24px 24px 32px; } }
     @media (max-width: 480px) {
       .boosting-steps .boosting-steps_wrapper {
         grid-template-columns: 1fr; } }
@@ -1125,6 +1171,11 @@ img {
       font-weight: 700;
       color: #43C8C0;
       border-radius: 50%; }
+      @media (max-width: 576px) {
+        .boosting-steps .boosting-steps_step .step_number {
+          top: 0;
+          right: auto;
+          left: 66px; } }
     .boosting-steps .boosting-steps_step .step_image {
       width: 50px;
       height: 50px;
@@ -1512,291 +1563,382 @@ img {
       text-align: center;
       max-width: 250px; }
 
-@media (max-width: 767px) {
-  .index_main {
-    padding: 15px 15px 30px; } }
-
-.index_main .main_top-info {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin-bottom: 51px; }
-  @media (max-width: 1380px) {
-    .index_main .main_top-info {
-      grid-template-columns: 40% 60%; } }
-  @media (max-width: 1280px) {
-    .index_main .main_top-info {
-      grid-template-columns: 100%;
-      grid-auto-rows: auto;
-      grid-row-gap: 20px; } }
+.index_main {
+  padding: 40px 0 100px; }
   @media (max-width: 767px) {
-    .index_main .main_top-info {
-      margin-bottom: 20px; } }
-  .index_main .main_top-info .top-info_attention {
-    margin-right: 6.5px;
-    border-radius: 5px;
-    position: relative; }
+    .index_main {
+      padding: 15px 0 30px; } }
+  .index_main .main_top-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 40px 51px; }
+    @media (max-width: 1380px) {
+      .index_main .main_top-info {
+        grid-template-columns: 40% 60%; } }
     @media (max-width: 1280px) {
-      .index_main .main_top-info .top-info_attention {
-        width: 100%;
-        margin-right: 0; } }
-  .index_main .main_top-info .top-info_slider {
-    width: 100%;
-    height: 100%; }
-    .index_main .main_top-info .top-info_slider .slider_slide {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      padding: 66px 42px; }
-      @media (max-width: 767px) {
-        .index_main .main_top-info .top-info_slider .slider_slide {
-          padding: 32px 24px; } }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_marks {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 19px 24px 0; }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_mark {
-        text-align: center;
-        text-transform: uppercase;
-        margin-right: 9px;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 13px;
-        line-height: 11px;
-        padding: 5px;
-        min-width: 40px; }
-        .index_main .main_top-info .top-info_slider .slider_slide .slide_mark:last-child {
-          margin-right: 0; }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_hot {
-        background: #D91616; }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_time {
-        background: #DE7C21; }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_title {
-        font-size: 33px;
-        line-height: 38px;
-        color: #fff;
-        font-weight: 700;
-        text-align: center;
-        margin: 0 0 50px; }
-        @media (max-width: 576px) {
-          .index_main .main_top-info .top-info_slider .slider_slide .slide_title {
-            font-size: 23px;
-            line-height: 27px;
-            margin-bottom: 24px; } }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_btn {
-        width: 200px;
-        padding: 16px 30px; }
-      .index_main .main_top-info .top-info_slider .slider_slide .slide_img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        object-fit: cover;
-        object-position: center; }
-  .index_main .main_top-info .top-info_arrows {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    user-select: none;
-    pointer-events: none; }
-    .index_main .main_top-info .top-info_arrows .arrows_arrow {
-      position: relative;
-      cursor: pointer;
-      width: 25px;
-      height: 42px;
-      background: url("../img/svg/arrow.svg") center center/100% 100% no-repeat;
-      user-select: auto;
-      pointer-events: auto; }
-      @media (max-width: 576px) {
-        .index_main .main_top-info .top-info_arrows .arrows_arrow {
-          width: 16px;
-          height: 30px; } }
-    .index_main .main_top-info .top-info_arrows .arrows_prev {
-      left: 42px;
-      transform: rotate(180deg); }
-      @media (max-width: 576px) {
-        .index_main .main_top-info .top-info_arrows .arrows_prev {
-          left: 24px; } }
-    .index_main .main_top-info .top-info_arrows .arrows_next {
-      right: 42px; }
-      @media (max-width: 576px) {
-        .index_main .main_top-info .top-info_arrows .arrows_next {
-          right: 24px; } }
-  .index_main .main_top-info .top-info_right {
-    margin-left: 20.5px;
-    display: flex;
-    flex-direction: column; }
-    @media (max-width: 1280px) {
-      .index_main .main_top-info .top-info_right {
-        margin-left: 0; } }
-  .index_main .main_top-info .top-info_block {
-    position: relative;
-    background: #FFFFFF;
-    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
-    border-radius: 5px; }
-    .index_main .main_top-info .top-info_block .block_arrows {
-      position: absolute;
-      top: 10px;
-      right: 13px;
-      display: flex; }
-      .index_main .main_top-info .top-info_block .block_arrows .arrows_arrow {
-        cursor: pointer;
-        width: 8px;
-        height: 15px;
-        padding: 5px;
-        background: url("../img/svg/arrow.svg") center center/50% 50% no-repeat; }
-      .index_main .main_top-info .top-info_block .block_arrows .arrows_prev {
-        transform: rotate(180deg);
-        margin-right: 12px; }
-  .index_main .main_top-info .top-info_calendar {
-    padding: 12px 20px;
-    margin-bottom: 9px; }
+      .index_main .main_top-info {
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        grid-row-gap: 20px; } }
+    @media (max-width: 767px) {
+      .index_main .main_top-info {
+        margin-bottom: 20px; } }
     @media (max-width: 576px) {
-      .index_main .main_top-info .top-info_calendar {
-        padding: 10px; } }
-    .index_main .main_top-info .top-info_calendar .calendar_slider {
+      .index_main .main_top-info {
+        margin: 0 15px 20px; } }
+    .index_main .main_top-info .top-info_attention {
+      margin-right: 6.5px;
+      border-radius: 5px;
+      position: relative; }
+      @media (max-width: 1280px) {
+        .index_main .main_top-info .top-info_attention {
+          width: 100%;
+          margin-right: 0; } }
+    .index_main .main_top-info .top-info_slider {
+      width: 100%;
+      height: 100%; }
+      .index_main .main_top-info .top-info_slider .slider_slide {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 66px 42px; }
+        @media (max-width: 767px) {
+          .index_main .main_top-info .top-info_slider .slider_slide {
+            padding: 32px 24px; } }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_marks {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 19px 24px 0; }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_mark {
+          text-align: center;
+          text-transform: uppercase;
+          margin-right: 9px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 13px;
+          line-height: 11px;
+          padding: 5px;
+          min-width: 40px; }
+          .index_main .main_top-info .top-info_slider .slider_slide .slide_mark:last-child {
+            margin-right: 0; }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_hot {
+          background: #D91616; }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_time {
+          background: #DE7C21; }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_title {
+          font-size: 33px;
+          line-height: 38px;
+          color: #fff;
+          font-weight: 700;
+          text-align: center;
+          margin: 0 0 50px; }
+          @media (max-width: 576px) {
+            .index_main .main_top-info .top-info_slider .slider_slide .slide_title {
+              font-size: 23px;
+              line-height: 27px;
+              margin-bottom: 24px; } }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_btn {
+          width: 200px;
+          padding: 16px 30px; }
+        .index_main .main_top-info .top-info_slider .slider_slide .slide_img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          object-fit: cover;
+          object-position: center; }
+    .index_main .main_top-info .top-info_arrows {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      pointer-events: none; }
+      .index_main .main_top-info .top-info_arrows .arrows_arrow {
+        position: relative;
+        cursor: pointer;
+        width: 25px;
+        height: 42px;
+        background: url("../img/svg/arrow.svg") center center/100% 100% no-repeat;
+        user-select: auto;
+        pointer-events: auto; }
+        @media (max-width: 576px) {
+          .index_main .main_top-info .top-info_arrows .arrows_arrow {
+            width: 16px;
+            height: 30px; } }
+      .index_main .main_top-info .top-info_arrows .arrows_prev {
+        left: 42px;
+        transform: rotate(180deg); }
+        @media (max-width: 576px) {
+          .index_main .main_top-info .top-info_arrows .arrows_prev {
+            left: 24px; } }
+      .index_main .main_top-info .top-info_arrows .arrows_next {
+        right: 42px; }
+        @media (max-width: 576px) {
+          .index_main .main_top-info .top-info_arrows .arrows_next {
+            right: 24px; } }
+    .index_main .main_top-info .top-info_right {
+      margin-left: 20.5px;
       display: flex;
       flex-direction: column; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_date {
+      @media (max-width: 1280px) {
+        .index_main .main_top-info .top-info_right {
+          margin-left: 0; } }
+    .index_main .main_top-info .top-info_block {
+      position: relative;
+      background: #FFFFFF;
+      box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+      border-radius: 5px; }
+      .index_main .main_top-info .top-info_block .block_arrows {
+        position: absolute;
+        top: 10px;
+        right: 13px;
+        display: flex; }
+        .index_main .main_top-info .top-info_block .block_arrows .arrows_arrow {
+          cursor: pointer;
+          width: 8px;
+          height: 15px;
+          padding: 5px;
+          background: url("../img/svg/arrow.svg") center center/50% 50% no-repeat; }
+        .index_main .main_top-info .top-info_block .block_arrows .arrows_prev {
+          transform: rotate(180deg);
+          margin-right: 12px; }
+    .index_main .main_top-info .top-info_calendar {
+      padding: 12px 20px;
+      margin-bottom: 9px; }
+      @media (max-width: 576px) {
+        .index_main .main_top-info .top-info_calendar {
+          padding: 10px; } }
+      .index_main .main_top-info .top-info_calendar .calendar_slider {
+        display: flex;
+        flex-direction: column; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_date {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;
+          color: #9D9EA4;
+          margin: 0 0 2px; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_title {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #3A3B3E;
+          margin: 0 0 8px; }
+          .index_main .main_top-info .top-info_calendar .calendar_slider .slider_title .title_text {
+            margin: 0; }
+          .index_main .main_top-info .top-info_calendar .calendar_slider .slider_title .title_image {
+            width: 35px;
+            height: 35px;
+            margin: 0 10px 0 0; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_row {
+          display: flex;
+          flex-direction: column; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_elem {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          border: 1px solid;
+          position: relative;
+          padding: 5px;
+          text-decoration: none; }
+          .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_elem:before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_text {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          text-transform: uppercase;
+          color: #000;
+          margin: 0 0 0 10px; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_alliance {
+          border-color: #3E7CD9; }
+          .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_alliance:before {
+            width: 16px;
+            height: 20px;
+            background: url("../img/svg/alliance-emblem.svg") center center/100% 100% no-repeat; }
+        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_horde {
+          border-color: #D24F58; }
+          .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_horde:before {
+            width: 12px;
+            height: 21px;
+            background: url("../img/svg/horde-emblem.svg") center center/100% 100% no-repeat; }
+    .index_main .main_top-info .top-info_boost-timers {
+      padding: 11px 18px 22px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px; }
+      @media (max-width: 1500px) {
+        .index_main .main_top-info .top-info_boost-timers {
+          padding: 10px 10px 15px; } }
+      .index_main .main_top-info .top-info_boost-timers .boost-timers_title {
+        margin: 0 0 13px;
         font-weight: 500;
-        font-size: 13px;
-        line-height: 16px;
-        color: #9D9EA4;
-        margin: 0 0 2px; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #3A3B3E;
+        display: flex;
+        align-items: center; }
+      .index_main .main_top-info .top-info_boost-timers .boost-timers_title-image {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px; }
+      .index_main .main_top-info .top-info_boost-timers .boost-timers_slider {
+        width: 100%; }
+        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide {
+          display: flex;
+          justify-content: flex-start;
+          padding: 5px; }
+          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_image {
+            width: 36%;
+            height: 100%;
+            margin-right: 12px;
+            position: relative; }
+          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%; }
+          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_text-field {
+            width: calc(66% - 18px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; }
+          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_text {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            color: #3A3B3E;
+            margin: 0; }
+          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer {
+            display: flex;
+            margin-bottom: 8px; }
+            .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div {
+              width: 48px;
+              margin-right: 5px;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: center; }
+              .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div p {
+                color: #43C8C0;
+                margin: 0;
+                font-size: 36px;
+                line-height: 34px;
+                text-align: center; }
+              .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div span {
+                color: #3A3B3E;
+                font-size: 11px;
+                line-height: 14px;
+                text-align: center; }
+              .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div:after {
+                content: ':';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -3px;
+                margin: 0 auto 16px;
+                display: flex;
+                align-items: center;
+                font-size: 14px; }
+              .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div:last-child {
+                margin-right: 0; }
+                .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div:last-child:after {
+                  content: none; }
+          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_btn {
+            width: 90%; }
+    .index_main .main_top-info .top-info_boost-timers2 {
+      display: flex;
+      flex-direction: column;
+      padding: 11px 18px 22px;
+      box-sizing: border-box; }
+      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_title {
+        margin: 0 0 13px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: #3A3B3E;
+        display: flex;
+        align-items: center; }
+      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_title-image {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px; }
+      @media (max-width: 1280px) {
+        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide {
+          padding: 0 15px; } }
+      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_title {
         display: flex;
         align-items: center;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
         color: #3A3B3E;
-        margin: 0 0 8px; }
-        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_title .title_text {
+        margin: 0 0 12px; }
+        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_title .title_text {
           margin: 0; }
-        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_title .title_image {
+        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_title .title_image {
           width: 35px;
           height: 35px;
           margin: 0 10px 0 0; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_row {
+      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info {
         display: flex;
-        flex-direction: column; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_elem {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        border: 1px solid;
-        position: relative;
-        padding: 5px;
-        text-decoration: none; }
-        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_elem:before {
-          content: '';
-          position: absolute;
-          left: 4px;
-          top: 0;
-          bottom: 0;
-          margin: auto; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_text {
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 18px;
-        text-transform: uppercase;
-        color: #000;
-        margin: 0 0 0 10px; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_alliance {
-        border-color: #3E7CD9; }
-        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_alliance:before {
-          width: 16px;
-          height: 20px;
-          background: url("../img/svg/alliance-emblem.svg") center center/100% 100% no-repeat; }
-      .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_horde {
-        border-color: #D24F58; }
-        .index_main .main_top-info .top-info_calendar .calendar_slider .slider_wrapper .grid_horde:before {
-          width: 12px;
-          height: 21px;
-          background: url("../img/svg/horde-emblem.svg") center center/100% 100% no-repeat; }
-  .index_main .main_top-info .top-info_boost-timers {
-    padding: 11px 18px 22px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px; }
-    @media (max-width: 1500px) {
-      .index_main .main_top-info .top-info_boost-timers {
-        padding: 10px 10px 15px; } }
-    .index_main .main_top-info .top-info_boost-timers .boost-timers_title {
-      margin: 0 0 13px;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 30px;
-      color: #3A3B3E;
-      display: flex;
-      align-items: center; }
-    .index_main .main_top-info .top-info_boost-timers .boost-timers_title-image {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px; }
-    .index_main .main_top-info .top-info_boost-timers .boost-timers_slider {
-      width: 100%; }
-      .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide {
-        display: flex;
-        justify-content: flex-start;
-        padding: 5px; }
-        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_image {
-          width: 36%;
-          height: 100%;
-          margin-right: 12px;
-          position: relative; }
-        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%; }
-        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_text-field {
-          width: calc(66% - 18px);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between; }
-        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_text {
+        align-items: center; }
+        @media (max-width: 1280px) {
+          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info {
+            flex-wrap: wrap; } }
+        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_text {
           font-weight: 500;
-          font-size: 13px;
-          line-height: 16px;
+          font-size: 16px;
+          line-height: 20px;
           color: #3A3B3E;
-          margin: 0; }
-        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer {
+          margin: 0 26px 0 0; }
+        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer {
           display: flex;
-          margin-bottom: 8px; }
-          .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div {
+          margin-right: 30px; }
+          @media (max-width: 1280px) {
+            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer {
+              flex: 1;
+              margin-right: 0; } }
+          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div {
             width: 48px;
             margin-right: 5px;
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center; }
-            .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div p {
+            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div p {
               color: #43C8C0;
               margin: 0;
               font-size: 36px;
               line-height: 34px;
               text-align: center; }
-            .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div span {
+            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div span {
               color: #3A3B3E;
               font-size: 11px;
               line-height: 14px;
               text-align: center; }
-            .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div:after {
+            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div:after {
               content: ':';
               position: absolute;
               top: 0;
@@ -1806,328 +1948,261 @@ img {
               display: flex;
               align-items: center;
               font-size: 14px; }
-            .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div:last-child {
+            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div:last-child {
               margin-right: 0; }
-              .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_timer div:last-child:after {
+              .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div:last-child:after {
                 content: none; }
-        .index_main .main_top-info .top-info_boost-timers .boost-timers_slider .slider_slide .slide_btn {
-          width: 90%; }
-  .index_main .main_top-info .top-info_boost-timers2 {
+        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_btn {
+          flex: 1;
+          max-width: 265px;
+          font-size: 14px;
+          line-height: 18px;
+          padding: 10px; }
+          @media (max-width: 1280px) {
+            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_btn {
+              margin-top: 10px;
+              min-width: 100%; } }
+  .index_main .main_best-sellers {
     display: flex;
-    flex-direction: column;
-    padding: 11px 18px 22px;
-    box-sizing: border-box; }
-    .index_main .main_top-info .top-info_boost-timers2 .boost-timers_title {
-      margin: 0 0 13px;
+    background: #FFFFFF;
+    padding: 20px 20px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 40px 38px; }
+    @media (max-width: 576px) {
+      .index_main .main_best-sellers {
+        margin: 0 15px 38px;
+        flex-direction: column;
+        padding: 16px 0 0; } }
+    .index_main .main_best-sellers .best-sellers_info-block {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 18px 0;
+      width: 20%; }
+      @media (max-width: 1024px) {
+        .index_main .main_best-sellers .best-sellers_info-block {
+          width: 25%; } }
+      @media (max-width: 576px) {
+        .index_main .main_best-sellers .best-sellers_info-block {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0 16px; } }
+    .index_main .main_best-sellers .best-sellers_title {
       font-weight: 500;
       font-size: 24px;
       line-height: 30px;
       color: #3A3B3E;
-      display: flex;
-      align-items: center; }
-    .index_main .main_top-info .top-info_boost-timers2 .boost-timers_title-image {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px; }
-    @media (max-width: 1280px) {
-      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide {
-        padding: 0 15px; } }
-    .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_title {
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
-      color: #3A3B3E;
-      margin: 0 0 12px; }
-      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_title .title_text {
-        margin: 0; }
-      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_title .title_image {
-        width: 35px;
-        height: 35px;
-        margin: 0 10px 0 0; }
-    .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info {
-      display: flex;
-      align-items: center; }
-      @media (max-width: 1280px) {
-        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info {
-          flex-wrap: wrap; } }
-      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_text {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        color: #3A3B3E;
-        margin: 0 26px 0 0; }
-      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer {
-        display: flex;
-        margin-right: 30px; }
-        @media (max-width: 1280px) {
-          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer {
-            flex: 1;
-            margin-right: 0; } }
-        .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div {
-          width: 48px;
-          margin-right: 5px;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center; }
-          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div p {
-            color: #43C8C0;
-            margin: 0;
-            font-size: 36px;
-            line-height: 34px;
-            text-align: center; }
-          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div span {
-            color: #3A3B3E;
-            font-size: 11px;
-            line-height: 14px;
-            text-align: center; }
-          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div:after {
-            content: ':';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: -3px;
-            margin: 0 auto 16px;
-            display: flex;
-            align-items: center;
-            font-size: 14px; }
-          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div:last-child {
-            margin-right: 0; }
-            .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_timer div:last-child:after {
-              content: none; }
-      .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_btn {
-        flex: 1;
-        max-width: 265px;
-        font-size: 14px;
-        line-height: 18px;
-        padding: 10px; }
-        @media (max-width: 1280px) {
-          .index_main .main_top-info .top-info_boost-timers2 .boost-timers_slide .slide_info .info_btn {
-            margin-top: 10px;
-            min-width: 100%; } }
-
-.index_main .main_best-sellers {
-  display: flex;
-  background: #FFFFFF;
-  padding: 20px 20px 0;
-  box-sizing: border-box;
-  margin-bottom: 38px;
-  border-radius: 5px; }
-  @media (max-width: 576px) {
-    .index_main .main_best-sellers {
-      flex-direction: column;
-      padding: 16px 0 0; } }
-  .index_main .main_best-sellers .best-sellers_info-block {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 18px 0;
-    width: 20%; }
-    @media (max-width: 1024px) {
-      .index_main .main_best-sellers .best-sellers_info-block {
-        width: 25%; } }
-    @media (max-width: 576px) {
-      .index_main .main_best-sellers .best-sellers_info-block {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 0 16px; } }
-  .index_main .main_best-sellers .best-sellers_title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    color: #3A3B3E;
-    margin: 0 0 16px; }
-    @media (max-width: 1024px) {
-      .index_main .main_best-sellers .best-sellers_title {
-        font-size: 18px;
-        line-height: 21px;
-        margin-bottom: 12px; } }
-  .index_main .main_best-sellers .best-sellers_text {
-    font-size: 13px;
-    line-height: 140%;
-    color: #3A3B3E;
-    margin: 0; }
-  .index_main .main_best-sellers .best-sellers_arrows {
-    position: absolute;
-    left: 0;
-    bottom: 25px;
-    display: flex; }
-    @media (max-width: 576px) {
-      .index_main .main_best-sellers .best-sellers_arrows {
-        bottom: 0;
-        left: 20px; } }
-    @media (max-width: 576px) {
-      .index_main .main_best-sellers .best-sellers_arrows {
-        bottom: auto;
-        top: 0;
-        left: auto;
-        right: 20px; } }
-    .index_main .main_best-sellers .best-sellers_arrows .arrow {
-      width: 16px;
-      height: 9px;
-      padding: 5px;
-      cursor: pointer;
-      background: url("../img/svg/arrow_black.svg") center center/16px 9px no-repeat;
-      margin-right: 23px; }
-      .index_main .main_best-sellers .best-sellers_arrows .arrow:last-child {
-        margin-right: 0; }
-      .index_main .main_best-sellers .best-sellers_arrows .arrow.prev {
-        transform: rotate(90deg); }
-      .index_main .main_best-sellers .best-sellers_arrows .arrow.next {
-        transform: rotate(-90deg); }
-  .index_main .main_best-sellers .best-sellers_slider-wrapper {
-    width: 80%; }
-    @media (max-width: 1024px) {
-      .index_main .main_best-sellers .best-sellers_slider-wrapper {
-        width: 75%; } }
-    @media (max-width: 576px) {
-      .index_main .main_best-sellers .best-sellers_slider-wrapper {
-        width: 100%; } }
-  .index_main .main_best-sellers .best-sellers_slider .slider_elem {
-    display: flex;
-    justify-content: center;
-    padding: 23px 32px;
-    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
-    border-radius: 6px;
-    margin: 20px;
-    position: relative;
-    overflow: hidden; }
-    @media (max-width: 1280px) {
-      .index_main .main_best-sellers .best-sellers_slider .slider_elem {
-        padding: 20px 10px; } }
-    @media (max-width: 576px) {
-      .index_main .main_best-sellers .best-sellers_slider .slider_elem {
-        align-items: center; } }
-    .index_main .main_best-sellers .best-sellers_slider .slider_elem:before {
-      content: '';
-      position: absolute;
-      left: -57px;
-      bottom: -146px;
-      width: 203px;
-      height: 203px;
-      background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%);
-      transform: rotate(27deg);
-      z-index: -1; }
-    .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_image {
-      width: 120px;
-      margin-right: 45px; }
-      @media (max-width: 1380px) {
-        .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_image {
-          margin-right: 20px; } }
-      @media (max-width: 360px) {
-        .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_image {
-          margin-right: 5px; } }
-    .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_info {
-      display: flex;
-      flex-direction: column; }
-    .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_name {
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 16px;
-      color: #3A3B3E;
-      margin: 0 0 10px;
-      text-transform: uppercase; }
-    .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_price {
-      font-weight: 500;
-      font-size: 17px;
-      line-height: 21px;
-      color: #3A3B3E;
       margin: 0 0 16px; }
-    .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_add-to-cart {
-      padding: 14px;
-      font-size: 14px;
-      line-height: 18px; }
-      @media (max-width: 360px) {
-        .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_add-to-cart {
-          padding: 10px; } }
-
-.index_main .main_shop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url("../img/shop_bg.png") right bottom/100% auto no-repeat; }
-  .index_main .main_shop .shop_title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    color: #3A3B3E;
-    padding: 17px 32px;
-    margin: 0 0 18px;
-    box-shadow: 0px -1px 0px #43C8C0; }
-  .index_main .main_shop .shop_menu {
-    width: 100%;
-    margin-bottom: 26px;
-    padding: 0 20px;
-    box-sizing: border-box; }
-    @media (max-width: 1320px) {
-      .index_main .main_shop .shop_menu {
-        padding: 0; } }
-    .index_main .main_shop .shop_menu.shadow {
+      @media (max-width: 1024px) {
+        .index_main .main_best-sellers .best-sellers_title {
+          font-size: 18px;
+          line-height: 21px;
+          margin-bottom: 12px; } }
+    .index_main .main_best-sellers .best-sellers_text {
+      font-size: 13px;
+      line-height: 140%;
+      color: #3A3B3E;
+      margin: 0; }
+    .index_main .main_best-sellers .best-sellers_arrows {
+      position: absolute;
+      left: 0;
+      bottom: 25px;
+      display: flex; }
+      @media (max-width: 576px) {
+        .index_main .main_best-sellers .best-sellers_arrows {
+          bottom: 0;
+          left: 20px; } }
+      @media (max-width: 576px) {
+        .index_main .main_best-sellers .best-sellers_arrows {
+          bottom: auto;
+          top: 0;
+          left: auto;
+          right: 20px; } }
+      .index_main .main_best-sellers .best-sellers_arrows .arrow {
+        width: 16px;
+        height: 9px;
+        padding: 5px;
+        cursor: pointer;
+        background: url("../img/svg/arrow_black.svg") center center/16px 9px no-repeat;
+        margin-right: 23px; }
+        .index_main .main_best-sellers .best-sellers_arrows .arrow:last-child {
+          margin-right: 0; }
+        .index_main .main_best-sellers .best-sellers_arrows .arrow.prev {
+          transform: rotate(90deg); }
+        .index_main .main_best-sellers .best-sellers_arrows .arrow.next {
+          transform: rotate(-90deg); }
+    .index_main .main_best-sellers .best-sellers_slider-wrapper {
+      width: 80%; }
+      @media (max-width: 1024px) {
+        .index_main .main_best-sellers .best-sellers_slider-wrapper {
+          width: 75%; } }
+      @media (max-width: 576px) {
+        .index_main .main_best-sellers .best-sellers_slider-wrapper {
+          width: 100%; } }
+    .index_main .main_best-sellers .best-sellers_slider .slider_elem {
+      display: flex;
+      justify-content: center;
+      padding: 23px 32px;
+      box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+      border-radius: 6px;
+      margin: 20px;
       position: relative;
       overflow: hidden; }
-      .index_main .main_shop .shop_menu.shadow:after {
+      @media (max-width: 1280px) {
+        .index_main .main_best-sellers .best-sellers_slider .slider_elem {
+          padding: 20px 10px; } }
+      @media (max-width: 576px) {
+        .index_main .main_best-sellers .best-sellers_slider .slider_elem {
+          align-items: center; } }
+      .index_main .main_best-sellers .best-sellers_slider .slider_elem:before {
         content: '';
-        height: 100%;
-        width: 0;
         position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1;
-        transition: all .1s; }
-      .index_main .main_shop .shop_menu.shadow:before {
-        content: '';
-        height: 100%;
-        width: 0;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 1;
-        transition: all .1s; }
-      .index_main .main_shop .shop_menu.shadow.shadow-left:before {
-        box-shadow: 0 0 22px 40px #ededed; }
-      .index_main .main_shop .shop_menu.shadow.shadow-right:after {
-        box-shadow: 0 0 22px 40px #ededed; }
-    .index_main .main_shop .shop_menu .menu_wrapper {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: scroll;
-      scrollbar-width: none; }
-      .index_main .main_shop .shop_menu .menu_wrapper::-webkit-scrollbar {
-        display: none; }
-      .index_main .main_shop .shop_menu .menu_wrapper .menu_list {
-        padding: 0;
-        margin: 0;
+        left: -57px;
+        bottom: -146px;
+        width: 203px;
+        height: 203px;
+        background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%);
+        transform: rotate(27deg);
+        z-index: -1; }
+      .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_image {
+        width: 120px;
+        margin-right: 45px; }
+        @media (max-width: 1380px) {
+          .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_image {
+            margin-right: 20px; } }
+        @media (max-width: 360px) {
+          .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_image {
+            margin-right: 5px; } }
+      .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_info {
         display: flex;
-        justify-content: space-between;
-        list-style: none;
-        width: max-content;
-        min-width: 100%; }
-      .index_main .main_shop .shop_menu .menu_wrapper .menu_href {
-        padding: 0 0 8px;
-        margin-right: 16px;
+        flex-direction: column; }
+      .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_name {
         font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: #3A3B3E;
+        margin: 0 0 10px;
+        text-transform: uppercase; }
+      .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_price {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #3A3B3E;
+        margin: 0 0 16px; }
+      .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_add-to-cart {
+        padding: 14px;
         font-size: 14px;
-        line-height: 18px;
-        color: #9D9EA4;
-        text-align: center;
-        text-transform: uppercase;
-        display: flex;
-        border-bottom: 2px solid #9D9EA4; }
-        .index_main .main_shop .shop_menu .menu_wrapper .menu_href.current {
-          border-color: #43C8C0;
-          color: #3A3B3E; }
-        .index_main .main_shop .shop_menu .menu_wrapper .menu_href:last-child {
-          margin-right: 0; }
-      .index_main .main_shop .shop_menu .menu_wrapper .menu_link {
-        text-decoration: none;
-        color: inherit; }
-  .index_main .main_shop .shop_grid {
-    margin-bottom: 55px; }
-
-.index_main .main_boosting-steps {
-  margin-bottom: 38px; }
+        line-height: 18px; }
+        @media (max-width: 360px) {
+          .index_main .main_best-sellers .best-sellers_slider .slider_elem .elem_add-to-cart {
+            padding: 10px; } }
+  .index_main .main_shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/shop_bg.png") right bottom/100% auto no-repeat;
+    padding: 0 40px; }
+    @media (max-width: 576px) {
+      .index_main .main_shop {
+        padding: 0 15px; } }
+    .index_main .main_shop .shop_title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      color: #3A3B3E;
+      padding: 17px 32px;
+      margin: 0 0 18px;
+      box-shadow: 0px -1px 0px #43C8C0; }
+    .index_main .main_shop .shop_menu {
+      width: 100%;
+      margin-bottom: 26px;
+      padding: 0 20px;
+      box-sizing: border-box; }
+      @media (max-width: 1320px) {
+        .index_main .main_shop .shop_menu {
+          padding: 0; } }
+      .index_main .main_shop .shop_menu.shadow {
+        position: relative;
+        overflow: hidden; }
+        .index_main .main_shop .shop_menu.shadow:after {
+          content: '';
+          height: 100%;
+          width: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+          transition: all .1s; }
+        .index_main .main_shop .shop_menu.shadow:before {
+          content: '';
+          height: 100%;
+          width: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          transition: all .1s; }
+        .index_main .main_shop .shop_menu.shadow.shadow-left:before {
+          box-shadow: 0 0 22px 40px #ededed; }
+        .index_main .main_shop .shop_menu.shadow.shadow-right:after {
+          box-shadow: 0 0 22px 40px #ededed; }
+      .index_main .main_shop .shop_menu .menu_wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: none; }
+        .index_main .main_shop .shop_menu .menu_wrapper::-webkit-scrollbar {
+          display: none; }
+        .index_main .main_shop .shop_menu .menu_wrapper .menu_list {
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          width: max-content;
+          min-width: 100%; }
+        .index_main .main_shop .shop_menu .menu_wrapper .menu_href {
+          padding: 0 0 8px;
+          margin-right: 16px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: #9D9EA4;
+          text-align: center;
+          text-transform: uppercase;
+          display: flex;
+          border-bottom: 2px solid #9D9EA4; }
+          .index_main .main_shop .shop_menu .menu_wrapper .menu_href.current {
+            border-color: #43C8C0;
+            color: #3A3B3E; }
+          .index_main .main_shop .shop_menu .menu_wrapper .menu_href:last-child {
+            margin-right: 0; }
+        .index_main .main_shop .shop_menu .menu_wrapper .menu_link {
+          text-decoration: none;
+          color: inherit; }
+    .index_main .main_shop .shop_grid {
+      margin-bottom: 55px; }
+  .index_main .main_boosting-steps {
+    margin: 0 40px 38px; }
+    @media (max-width: 576px) {
+      .index_main .main_boosting-steps {
+        margin-left: 15px;
+        margin-right: 15px; } }
+  .index_main .main_advantages {
+    margin-left: 40px;
+    margin-right: 40px; }
+    @media (max-width: 576px) {
+      .index_main .main_advantages {
+        margin-left: 15px;
+        margin-right: 15px; } }
+  .index_main .main_seo-text {
+    margin-left: 40px;
+    margin-right: 40px; }
+    @media (max-width: 576px) {
+      .index_main .main_seo-text {
+        margin-left: 15px;
+        margin-right: 15px; } }
 
 .tovar_main {
   padding-bottom: 60px; }
@@ -3374,9 +3449,33 @@ img {
     display: flex;
     align-items: flex-start;
     margin-bottom: 40px; }
+    @media (max-width: 1150px) {
+      .about-us_main .about-us_top-block {
+        flex-direction: column; } }
     .about-us_main .about-us_top-block .top-block_image {
       min-width: 427px;
       margin-right: 40px; }
+      @media (max-width: 1150px) {
+        .about-us_main .about-us_top-block .top-block_image {
+          width: 100%;
+          margin-right: 0;
+          height: 150px;
+          overflow: hidden;
+          min-width: auto; }
+          .about-us_main .about-us_top-block .top-block_image img {
+            object-position: center -400px; } }
+    @media (max-width: 1150px) and (max-width: 1050px) {
+      .about-us_main .about-us_top-block .top-block_image img {
+        object-position: center -350px; } }
+    @media (max-width: 1150px) and (max-width: 912px) {
+      .about-us_main .about-us_top-block .top-block_image img {
+        object-position: center -300px; } }
+    @media (max-width: 1150px) and (max-width: 612px) {
+      .about-us_main .about-us_top-block .top-block_image img {
+        object-position: center -225px; } }
+    @media (max-width: 1150px) and (max-width: 480px) {
+      .about-us_main .about-us_top-block .top-block_image img {
+        object-position: center -125px; } }
     .about-us_main .about-us_top-block .top-block_content {
       display: flex;
       flex-direction: column;
@@ -3388,7 +3487,12 @@ img {
     .about-us_main .about-us_top-block .top-block_duty {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; }
+      align-items: flex-start;
+      position: relative;
+      z-index: 2; }
+      @media (max-width: 1150px) {
+        .about-us_main .about-us_top-block .top-block_duty {
+          width: 100%; } }
       .about-us_main .about-us_top-block .top-block_duty .duty_title {
         font-weight: 500;
         font-size: 24px;
@@ -3399,6 +3503,9 @@ img {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px; }
+        @media (max-width: 1150px) {
+          .about-us_main .about-us_top-block .top-block_duty .duty_blocks {
+            width: 100%; } }
       .about-us_main .about-us_top-block .top-block_duty .duty_block {
         padding: 15px 16px 15px 52px;
         position: relative;
@@ -3410,7 +3517,11 @@ img {
         font-weight: 700;
         font-size: 16px;
         line-height: 140%;
+        box-sizing: border-box;
         color: #3A3B3E; }
+        @media (max-width: 1150px) {
+          .about-us_main .about-us_top-block .top-block_duty .duty_block {
+            min-width: auto; } }
         .about-us_main .about-us_top-block .top-block_duty .duty_block:last-child {
           margin-bottom: 0; }
         .about-us_main .about-us_top-block .top-block_duty .duty_block:before {
@@ -3434,18 +3545,52 @@ img {
         line-height: 140%;
         color: #3A3B3E;
         margin: 0; }
+        @media (max-width: 1150px) {
+          .about-us_main .about-us_top-block .top-block_duty .duty_afterword {
+            width: 100%; } }
   .about-us_main .about-us_company {
     display: flex;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    position: relative; }
     .about-us_main .about-us_company .company_image {
       width: 310px;
       margin-left: 40px;
       position: relative; }
+      @media (max-width: 991px) {
+        .about-us_main .about-us_company .company_image {
+          position: absolute;
+          right: 0;
+          top: 0;
+          left: 0;
+          margin: auto;
+          width: 100%; } }
+      @media (max-width: 360px) {
+        .about-us_main .about-us_company .company_image {
+          width: 260px; } }
       .about-us_main .about-us_company .company_image img {
         position: absolute;
         width: 310px;
         height: auto;
-        bottom: 0; }
+        bottom: 0;
+        right: 0; }
+        @media (max-width: 1350px) {
+          .about-us_main .about-us_company .company_image img {
+            width: 210px; } }
+        @media (max-width: 991px) {
+          .about-us_main .about-us_company .company_image img {
+            z-index: 0;
+            left: 0;
+            bottom: auto;
+            top: 0;
+            margin: auto;
+            opacity: .3;
+            width: 310px; } }
+        @media (max-width: 360px) {
+          .about-us_main .about-us_company .company_image img {
+            width: 260px; } }
+    .about-us_main .about-us_company .company_content {
+      position: relative;
+      z-index: 1; }
     .about-us_main .about-us_company .company_title {
       font-weight: 500;
       font-size: 24px;
@@ -3464,7 +3609,12 @@ img {
       border: 1px solid #CFDDDD;
       box-sizing: border-box;
       border-radius: 5px;
-      position: relative; }
+      position: relative;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #3A3B3E;
+      background: #FFFFFF; }
       .about-us_main .about-us_company .company_tab:before {
         content: '';
         width: 24px;
@@ -3477,12 +3627,26 @@ img {
         background: url("../img/svg/about-us_arrow.svg") center center/100% 100% no-repeat; }
   .about-us_main .about-us_goals {
     display: flex; }
+    @media (max-width: 1275px) {
+      .about-us_main .about-us_goals {
+        flex-direction: column; } }
+    @media (max-width: 991px) {
+      .about-us_main .about-us_goals {
+        flex-direction: column-reverse; } }
     .about-us_main .about-us_goals .goals_image {
       min-width: 660px;
       margin-left: 40px; }
+      @media (max-width: 1275px) {
+        .about-us_main .about-us_goals .goals_image {
+          width: 100%;
+          margin-left: 0;
+          min-width: auto; } }
     .about-us_main .about-us_goals .goals_content {
       display: flex;
       flex-direction: column; }
+      @media (max-width: 1275px) {
+        .about-us_main .about-us_goals .goals_content {
+          margin-bottom: 16px; } }
     .about-us_main .about-us_goals .goals_title {
       font-weight: 500;
       font-size: 24px;
@@ -3513,3 +3677,774 @@ img {
       line-height: 140%;
       color: #3A3B3E;
       margin: 0; }
+
+.raid-calendar_main {
+  background: none; }
+  .raid-calendar_main .raid-calendar_title {
+    font-size: 33px;
+    line-height: 42px;
+    margin-bottom: 32px; }
+  .raid-calendar_main .raid-calendar_top-select {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+    padding: 8px 16px 8px 8px;
+    margin-bottom: 32px; }
+    @media (max-width: 1200px) {
+      .raid-calendar_main .raid-calendar_top-select {
+        flex-direction: column;
+        padding: 8px; } }
+    .raid-calendar_main .raid-calendar_top-select .top-select_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 47px 24px;
+      min-width: 330px;
+      box-sizing: border-box;
+      background: url("../img/top-select_info_BG.png") center center/cover no-repeat;
+      margin-right: 32px; }
+      @media (max-width: 1200px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_info {
+          min-width: auto;
+          width: 100%;
+          padding: 10px 24px;
+          margin-right: 0;
+          margin-bottom: 10px; } }
+      .raid-calendar_main .raid-calendar_top-select .top-select_info .info_image {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_info .info_title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: #3A3B3E;
+        margin: 0 0 8px; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_info .info_text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #3A3B3E;
+        margin: 0; }
+    .raid-calendar_main .raid-calendar_top-select .top-select_settings {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1; }
+      @media (max-width: 1200px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings {
+          width: 100%; } }
+      @media (max-width: 576px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings {
+          padding: 0 16px 16px;
+          box-sizing: border-box; } }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
+        display: flex;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #efefef;
+        margin-bottom: 24px;
+        width: 100%; }
+        @media (max-width: 1280px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
+            flex-wrap: wrap;
+            margin-bottom: 19px;
+            align-items: center; } }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
+            flex-direction: column;
+            align-items: center; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+          font-size: 16px;
+          line-height: 140%;
+          color: #3A3B3E;
+          margin: 0 16px 0 0;
+          padding-right: 35px;
+          position: relative;
+          text-align: center;
+          box-sizing: border-box; }
+          @media (max-width: 1280px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+              width: calc( 50% - 16px);
+              margin-bottom: 5px; } }
+          @media (max-width: 1200px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+              width: calc( 25% - 16px); } }
+          @media (max-width: 1140px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+              text-align: left;
+              width: 100%;
+              margin: 0 0 16px;
+              padding-right: 0;
+              padding-left: 40px; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 24px;
+            height: 24px;
+            background: url("../img/svg/arrow-down-circle.svg") center center/100% 100% no-repeat;
+            transform: rotate(-90deg); }
+            @media (max-width: 1140px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
+                right: auto;
+                left: 0;
+                transform: none; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+            margin-right: 0;
+            padding-right: 0; }
+            @media (max-width: 1280px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+                width: 50%; } }
+            @media (max-width: 1200px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+                width: 25%; } }
+            @media (max-width: 1140px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+                width: 100%; } }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child:after {
+              content: none; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher {
+        padding: 0;
+        margin: 0 0 24px;
+        list-style: none;
+        display: flex;
+        width: 100%; }
+        @media (max-width: 576px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher {
+            flex-direction: column; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn {
+          flex: 1;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 140%;
+          color: #5f6062;
+          background: #EDEDED;
+          box-sizing: border-box;
+          display: flex;
+          text-align: center; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:first-child {
+            border-radius: 5px 0 0 5px; }
+            @media (max-width: 576px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:first-child {
+                border-radius: 5px 5px 0 0; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:last-child {
+            border-radius: 0 5px 5px 0; }
+            @media (max-width: 576px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:last-child {
+                border-radius: 0 0 5px 5px; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn.active {
+            background: #43C8C0;
+            color: #FFFFFF; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn a {
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers {
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+        width: 100%; }
+        @media (max-width: 576px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers {
+            padding: 24px;
+            flex-direction: column;
+            box-sizing: border-box;
+            align-items: center; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
+          margin-bottom: 0;
+          border-right: 1px solid #efefef;
+          width: auto; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
+              flex-direction: row;
+              margin-bottom: 16px; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn {
+            background: #FFFFFF;
+            max-width: 68px;
+            width: 68px; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn a {
+              padding: 8px 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              box-sizing: border-box;
+              width: 100%; }
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn a:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 1px;
+                height: 60%;
+                background: #D8D8D8; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:first-child {
+              border-radius: 5px 0 0 5px; }
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:first-child a {
+                padding: 8px 16px 8px 24px; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child {
+              border-radius: 0 5px 5px 0; }
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child a {
+                padding: 8px 24px 8px 16px; }
+                .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child a:after {
+                  content: none; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher:first-child .switcher_btn:first-child {
+            border-radius: 5px 0 0 5px; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn img {
+          min-height: 32px;
+          width: auto; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.horde {
+          background: #D24F58; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.horde img {
+            filter: brightness(0) invert(1); }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.alliance {
+          background: #3E7CD9; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.alliance img {
+            filter: brightness(0) invert(1); }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock {
+          display: flex;
+          flex: 2; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock {
+              flex-direction: column; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
+            flex: 1;
+            margin: 0 24px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 18px;
+            color: #3A3B3E;
+            justify-content: center; }
+            @media (max-width: 576px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
+                margin: 0 0 16px; } }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text img {
+              width: 24px;
+              height: 24px;
+              margin-right: 8px; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            color: #3A3B3E;
+            justify-content: center; }
+            @media (max-width: 576px) {
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time {
+                box-sizing: border-box;
+                width: 234px;
+                border-radius: 5px 5px 0 0; } }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time span {
+              margin-right: 5px; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p {
+              margin: 0;
+              position: relative; }
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p:after {
+                content: ':'; }
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p:last-child:after {
+                content: none; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_buy {
+          border-radius: 0 5px 5px 0;
+          flex: 1; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_buy {
+              padding: 14px;
+              width: 234px;
+              border-radius: 0 0 5px 5px; } }
+  .raid-calendar_main .raid-calendar_calendar-switchers {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px; }
+    @media (max-width: 991px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers {
+        margin-bottom: 16px; } }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap; }
+      @media (max-width: 1280px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+          width: 85%; } }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+          width: 100%; } }
+      @media (max-width: 991px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+          justify-content: center; } }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+      padding: 0;
+      margin: 0 24px 0 0;
+      list-style: none;
+      display: flex;
+      width: calc(33% - 24px); }
+      @media (max-width: 1280px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+          margin-right: 10px;
+          width: calc(33% - 10px); } }
+      @media (max-width: 991px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+          width: calc( 50% - 10px);
+          margin-bottom: 16px; }
+          .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher:nth-child(even) {
+            margin-right: 0; } }
+      @media (max-width: 480px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+          width: 100%;
+          margin: 0 0 16px; } }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn {
+        display: flex;
+        box-sizing: border-box;
+        flex: 1;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #5f6062;
+        background: #DFDFDF; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn:first-child {
+          border-radius: 5px 0 0 5px; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn:last-child {
+          border-radius: 0 5px 5px 0; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn img {
+          max-width: 36px;
+          max-height: 24px;
+          margin-right: 30px; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn a {
+          width: 100%;
+          color: inherit;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 11px 16px; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn.active {
+          background: #43C8C0;
+          color: #FFFFFF; }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      @media (max-width: 1280px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
+          width: 15%; } }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
+          display: none; } }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_text {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-right: 8px; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time {
+        font-size: 16px;
+        line-height: 20px;
+        color: #3A3B3E;
+        margin: 0 0 2px;
+        text-align: right; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time span:after {
+          content: ':'; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time span:last-child:after {
+          content: none; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_date {
+        font-size: 11px;
+        line-height: 140%;
+        color: #3A3B3E;
+        margin: 0; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_image {
+        width: 24px;
+        height: 24px; }
+  .raid-calendar_main .raid-calendar_calendar {
+    margin-bottom: 47px;
+    display: flex;
+    flex-direction: column;
+    padding: 34px;
+    background: #FFFFFF;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+    border-radius: 5px; }
+    @media (max-width: 576px) {
+      .raid-calendar_main .raid-calendar_calendar {
+        padding: 16px; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_dates {
+      display: flex;
+      margin-bottom: 34px; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_list {
+        width: calc(100% - 95px); }
+        @media (max-width: 480px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_list {
+            width: calc(100% - 65px); } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        padding: 0 4px; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_month {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 140%;
+          color: #5f6062;
+          background: #efefef;
+          border-radius: 5px 5px 0 0;
+          text-align: center; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_num {
+          font-weight: 700;
+          font-size: 33px;
+          line-height: 42px;
+          color: #3A3B3E;
+          border: 1px solid #efefef;
+          border-radius: 0 0 5px 5px;
+          margin: 0 0 12px;
+          text-align: center; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_week-day {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 140%;
+          color: #5F6062;
+          text-align: center; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.current .date_month {
+          background: #43C8C0;
+          color: #FFFFFF; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.current .date_num {
+          border-color: #43C8C0; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows {
+        width: 95px;
+        display: flex; }
+        @media (max-width: 480px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows {
+            width: 65px; } }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow {
+          flex: 1;
+          border: 1px solid #D8D8D8;
+          background: url("../img/svg/arrow.svg") center center/24px 24px no-repeat;
+          border-radius: 0 5px 5px 0; }
+          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow.prev {
+            transform: rotate(180deg); }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 8px;
+      margin-bottom: 34px; }
+      @media (max-width: 1280px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+          grid-template-columns: repeat(4, 1fr); } }
+      @media (max-width: 1200px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+          grid-template-columns: 21% calc(26% - 8px) calc(26% - 8px) calc(26% - 8px); } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row:last-child {
+        margin-bottom: 0; }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+          grid-template-columns: auto;
+          grid-row-gap: 8px; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 2px solid #43C8C0;
+      padding: 32px 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #3A3B3E;
+      position: relative; }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
+          padding: 5px 32px;
+          flex-direction: row; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_num {
+        font-size: 73px;
+        line-height: 92px;
+        margin: 0; }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_num {
+            margin-right: 16px; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_month {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0;
+        flex: 1; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_image {
+        width: 48px;
+        height: 48px; }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_image {
+            display: none; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-radius: 5px;
+      padding: 16px;
+      background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%); }
+      @media (max-width: 1280px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid:last-child {
+          display: none; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale {
+        position: absolute;
+        width: 68px;
+        height: 68px;
+        top: 0;
+        left: 0;
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 5px 0 0 0;
+        background: url("../img/svg/raid_sale_BG.svg") center center/100% 100% no-repeat; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 14px;
+          color: #FFFFFF; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #b7c5c5;
+        margin-bottom: 16px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
+            padding-bottom: 5px;
+            margin-bottom: 5px; } }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date .date_block {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_time {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: #3A3B3E;
+        margin: 0; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_day {
+        font-size: 16px;
+        line-height: 140%;
+        color: #3A3B3E;
+        margin: 0; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_fraction {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 38px;
+        height: 48px; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_desc {
+        font-size: 16px;
+        line-height: 140%;
+        color: #3A3B3E;
+        margin: 0 0 16px; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
+        position: relative;
+        display: flex;
+        flex-direction: column; }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
+            flex-direction: row; } }
+        @media (max-width: 576px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
+            flex-direction: column; } }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px; }
+          @media (max-width: 1140px) {
+            .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block {
+              margin-right: 15px; } }
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block:last-child {
+            margin-bottom: 0; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_image {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_text {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 18px;
+          color: #3A3B3E;
+          margin: 0; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_server {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 36px;
+        height: auto; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price {
+          display: flex;
+          flex-direction: column; }
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_span {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 14px;
+            color: #3A3B3E;
+            margin: 0 0 4px; }
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_p {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            color: #3A3B3E;
+            margin: 0; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_btn {
+          width: 100px;
+          color: #FFFFFF;
+          padding: 14px 16px;
+          background: #3A3B3E; }
+  .raid-calendar_main .raid-calendar_boosting-steps {
+    margin-bottom: 38px; }
+
+.error {
+  color: #FFFFFF;
+  position: absolute;
+  top: 100px;
+  left: 160px; }
+  @media (max-width: 1345px) {
+    .error {
+      left: 10%; } }
+  @media (max-width: 767px) {
+    .error {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto 170px; } }
+  @media (max-width: 576px) {
+    .error {
+      max-width: 330px;
+      width: 100%; } }
+  .error .error_title {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 83px;
+    margin: 0 0 8px; }
+    @media (max-width: 576px) {
+      .error .error_title {
+        font-size: 32px;
+        line-height: 37px; } }
+  .error .error_text {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 32px; }
+    @media (max-width: 576px) {
+      .error .error_text {
+        font-size: 16px;
+        line-height: 20px; } }
+  .error .error_block {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    padding: 32px;
+    width: 430px;
+    box-sizing: border-box; }
+    @media (max-width: 576px) {
+      .error .error_block {
+        margin: 0 15px;
+        flex-direction: column;
+        width: calc(100% - 30px); } }
+    .error .error_block .block_text {
+      font-size: 16px;
+      line-height: 140%;
+      color: #3A3B3E;
+      margin: 0 32px 0 0; }
+      @media (max-width: 576px) {
+        .error .error_block .block_text {
+          text-align: center;
+          margin-right: 0;
+          margin-bottom: 32px; } }
+  .error .error_btn {
+    color: #FFFFFF;
+    padding: 14px;
+    width: 115px;
+    background: #3A3B3E; }
+
+.privacy-policy_main .privacy-policy_block {
+  max-width: 900px;
+  width: 100%;
+  padding: 48px 115px 64px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative; }
+  @media (max-width: 1024px) {
+    .privacy-policy_main .privacy-policy_block {
+      padding: 48px 48px 64px; } }
+  @media (max-width: 576px) {
+    .privacy-policy_main .privacy-policy_block {
+      padding: 16px 16px 24px; } }
+
+.privacy-policy_main .privacy-policy_text {
+  overflow: hidden;
+  transition: height 2.5s; }
+  @media (max-width: 576px) {
+    .privacy-policy_main .privacy-policy_text {
+      height: 270px; } }
+
+.privacy-policy_main .privacy-policy_btn {
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  width: calc(100% - 32px);
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px; }
+
+.refund-policy_main .refund-policy_block {
+  max-width: 900px;
+  width: 100%;
+  padding: 48px 115px 64px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative; }
+  @media (max-width: 1024px) {
+    .refund-policy_main .refund-policy_block {
+      padding: 48px 48px 64px; } }
+  @media (max-width: 576px) {
+    .refund-policy_main .refund-policy_block {
+      padding: 16px 16px 24px; } }
+
+.refund-policy_main .refund-policy_text {
+  overflow: hidden;
+  transition: height 2.5s; }
+  @media (max-width: 576px) {
+    .refund-policy_main .refund-policy_text {
+      height: 270px; } }
+
+.refund-policy_main .refund-policy_btn {
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  width: calc(100% - 32px);
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px; }

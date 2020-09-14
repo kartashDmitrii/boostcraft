@@ -1,11 +1,12 @@
 .index_main
+  padding: 40px 0 100px
   @media (max-width: 767px)
-    padding: 15px 15px 30px
+    padding: 15px 0 30px
   .main
     &_top-info
       display: grid
       grid-template-columns: 50% 50%
-      margin-bottom: 51px
+      margin: 0 40px 51px
       @media (max-width: 1380px)
         grid-template-columns: 40% 60%
       @media (max-width: 1280px)
@@ -14,6 +15,8 @@
         grid-row-gap: 20px
       @media (max-width: 767px)
         margin-bottom: 20px
+      @media (max-width: 576px)
+        margin: 0 15px 20px
       .top-info
         &_attention
           margin-right: 6.5px
@@ -401,9 +404,10 @@
       background: #FFFFFF
       padding: 20px 20px 0
       box-sizing: border-box
-      margin-bottom: 38px
       border-radius: 5px
+      margin: 0 40px 38px
       @media (max-width: 576px)
+        margin: 0 15px 38px
         flex-direction: column
         padding: 16px 0 0
       .best-sellers
@@ -526,6 +530,9 @@
       flex-direction: column
       align-items: center
       background: url("../img/shop_bg.png") right bottom / 100% auto no-repeat
+      padding: 0 40px
+      @media (max-width: 576px)
+        padding: 0 15px
       .shop
         &_title
           font-weight: 500
@@ -608,5 +615,19 @@
         &_grid
           margin-bottom: 55px
     &_boosting-steps
-      margin-bottom: 38px
-
+      margin: 0 40px 38px
+      @media (max-width: 576px)
+        margin-left: 15px
+        margin-right: 15px
+    &_advantages
+      margin-left: 40px
+      margin-right: 40px
+      @media (max-width: 576px)
+        margin-left: 15px
+        margin-right: 15px
+    &_seo-text
+      margin-left: 40px
+      margin-right: 40px
+      @media (max-width: 576px)
+        margin-left: 15px
+        margin-right: 15px

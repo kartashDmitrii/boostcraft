@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BoostCraft raid-calendar</title>
+    <link rel="stylesheet" href="css/lib.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <a href="/" class="header_logo">
+        <img class="logo_image" src="img/logo.svg" alt="logo">
+        <img class="logo_mobile-image" src="img/logo-mobile.svg" alt="logo">
+    </a>
+    <div class="header_mobile-sidebar-switcher">
+        <img src="img/svg/mobile-sidebar-switcher.svg" alt="mob-switcher">
+    </div>
+    <div class="header_toggle-version">
+        <a href="#" class="toggle-version_version">
+            <img class="toggle-version_image" src="img/svg/logo-classic.svg" alt="classic">
+        </a>
+        <a href="#" class="toggle-version_version current">
+            <img class="toggle-version_image" src="img/svg/logo-actual.svg" alt="actual">
+        </a>
+    </div>
+    <div class="header_mobile-menu">
+        <div class="header_menu">
+            <ul class="menu_list">
+                <li class="menu_href"><a class="menu_link" href="#">RAID CALENDAR</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">How to buy</a></li>
+                <li class="menu_href current"><a class="menu_link" href="#">ABOUT US</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">guarantees</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">FAQ</a></li>
+                <li class="menu_href"><a class="menu_link" href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="header_social">
+            <a href="#" class=" social_email social_link">
+                <img class="social_image" src="img/svg/email.svg" alt="email">
+            </a>
+            <a href="#" class=" social_skype social_link">
+                <img class="social_image" src="img/svg/skype.svg" alt="skype">
+            </a>
+            <a href="#" class=" social_discord social_link">
+                <img class="social_image" src="img/svg/discord.svg" alt="discord">
+            </a>
+        </div>
+        <div class="header_user-menu">
+            <button class="user-menu_color-theme user-menu_button">
+                <img class="user-menu_image" src="img/svg/color-theme-empty.svg" alt="color-theme">
+            </button>
+            <div class="user-menu_search user-menu_button">
+                <input class="search_field" type="text" name="search" placeholder="Search">
+                <a class="search_button"><img class="user-menu_image" src="img/svg/search.svg" alt="search"></a>
+            </div>
+        </div>
+    </div>
+    <div class="header_user-menu static">
+        <button class="user-menu_user user-menu_button">
+            <img class="user-menu_image" src="img/svg/user.svg" alt="user">
+        </button>
+        <button class="user-menu_cart user-menu_button">
+            <img class="user-menu_image" src="img/svg/cart.svg" alt="cart">
+            <span class="user-menu_count">0</span>
+        </button>
+        <button class="user-menu_mobile-switch user-menu_button">
+            <div class="switch"></div>
+        </button>
+    </div>
+</header>
+<div class="content index">
+    <aside class="aside">
+        <div class="aside_wrapper">
+            <div class="aside_menu">
+                <ul class="menu_list">
+                    <li class="menu_href"><a class="menu_link" href="#">BFA OFFERS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">NEW 8.3 OFFERS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">PVP SERVICES</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">PVE SERVICES</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">POWERLEVELING</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">FARMING</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">ACHIEVEMENTS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">MOUNTS</a></li>
+                </ul>
+            </div>
+            <div class="aside_login">
+                <a class="login_link" href="#">Register</a>
+                <span class="login_separate">or</span>
+                <a class="login_link" href="#">Log in</a>
+            </div>
+            <div class="aside_review">
+                <img class="review_logo" src="img/star-logo.svg" alt="star-logo">
+                <img class="review_rating" src="img/small-stars.svg" alt="small-stars">
+                <p class="review_text">Check out our 191 reviews</p>
+            </div>
+        </div>
+    </aside>
+    <main class="raid-calendar_main main">
+        <div class="raid-calendar_breadcrumbs breadcrumbs">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="current"><span>Some page</span></li>
+            </ul>
+        </div>
+        <div class="raid-calendar_title block_title">Calendar Event Manager</div>
+        <div class="raid-calendar_top-select">
+            <div class="top-select_info">
+                <div class="info_image">
+                    <img src="img/svg/crystal.svg" alt="crystal">
+                </div>
+                <h2 class="info_title">Rapid Boost</h2>
+                <p class="info_text">Start in 15-60 min after purchase</p>
+            </div>
+            <div class="top-select_settings">
+                <div class="setting_instruction">
+                    <p class="instruction_step">Select your faction</p>
+                    <p class="instruction_step">Make an order</p>
+                    <p class="instruction_step">Get contacted via support</p>
+                    <p class="instruction_step">Be boosted!</p>
+                </div>  
+                <ul class="setting_switcher">
+                    <li class="switcher_btn active"><a href="#">Mythic+ Dungeons</a></li>
+                    <li class="switcher_btn"><a href="#">Leveling Retail</a></li>
+                    <li class="switcher_btn"><a href="#">Leveling Classic</a></li>
+                    <li class="switcher_btn"><a href="#">Farm Services</a></li>
+                    <li class="switcher_btn"><a href="#">Shadowlands Gearing</a></li>
+                </ul>
+                <div class="setting_switchers">
+                    <ul class="setting_switcher setting_fraction-switcher">
+                        <li class="switcher_btn horde active"><a href="#">
+                            <img src="img/svg/horde-emblem.svg" alt="horde">
+                        </a></li>
+                        <li class="switcher_btn alliance active"><a href="#">
+                            <img src="img/svg/alliance-emblem.svg" alt="alliance">
+                        </a></li>
+                    </ul>
+                    <div class="setting_clock">
+                        <p class="clock_text"><img src="img/svg/clock.svg" alt="clock">Next Group:</p>
+                        <div class="clock_time">
+                            <span>~</span>
+                            <p class="hours">00</p>
+                            <p class="minutes">06</p>
+                            <p class="seconds">28</p>
+                        </div>
+                    </div>
+                    <a href="#" class="setting_buy btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="raid-calendar_calendar-switchers">
+            <div class="calendar-switchers_switchers">
+                <ul class="calendar-switchers_switcher region">
+                    <li class="switcher_btn"><a href="#">
+                        <img src="img/svg/es_flag.svg" alt="es">
+                        EU
+                    </a></li>
+                    <li class="switcher_btn active"><a href="#">
+                        <img src="img/svg/america_flag.svg" alt="america">
+                        US
+                    </a></li>
+                </ul>
+                <ul class="calendar-switchers_switcher fraction">
+                    <li class="switcher_btn"><a href="#">
+                        All
+                    </a></li>
+                    <li class="switcher_btn"><a href="#">
+                        Alliance
+                    </a></li>
+                    <li class="switcher_btn"><a href="#">
+                        Horde
+                    </a></li>
+                </ul>
+                <ul class="calendar-switchers_switcher level">
+                    <li class="switcher_btn"><a href="#">
+                        Normal
+                    </a></li>
+                    <li class="switcher_btn"><a href="#">
+                        Heroic
+                    </a></li>
+                    <li class="switcher_btn"><a href="#">
+                        Mythic
+                    </a></li>
+                </ul>
+            </div>
+            <div class="calendar-switchers_current-time">
+                <div class="current-time_text">
+                    <p class="current-time_time"><span class="hours">19</span><span class="minute">24</span></p>
+                    <p class="current-time_date">
+                        <span class="month">August</span>
+                        <span class="date">11</span>,
+                        <span class="year">2020</span>
+                    </p>
+                </div>
+                <div class="current-time_image">
+                    <img src="img/svg/clock_grey.svg" alt="clock_grey">
+                </div>
+            </div>
+        </div>
+        <div class="raid-calendar_calendar">
+            <div class="calendar_dates">
+                <div class="dates_list">
+                    <div class="dates_wrapper">
+                        <div class="dates_slider">
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date current">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                            <a href="#" class="dates_date">
+                                <span class="date_month">Aug</span>
+                                <span class="date_num">11</span>
+                                <span class="date_week-day">Friday</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dates_arrows">
+                    <div class="arrows_arrow prev"></div>
+                    <div class="arrows_arrow next"></div>
+                </div>
+            </div>
+            <div class="calendar_raids">
+                <div class="raids_row">
+                    <div class="raids_day">
+                        <h2 class="day_num">11</h2>
+                        <p class="day_month">August</p>
+                        <div class="day_image">
+                            <img src="img/svg/corner-down-right.svg" alt="cdr">
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="raids_row">
+                    <div class="raids_day">
+                        <h2 class="day_num">11</h2>
+                        <p class="day_month">August</p>
+                        <div class="day_image">
+                            <img src="img/svg/corner-down-right.svg" alt="cdr">
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="raids_raid">
+                        <div class="raid_sale">
+                            <p class="sale_percent">15 <span>%</span></p>
+                            <p>Off</p>
+                        </div>
+                        <div class="raid_date">
+                            <div class="date_block">
+                                <p class="raid_time">21:00</p>
+                                <p class="raid_day">11.08</p>
+                            </div>
+                            <div class="raid_fraction">
+                                <img src="img/svg/alliance-emblem.svg" alt="ae">
+                            </div>
+                        </div>
+                        <p class="raid_desc">
+                            Ny’alotha, the waking city heroic run.
+                        </p>
+                        <div class="raid_info">
+                            <div class="info_block raid_person">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_person.svg" alt="rp">
+                                </div>
+                                <p class="info_text person_count">
+                                    <span class="person_now">2</span>
+                                    /
+                                    <span class="person_max">6</span>
+                                </p>
+                            </div>
+                            <div class="info_block raid_level">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_level.svg" alt="rl">
+                                </div>
+                                <p class="info_text">mythic</p>
+                            </div>
+                            <div class="info_block raid_loot">
+                                <div class="info_image">
+                                    <img src="img/svg/raid_loot.svg" alt="rlo">
+                                </div>
+                                <p class="info_text">Personal Loot</p>
+                            </div>
+                            <div class="raid_server">
+                                <img src="img/svg/america_flag.svg" alt="america">
+                            </div>
+                        </div>
+                        <div class="raid_buy">
+                            <div class="buy_price">
+                                <span class="price_span">From</span>
+                                <p class="price_p"><span>€</span>32.15</p>
+                            </div>
+                            <a href="#" class="buy_btn btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="raid-calendar_boosting-steps boosting-steps">
+            <h2 class="boosting-steps_title">Fast & easy boosting steps</h2>
+            <div class="boosting-steps_wrapper">
+                <div class="boosting-steps_step">
+                    <span class="step_number">1</span>
+                    <div class="step_image">
+                        <img src="img/svg/step1.svg" alt="s1" class="step_img">
+                    </div>
+                    <p class="step_name">Choose the service</p>
+                    <p class="step_description">Choose the service you would like to order. And contact operator
+                        in case you need any additional information about the product</p>
+                </div>
+                <div class="boosting-steps_step">
+                    <span class="step_number">2</span>
+                    <div class="step_image">
+                        <img src="img/svg/step2.svg" alt="s2" class="step_img">
+                    </div>
+                    <p class="step_name">ADD TO CART</p>
+                    <p class="step_description">Add the products you would like to order to cart and continue
+                        shoping. You can always remoove the unwanted services from your cart</p>
+                </div>
+                <div class="boosting-steps_step">
+                    <span class="step_number">3</span>
+                    <div class="step_image">
+                        <img src="img/svg/step3.svg" alt="s3" class="step_img">
+                    </div>
+                    <p class="step_name">Order the services</p>
+                    <p class="step_description">Order services you would like to be completed by simply pressing
+                        checkout inside your cart and complete the payment process</p>
+                </div>
+                <div class="boosting-steps_step">
+                    <span class="step_number">4</span>
+                    <div class="step_image">
+                        <img src="img/svg/step4.svg" alt="s4" class="step_img">
+                    </div>
+                    <p class="step_name">be boosted</p>
+                    <p class="step_description">Once your payment went through, our Customer Support will contact
+                        you via Skype or E-mail to organise your boost</p>
+                </div>
+            </div>
+        </div>
+        <div class="raid-calendar_advantages advantages">
+            <h2 class="advantages_title">Advantages of using our services</h2>
+            <div class="advantages_wrapper">
+                <div class="advantages_advantage">
+                    <div class="advantage_image">
+                        <img src="img/svg/advantage1.svg" alt="a1" class="advantage_img">
+                    </div>
+                    <p class="advantage_title">SAFE SERVICES</p>
+                    <p class="advantage_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div class="advantages_advantage">
+                    <div class="advantage_image">
+                        <img src="img/svg/advantage2.svg" alt="a2" class="advantage_img">
+                    </div>
+                    <p class="advantage_title">INFORMATIVENESS</p>
+                    <p class="advantage_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div class="advantages_advantage">
+                    <div class="advantage_image">
+                        <img src="img/svg/advantage3.svg" alt="a3" class="advantage_img">
+                    </div>
+                    <p class="advantage_title">SELF PLAY</p>
+                    <p class="advantage_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div class="advantages_advantage">
+                    <div class="advantage_image">
+                        <img src="img/svg/advantage4.svg" alt="a4" class="advantage_img">
+                    </div>
+                    <p class="advantage_title">VPN</p>
+                    <p class="advantage_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+            </div>
+        </div>
+        <div class="raid-calendar_seo-text seo-text">
+            <h2 class="seo-text_title">Seo text heading</h2>
+            <div class="seo-text_block shadow">
+                <p>We always use clean VPN for each our customer so it looks like you have logged from PC of your
+                    neighbor. All the services are live-streamed for your comfort. We never give our orders to
+                    random boosters as other websites do. Most of our services can be done without account sharing
+                    (Selfplay) We always use clean VPN for each our customer so it looks like you have logged from
+                    PC of your neighbor. All the services are live-streamed for your comfort.</p>
+                <p>We always use clean VPN for each our customer so it looks like you have logged from PC of your
+                    neighbor. All the services are live-streamed for your comfort. We never give our orders to
+                    random boosters as other websites do. Most of our services can be done without account sharing
+                    (Selfplay) We always use clean VPN for each our customer so it looks like you have logged from
+                    PC of your neighbor. All the services are live-streamed for your comfort.</p>
+            </div>
+            <button class="seo-text_button">Read more</button>
+        </div>
+    </main>
+</div>
+<footer class="footer">
+    <div class="footer_left">
+        <div class="footer_logo">
+            <img src="img/logo-white.svg" alt="logo">
+        </div>
+        <div class="footer_socials">
+            <a href="" class="footer_social">
+                <img src="img/svg/footer_social_fb.svg" alt="fb">
+            </a>
+            <a href="" class="footer_social">
+                <img src="img/svg/footer_social_inst.svg" alt="inst">
+            </a>
+        </div>
+    </div>
+    <div class="footer_right">
+        <div class="right_top">
+            <div class="footer_review">
+                <img class="review_logo" src="img/star-logo-white.svg" alt="star-logo">
+                <img class="review_rating" src="img/small-stars.svg" alt="small-stars">
+                <p class="review_text">Check out our 191 reviews</p>
+            </div>
+            <div class="footer_menus">
+                <div class="menus_our-policies menus_menu">
+                    <p class="menus_title">OUR POLICIES</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="">Privacy policy</a></li>
+                        <li class="menus_href"><a class="menus_link" href="">Refund policy</a></li>
+                        <li class="menus_href"><a class="menus_link" href="">Terms & conditions</a></li>
+                    </ul>
+                </div>
+                <div class="menus_get-in-touch menus_menu">
+                    <p class="menus_title">GET IN TOUCH</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="">Contact us</a></li>
+                        <li class="menus_href"><a class="menus_link" href="">Work with us</a></li>
+                    </ul>
+                </div>
+                <div class="menus_navigation menus_menu">
+                    <p class="menus_title">NAVIGATION</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right_bottom">
+            <p class="footer_term-of-use">
+                World of Warcraft tm and Blizzard Entertainment are registered trademarks of Blizzard Entertainment
+                Inc. In U.S.A. and/or other countries.These terms and all related materials, logos, and images are
+                copyright © Blizzard Entertainment. Boostcraft is in no way associated with or endorsed by Blizzard
+                Entertainment™. Boostcraft is not selling wow ingame items, only offers you diffirent services to
+                make your ingame skill better and gifting you ingame items.Boostcraft.net 2013 - 2020 . All Rights
+                Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="js/lib.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

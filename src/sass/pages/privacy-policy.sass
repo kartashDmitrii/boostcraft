@@ -1,0 +1,29 @@
+.privacy-policy_main
+  .privacy-policy
+    &_block
+      max-width: 900px
+      width: 100%
+      padding: 48px 115px 64px
+      box-sizing: border-box
+      background: rgba(255, 255, 255, 0.5)
+      backdrop-filter: blur(10px)
+      border-radius: 5px
+      margin: 0 auto
+      position: relative
+      @media (max-width: 1024px)
+        padding: 48px 48px 64px
+      @media (max-width: 576px)
+        padding: 16px 16px 24px
+    &_text
+      overflow: hidden
+      transition: height 2.5s
+      @media (max-width: 576px)
+        height: 270px
+    &_btn
+      position: absolute
+      bottom: 24px
+      left: 16px
+      width: calc(100% - 32px)
+      margin: 0
+      font-weight: 500
+      font-size: 18px

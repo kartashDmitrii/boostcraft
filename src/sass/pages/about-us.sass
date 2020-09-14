@@ -6,10 +6,28 @@
       display: flex
       align-items: flex-start
       margin-bottom: 40px
+      @media (max-width: 1150px)
+        flex-direction: column
       .top-block
         &_image
           min-width: 427px
           margin-right: 40px
+          @media (max-width: 1150px)
+            width: 100%
+            margin-right: 0
+            height: 150px
+            overflow: hidden
+            min-width: auto
+            img
+              object-position: center -400px
+              @media (max-width: 1050px)
+                object-position: center -350px
+              @media (max-width: 912px)
+                object-position: center -300px
+              @media (max-width: 612px)
+                object-position: center -225px
+              @media (max-width: 480px)
+                object-position: center -125px
         &_content
           display: flex
           flex-direction: column
@@ -22,6 +40,10 @@
           display: flex
           flex-direction: column
           align-items: flex-start
+          position: relative
+          z-index: 2
+          @media (max-width: 1150px)
+            width: 100%
           .duty
             &_title
               font-weight: 500
@@ -33,6 +55,8 @@
               display: flex
               flex-direction: column
               margin-bottom: 20px
+              @media (max-width: 1150px)
+                width: 100%
             &_block
               padding: 15px 16px 15px 52px
               position: relative
@@ -44,7 +68,10 @@
               font-weight: 700
               font-size: 16px
               line-height: 140%
+              box-sizing: border-box
               color: $text-color-dark
+              @media (max-width: 1150px)
+                min-width: auto
               &:last-child
                 margin-bottom: 0
               &:before
@@ -71,19 +98,47 @@
               line-height: 140%
               color: $text-color-dark
               margin: 0
+              @media (max-width: 1150px)
+                width: 100%
     &_company
       display: flex
       margin-bottom: 48px
+      position: relative
       .company
         &_image
           width: 310px
           margin-left: 40px
           position: relative
+          @media (max-width: 991px)
+            position: absolute
+            right: 0
+            top: 0
+            left: 0
+            margin: auto
+            width: 100%
+          @media (max-width: 360px)
+            width: 260px
           img
             position: absolute
             width: 310px
             height: auto
             bottom: 0
+            right: 0
+            @media (max-width: 1350px)
+              width: 210px
+            @media (max-width: 991px)
+              z-index: 0
+              left: 0
+              bottom: auto
+              top: 0
+              margin: auto
+              opacity: .3
+              width: 310px
+            @media (max-width: 360px)
+              width: 260px
+        &_content
+          position: relative
+          z-index: 1
         &_title
           font-weight: 500
           font-size: 24px
@@ -103,6 +158,11 @@
           box-sizing: border-box
           border-radius: 5px
           position: relative
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          color: $text-color-dark
+          background: #FFFFFF
           &:before
             content: ''
             width: 24px
@@ -115,13 +175,23 @@
             background: url("../img/svg/about-us_arrow.svg") center center / 100% 100% no-repeat
     &_goals
       display: flex
+      @media (max-width: 1275px)
+        flex-direction: column
+      @media (max-width: 991px)
+        flex-direction: column-reverse
       .goals
         &_image
           min-width: 660px
           margin-left: 40px
+          @media (max-width: 1275px)
+            width: 100%
+            margin-left: 0
+            min-width: auto
         &_content
           display: flex
           flex-direction: column
+          @media (max-width: 1275px)
+            margin-bottom: 16px
         &_title
           font-weight: 500
           font-size: 24px
