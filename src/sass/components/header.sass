@@ -9,9 +9,10 @@
   justify-content: space-between
   transition: width .3s
   width: 100%
+  z-index: 12
   &.fixed
     position: fixed
-    z-index: 11
+    z-index: 12
   @media (max-width: 1365px)
     padding: 0 20px
   @media (max-width: 1280px)
@@ -199,9 +200,12 @@
         background: transparent
         cursor: pointer
         box-sizing: border-box
+        outline: none
         @media (max-width: 1500px)
           margin-right: 5px
       &_cart
+        position: relative
+      &_cart-btn
         position: relative
       &_count
         position: absolute
@@ -258,7 +262,8 @@
         display: none
         @media (max-width: 1280px)
           display: block
-        div
+        span
+          display: block
           width: 18px
           height: 2px
           background: $text-color-grey
@@ -288,7 +293,7 @@
             transition: all .3s
             transform: rotate(0)
         &.active
-          div
+          span
             width: 0
             &:before
               top: 11px
@@ -375,6 +380,4 @@
     @media (max-width: 1024px)
       width: 30%
     @media (max-width: 767px)
-      width: 220px
-    @media (max-width: 576px)
       width: 100%

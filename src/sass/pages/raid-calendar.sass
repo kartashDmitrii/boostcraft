@@ -394,6 +394,29 @@
           display: flex
           margin-bottom: 34px
           .dates
+            &_wrapper
+              position: relative
+              overflow: hidden
+              &:before
+                content: ''
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                height: 100%
+                width: 0
+                box-shadow: 0 0 100px 100px #FFFFFF
+                z-index: 5
+              &:after
+                content: ''
+                position: absolute
+                top: 0
+                bottom: 0
+                right: 0
+                height: 100%
+                width: 0
+                box-shadow: 0 0 100px 100px #FFFFFF
+                z-index: 5
             &_list
               width: calc(100% - 95px)
               @media (max-width: 480px)
@@ -427,7 +450,7 @@
                   line-height: 140%
                   color: #5F6062
                   text-align: center
-              &.current
+              &.active
                 .date
                   &_month
                     background: $second-color
@@ -445,6 +468,7 @@
                   border: 1px solid #D8D8D8
                   background: url("../img/svg/arrow.svg") center center / 24px 24px no-repeat
                   border-radius: 0 5px 5px 0
+                  cursor: pointer
                   &.prev
                     transform: rotate(180deg)
         &_raids

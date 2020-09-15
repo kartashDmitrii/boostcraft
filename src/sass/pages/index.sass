@@ -7,11 +7,12 @@
       display: grid
       grid-template-columns: 50% 50%
       margin: 0 40px 51px
+      grid-auto-rows: auto
+      align-items: flex-start
       @media (max-width: 1380px)
         grid-template-columns: 40% 60%
       @media (max-width: 1280px)
         grid-template-columns: 100%
-        grid-auto-rows: auto
         grid-row-gap: 20px
       @media (max-width: 767px)
         margin-bottom: 20px
@@ -180,6 +181,9 @@
                     &_row
                       display: flex
                       flex-direction: column
+                      margin-right: 5px
+                      &:last-child
+                        margin-right: 0
                     &_elem
                       display: flex
                       justify-content: center
@@ -189,6 +193,9 @@
                       position: relative
                       padding: 5px
                       text-decoration: none
+                      margin-bottom: 5px
+                      &:last-child
+                        margin-bottom: 0
                       &:before
                         content: ''
                         position: absolute

@@ -1,0 +1,194 @@
+.cart-header
+  position: fixed
+  top: 55px
+  right: 0
+  width: 390px
+  padding: 40px 40px 0
+  box-sizing: border-box
+  background: $second-color
+  color: #FFFFFF
+  height: calc(100vh - 55px)
+  flex-direction: column
+  overflow-y: scroll
+  scrollbar-width: thin
+  scrollbar-color: #888 #f1f1f1
+  transition: all .3s
+  display: flex
+  transform: translateX(110%)
+  &::-webkit-scrollbar
+    width: 2px
+  &::-webkit-scrollbar-track
+    background: #f1f1f1
+  &::-webkit-scrollbar-thumb
+    background: #888
+    border-radius: 5px
+  &::-webkit-scrollbar-thumb:hover
+    background: #555
+  &.active
+    transform: translateX(0)
+  @media (max-width: 767px)
+    width: 100vw
+    padding: 40px 25px 0
+  .cart-header
+    &_title
+      font-weight: 700
+      font-size: 24px
+      line-height: 30px
+      padding-bottom: 16px
+      margin: 0 0 28px
+      border-bottom: 1px solid #64DCD5
+    &_products
+      display: grid
+      grid-template-columns: 1fr
+      grid-auto-rows: auto
+      grid-row-gap: 16px
+      flex: 1
+      margin-bottom: 48px
+    &_product
+      display: flex
+      flex-direction: column
+      .product
+        &_head
+          display: flex
+          align-items: center
+          margin-bottom: 22px
+        &_image
+          min-width: 40px
+          height: 40px
+          margin-right: 16px
+        &_name
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          margin: 0
+          color: inherit
+          text-decoration: none
+        &_info-block
+          display: flex
+          flex-direction: column
+          margin-bottom: 24px
+        &_info
+          display: flex
+          justify-content: space-between
+          p
+            font-weight: 500
+            font-size: 12px
+            line-height: 140%
+            text-transform: uppercase
+            margin: 0 0 8px
+          &:last-child
+            p
+              margin-bottom: 0
+        &_edit-block
+          display: flex
+          align-items: center
+          padding-bottom: 24px
+          border-bottom: 1px solid #64DCD5
+          .edit-block
+            &_count
+              display: flex
+              height: 46px
+              margin-right: 16px
+              @media (max-width: 360px)
+                height: 34px
+              .count
+                &_btn
+                  width: 40px
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  border: none
+                  border-radius: 5px
+                  background: #64DCD5
+                  color: #FFFFFF
+                  font-size: 21px
+                  @media (max-width: 360px)
+                    width: 30px
+                &_value
+                  margin: 0 3px
+                  border-radius: 5px
+                  border: 1px solid #64DCD5
+                  background: transparent
+                  width: 54px
+                  text-align: center
+                  outline: none
+                  color: #FFFFFF
+                  -moz-appearance: textfield
+                  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+                    margin: 0
+                  @media (max-width: 360px)
+                    width: 45px
+            &_btns
+              display: flex
+              flex: 1
+              a
+                width: 24px
+                height: 24px
+                margin-right: 16px
+                &:last-child
+                  margin-right: 0
+        &_price
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          margin: 0
+    &_for-sellers
+      display: flex
+      flex-direction: column
+      font-weight: 500
+      font-size: 12px
+      line-height: 140%
+      text-transform: uppercase
+      margin-bottom: 16px
+      .for-sellers
+        &_message
+          box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+          border-radius: 5px
+          padding: 14px 20px
+          text-transform: none
+          font-weight: 500
+          font-size: 13px
+          line-height: 140%
+          color: $text-color-dark
+          outline: none
+          width: 100%
+          box-sizing: border-box
+          resize: none
+          border: none
+          margin-top: 10px
+    &_total
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 16px
+      .total
+        &_title
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          margin: 0
+        &_price
+          font-weight: 700
+          font-size: 24px
+          line-height: 30px
+          margin: 0
+    &_alert
+      font-size: 11px
+      line-height: 140%
+      padding-top: 9px
+      border-top: 1px solid #64DCD5
+      margin: 0 0 24px
+    &_btns
+      display: flex
+      justify-content: space-between
+      padding-bottom: 40px
+      .btn
+        padding: 14px
+        width: calc(50% - 4px)
+        @media (max-width: 360px)
+          padding: 7px
+    &_ref
+      border: 2px solid #FFFFFF
+    &_check-out
+      background: $text-color-dark

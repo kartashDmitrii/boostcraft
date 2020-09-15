@@ -1,0 +1,268 @@
+.checkout_main
+  .checkout
+    &_content
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 40px
+      grid-auto-rows: auto
+      align-items: flex-start
+      @media (max-width: 1200px)
+        grid-template-columns: 1fr
+    &_products
+      background: #343A45
+      border-radius: 5px
+      padding: 32px
+      .products
+        &_title
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: #FFFFFF
+          margin: 0 0 16px
+        &_total
+          display: flex
+          justify-content: space-between
+          margin-top: 24px
+          @media (max-width: 1350px)
+            flex-wrap: wrap
+          .total
+            &_discount
+              display: flex
+              align-items: center
+              @media (max-width: 480px)
+                width: 100%
+              form
+                @media (max-width: 480px)
+                  flex: 1
+              .discount
+                &_field
+                  padding: 14px 20px
+                  font-weight: 500
+                  font-size: 13px
+                  line-height: 140%
+                  color: $text-color-dark
+                  border-radius: 5px
+                  margin-right: 8px
+                  border: none
+                  outline: none
+                  @media (max-width: 480px)
+                    width: 100%
+                &_btn
+                  background: transparent
+                  border-radius: 5px
+                  box-sizing: border-box
+                  border: 2px solid #43c8c0
+                  padding: 14px
+            &_price
+              display: flex
+              align-items: center
+              color: $text-color-white
+              font-weight: 700
+              @media (max-width: 1350px)
+                width: 100%
+                justify-content: flex-end
+                margin-top: 10px
+              @media (max-width: 480px)
+                justify-content: space-between
+                margin-top: 24px
+              .price
+                &_title
+                  font-size: 16px
+                  line-height: 140%
+                  margin: 0 24px 0 0
+                &_sum
+                  font-size: 24px
+                  line-height: 30px
+                  margin: 0
+    &_express
+      display: flex
+      flex-direction: column
+      padding: 32px 0 0
+      background: #FFFFFF
+      border-radius: 5px
+      box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+      @media (max-width: 480px)
+        padding-top: 24px
+      .express
+        &_title
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: $text-color-dark
+          margin: 0 0 32px
+          padding: 0 32px
+          box-sizing: border-box
+          @media (max-width: 480px)
+            padding: 0 24px
+        &_refs
+          display: flex
+          justify-content: space-between
+          padding: 0 32px
+          box-sizing: border-box
+          margin-bottom: 32px
+          @media (max-width: 480px)
+            flex-direction: column
+            padding: 0 24px
+          .btn
+            width: calc(50% - 8px)
+            padding: 14px
+            @media (max-width: 480px)
+              width: 100%
+              margin-bottom: 16px
+              &:last-child
+                margin-bottom: 0
+            img
+              height: 20px
+              width: auto
+          input
+            display: none
+            opacity: 0
+          .refs
+            &_gpay
+              background: #000000
+            &_paypal
+              background: #FFC43A
+        &_registration
+          background: #F8F8F8
+          position: relative
+          padding: 32px
+          box-sizing: border-box
+          @media (max-width: 480px)
+            padding: 24px
+          .registration
+            &_text
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              margin: 0 auto
+              transform: translateY(-50%)
+              padding: 4px 16px
+              border-radius: 12px
+              background: $second-color
+              text-transform: uppercase
+              color: #FFFFFF
+              font-weight: 500
+              font-size: 12px
+              line-height: 140%
+              width: max-content
+            &_head
+              display: flex
+              justify-content: space-between
+              @media (max-width: 1350px)
+                flex-direction: column-reverse
+            &_title
+              font-weight: 500
+              font-size: 24px
+              line-height: 30px
+              color: $text-color-dark
+              margin: 0 0 24px
+            &_login
+              display: flex
+              align-items: center
+              font-weight: 500
+              font-size: 12px
+              line-height: 140%
+              @media (max-width: 1350px)
+                margin-bottom: 16px
+              .login
+                &_text
+                  margin: 0 5px 0 0
+                  color: $text-color-dark
+                &_ref
+                  color: $second-color
+                  text-decoration: none
+            &_label
+              width: 100%
+              font-weight: 500
+              font-size: 12px
+              line-height: 140%
+              text-transform: uppercase
+              color: $text-color-grey
+              margin: 0 0 24px
+              display: flex
+              flex-direction: column
+              input
+                width: 100%
+                border-radius: 5px
+                box-sizing: border-box
+                padding: 14px 20px
+                font-weight: 500
+                font-size: 13px
+                line-height: 140%
+                color: $text-color-dark
+                border: none
+                outline: none
+                margin-top: 10px
+                -moz-appearance: textfield
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                  -webkit-appearance: none
+                  margin: 0
+            &_row
+              display: grid
+              grid-template-columns: 1fr 1fr
+              grid-column-gap: 20px
+              @media (max-width: 480px)
+                grid-template-columns: 1fr
+            &_checkbox
+              display: flex
+              font-size: 13px
+              line-height: 140%
+              font-weight: 500
+              color: $text-color-dark
+              margin-bottom: 32px
+              position: relative
+              padding-left: 32px
+              cursor: pointer
+              input[type='checkbox']
+                position: absolute
+                opacity: 0
+                cursor: pointer
+              span
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                margin: auto
+                height: 24px
+                width: 24px
+                border: 1px solid #efefef
+                box-sizing: border-box
+                border-radius: 5px
+                background-color: #FFFFFF
+                &:after
+                  content: ''
+                  position: absolute
+                  display: none
+                  top: 6px
+                  left: 9px
+                  width: 4px
+                  height: 6px
+                  transform: rotate(45deg)
+                  border: solid $second-color
+                  border-width: 0 1px 1px 0
+                  z-index: 2
+              input:checked ~ span:after
+                display: block
+              input
+                display: none
+              p
+                margin: 0
+                a
+                  color: inherit
+            &_btns
+              display: flex
+              justify-content: space-between
+              @media (max-width: 480px)
+                flex-direction: column
+              .btn
+                padding: 14px
+                img
+                  width: 24px
+                  height: 24px
+                  margin-right: 20px
+            &_return
+              background: #efefef
+              color: $text-color-dark
+              @media (max-width: 480px)
+                margin-bottom: 16px

@@ -17,6 +17,9 @@ body
         background-position: center left
     main
       background-color: $body-color
+  &.hidden
+    height: 100vh
+    overflow: hidden
 main
   width: 83%
   box-sizing: border-box
@@ -36,8 +39,6 @@ aside
   @media (max-width: 1024px)
     width: 22.5%
   @media (max-width: 767px)
-    width: 220px
-  @media (max-width: 576px)
     width: 100%
 img
   width: 100%
@@ -62,6 +63,7 @@ img
   text-decoration: none
   box-sizing: border-box
   cursor: pointer
+  outline: none
 
 .block_title
   font-weight: 700

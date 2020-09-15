@@ -1,5 +1,6 @@
 //Подключаем модули галпа
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -62,6 +63,7 @@ function scripts() {
    // .pipe(uglify({
    //    toplevel: true
    // }))
+   .pipe(babel())
    .pipe(gulp.dest('./build/js'))
    .pipe(browserSync.stream());
 }

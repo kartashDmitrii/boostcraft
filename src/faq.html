@@ -26,7 +26,7 @@
             <img class="toggle-version_image" src="img/svg/logo-actual.svg" alt="actual">
         </a>
     </div>
-    <div class="header_mobile-menu">
+    <div class="header_mobile-menu menu-bar">
         <div class="header_menu">
             <ul class="menu_list">
                 <li class="menu_href"><a class="menu_link" href="#">RAID CALENDAR</a></li>
@@ -62,28 +62,109 @@
         <button class="user-menu_user user-menu_button">
             <img class="user-menu_image" src="img/svg/user.svg" alt="user">
         </button>
-        <button class="user-menu_cart user-menu_button">
-            <img class="user-menu_image" src="img/svg/cart.svg" alt="cart">
-            <span class="user-menu_count">0</span>
-        </button>
-        <button class="user-menu_mobile-switch user-menu_button">
-            <div class="switch"></div>
+        <div class="user-menu_cart">
+            <button class="user-menu_cart-btn user-menu_button">
+                <img class="user-menu_image" src="img/svg/cart.svg" alt="cart">
+                <span class="user-menu_count">0</span>
+            </button>
+            <div class="user-menu_cart-header cart-header menu-bar">
+                <h4 class="cart-header_title">Your cart</h4>
+                <form class="cart-header_products">
+                    <div class="cart-header_product">
+                        <div class="product_head">
+                            <a href="#" class="product_image">
+                                <img src="img/boost_run.png" alt="brc">
+                            </a>
+                            <a href="#" class="product_name">Ny'alotha, The Waking City Heroic Boost Run</a>
+                        </div>
+                        <div class="product_info-block">
+                            <div class="product_info">
+                                <p class="info_option">LEVEL OF KEY:</p>
+                                <p class="info_value">+10 IN TIME</p>
+                            </div>
+                            <div class="product_info">
+                                <p class="info_option">EXTRA LOOT:</p>
+                                <p class="info_value">NO EXTRA LOOT</p>
+                            </div>
+                            <div class="product_info">
+                                <p class="info_option">DUNGEON:</p>
+                                <p class="info_value">RANDOM DUNGEON</p>
+                            </div>
+                            <div class="product_info">
+                                <p class="info_option">CHOOSE YOUR REGION:</p>
+                                <p class="info_value">EU</p>
+                            </div>
+                        </div>
+                        <div class="product_edit-block">
+                            <div class="edit-block_count">
+                                <button class="count_btn count_minus">-</button>
+                                <input type="number" class="count_value">
+                                <button class="count_btn count_plus">+</button>
+                            </div>
+                            <div class="edit-block_btns">
+                                <a href="#" class="product_edit">
+                                    <img src="img/svg/edit.svg" alt="edit">
+                                </a>
+                                <a href="#" class="product_delete">
+                                    <img src="img/svg/trash.svg" alt="trash">
+                                </a>
+                            </div>
+                            <p class="product_price"><span>€</span>17.95</p>
+                        </div>
+                    </div>
+                </form>
+                <form class="cart-header_for-sellers">
+                    <label class="for-sellers_label">
+                        SPECIAL INSTRUCTIONS FOR SELLER
+                        <textarea name="message_for_sellers" class="for-sellers_message"></textarea>
+                    </label>
+                </form>
+                <div class="cart-header_total">
+                    <p class="total_title">Subtotal:</p>
+                    <h2 class="total_price">€17.95</h2>
+                </div>
+                <p class="cart-header_alert">Shipping, taxes, and discounts calculated at checkout.</p>
+                <div class="cart-header_btns">
+                    <a href="#" class="cart-header_ref btn">shopping cart</a>
+                    <a href="#" class="cart-header_check-out btn">check out</a>
+                </div>
+                <div class="cart-header_close"></div>
+            </div>
+        </div>
+        <button class="user-menu_mobile-switch menu-bar-btn user-menu_button">
+            <span class="switch"></span>
         </button>
     </div>
 </header>
 <div class="content index">
-    <aside class="aside">
+    <aside class="aside menu-bar">
         <div class="aside_wrapper">
             <div class="aside_menu">
                 <ul class="menu_list">
-                    <li class="menu_href"><a class="menu_link" href="#">BFA OFFERS</a></li>
+                    <!--<li class="menu_href"><a class="menu_link" href="#">BFA OFFERS</a></li>
                     <li class="menu_href"><a class="menu_link" href="#">NEW 8.3 OFFERS</a></li>
                     <li class="menu_href"><a class="menu_link" href="#">PVP SERVICES</a></li>
                     <li class="menu_href"><a class="menu_link" href="#">PVE SERVICES</a></li>
                     <li class="menu_href"><a class="menu_link" href="#">POWERLEVELING</a></li>
                     <li class="menu_href"><a class="menu_link" href="#">FARMING</a></li>
                     <li class="menu_href"><a class="menu_link" href="#">ACHIEVEMENTS</a></li>
-                    <li class="menu_href"><a class="menu_link" href="#">MOUNTS</a></li>
+                    <li class="menu_href"><a class="menu_link" href="#">MOUNTS</a></li>-->
+                    <li class="menu_href"><a class="menu_link" href="404.html">404 page</a></li>
+                    <li class="menu_href"><a class="menu_link" href="about-us.html">about-us</a></li>
+                    <li class="menu_href"><a class="menu_link" href="category.html">category</a></li>
+                    <li class="menu_href"><a class="menu_link" href="contact-us.html">contact-us</a></li>
+                    <li class="menu_href"><a class="menu_link" href="faq.html">faq</a></li>
+                    <li class="menu_href"><a class="menu_link" href="how-to-buy.html">how-to-buy</a></li>
+                    <li class="menu_href"><a class="menu_link" href="my-account.html">my-account</a></li>
+                    <li class="menu_href"><a class="menu_link" href="my-account-edit.html">my-account-edit</a></li>
+                    <li class="menu_href"><a class="menu_link" href="privacy-policy.html">privacy-policy</a></li>
+                    <li class="menu_href"><a class="menu_link" href="raid-calendar.html">raid-calendar</a></li>
+                    <li class="menu_href"><a class="menu_link" href="refund-policy.html">refund-policy</a></li>
+                    <li class="menu_href"><a class="menu_link" href="some-page.html">some-page</a></li>
+                    <li class="menu_href"><a class="menu_link" href="tovar.html">tovar</a></li>
+                    <li class="menu_href"><a class="menu_link" href="cart.html">cart</a></li>
+                    <li class="menu_href"><a class="menu_link" href="checkout.html">checkout</a></li>
+                    <li class="menu_href"><a class="menu_link" href="successfully-paid.html">successfully-paid</a></li>
                 </ul>
             </div>
             <div class="aside_login">
