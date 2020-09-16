@@ -114,6 +114,7 @@
                       justify-content: center
                       border: none
                       outline: none
+                      cursor: pointer
                       @media (max-width: 1200px)
                         width: 30px
                     &_value
@@ -217,9 +218,9 @@
           font-size: 12px
           line-height: 140%
           color: $text-color-grey
-          margin: 0 0 12px
+          padding: 12px 0
           border-bottom: 1px solid #43C8C0
-          margin-bottom: 24px
+          margin: 0 0 24px
         &_btns
           display: flex
           justify-content: space-between
@@ -234,5 +235,12 @@
         &_update-cart
           background: transparent
           border: 2px solid #43C8C0
+          &:hover
+            background: #FFFFFF
           @media (max-width: 380px)
             margin-bottom: 10px
+        &_check-out
+          &:hover
+            color: #FFFFFF
+            background: $text-color-dark
+            border-color: #FFFFFF

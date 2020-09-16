@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/lib.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="dark-theme">
 <header class="header">
     <a href="/" class="header_logo">
-        <img class="logo_image" src="img/logo.svg" alt="logo">
+        <img class="logo_image" data-dark="img/logo-black.svg" data-light="img/logo.svg" src="img/logo.svg" alt="logo">
         <img class="logo_mobile-image" src="img/logo-mobile.svg" alt="logo">
     </a>
     <div class="header_mobile-sidebar-switcher">
@@ -96,10 +96,10 @@
                             </div>
                         </div>
                         <div class="product_edit-block">
-                            <div class="edit-block_count">
-                                <button class="count_btn count_minus">-</button>
-                                <input type="number" class="count_value">
-                                <button class="count_btn count_plus">+</button>
+                            <div class="edit-block_count qty">
+                                <button class="count_btn count_minus minus">-</button>
+                                <input type="number" class="count_value" value="1">
+                                <button class="count_btn count_plus plus">+</button>
                             </div>
                             <div class="edit-block_btns">
                                 <a href="#" class="product_edit">
@@ -173,7 +173,7 @@
                     <a class="login_link" href="#">Log in</a>
                 </div>
                 <div class="aside_review">
-                    <img class="review_logo" src="img/star-logo.svg" alt="star-logo">
+                    <img class="review_logo" data-dark="img/star-logo-white.svg" data-light="img/star-logo.svg" src="img/star-logo.svg" alt="star-logo">
                     <img class="review_rating" src="img/small-stars.svg" alt="small-stars">
                     <p class="review_text">Check out our 191 reviews</p>
                 </div>
@@ -289,16 +289,16 @@
                                 </div>
                                 <div class="slide_text-field">
                                     <p class="slide_text">Next M+ group</p>
-                                    <div class="slide_timer">
-                                        <div class="timer_hours">
-                                            <p>9</p>
+                                    <div class="slide_timer timer">
+                                        <div class="timer_hours hours">
+                                            <p>09</p>
                                             <span>hr</span>
                                         </div>
-                                        <div class="timer_minute">
+                                        <div class="timer_minute minute">
                                             <p>04</p>
                                             <span>min</span>
                                         </div>
-                                        <div class="timer_second">
+                                        <div class="timer_second second">
                                             <p>00</p>
                                             <span>sec</span>
                                         </div>
@@ -312,16 +312,16 @@
                                 </div>
                                 <div class="slide_text-field">
                                     <p class="slide_text">Next M+ group</p>
-                                    <div class="slide_timer">
-                                        <div class="timer_hours">
-                                            <p>9</p>
+                                    <div class="slide_timer timer">
+                                        <div class="timer_hours hours">
+                                            <p>09</p>
                                             <span>hr</span>
                                         </div>
-                                        <div class="timer_minute">
+                                        <div class="timer_minute minute">
                                             <p>04</p>
                                             <span>min</span>
                                         </div>
-                                        <div class="timer_second">
+                                        <div class="timer_second second">
                                             <p>00</p>
                                             <span>sec</span>
                                         </div>
@@ -335,16 +335,16 @@
                                 </div>
                                 <div class="slide_text-field">
                                     <p class="slide_text">Next M+ group</p>
-                                    <div class="slide_timer">
-                                        <div class="timer_hours">
-                                            <p>9</p>
+                                    <div class="slide_timer timer">
+                                        <div class="timer_hours hours">
+                                            <p>09</p>
                                             <span>hr</span>
                                         </div>
-                                        <div class="timer_minute">
+                                        <div class="timer_minute minute">
                                             <p>04</p>
                                             <span>min</span>
                                         </div>
-                                        <div class="timer_second">
+                                        <div class="timer_second second">
                                             <p>00</p>
                                             <span>sec</span>
                                         </div>
@@ -371,17 +371,17 @@
                                 </div>
                                 <div class="slide_info">
                                     <div class="info_text">Next in:</div>
-                                    <div class="info_timer">
-                                        <div class="timer_hours">
-                                            <p>9</p>
+                                    <div class="info_timer timer">
+                                        <div class="timer_hours hours">
+                                            <p>00</p>
                                             <span>hr</span>
                                         </div>
-                                        <div class="timer_minute">
-                                            <p>04</p>
+                                        <div class="timer_minute minute">
+                                            <p>01</p>
                                             <span>min</span>
                                         </div>
-                                        <div class="timer_second">
-                                            <p>00</p>
+                                        <div class="timer_second second">
+                                            <p>10</p>
                                             <span>sec</span>
                                         </div>
                                     </div>
@@ -395,16 +395,16 @@
                                 </div>
                                 <div class="slide_info">
                                     <div class="info_text">Next in:</div>
-                                    <div class="info_timer">
-                                        <div class="timer_hours">
-                                            <p>9</p>
+                                    <div class="info_timer timer">
+                                        <div class="timer_hours hours">
+                                            <p>00</p>
                                             <span>hr</span>
                                         </div>
-                                        <div class="timer_minute">
-                                            <p>04</p>
+                                        <div class="timer_minute minute">
+                                            <p>01</p>
                                             <span>min</span>
                                         </div>
-                                        <div class="timer_second">
+                                        <div class="timer_second second">
                                             <p>00</p>
                                             <span>sec</span>
                                         </div>
@@ -468,15 +468,15 @@
                 <h2 class="shop_title">Choose what you want to boosting</h2>
                 <div class="shop_menu">
                     <div class="menu_wrapper">
-                        <ul class="menu_list">
-                            <li class="menu_href current"><a class="menu_link" href="#">NEW 8.3 Offers</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">WoW Classic</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">BFA Raids</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">Dungeons & Mythic+</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">Leveling & Farm</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">Achievements & FoS</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">PvP</a></li>
-                            <li class="menu_href"><a class="menu_link" href="#">Packages</a></li>
+                        <ul class="menu_list custom-switcher">
+                            <li class="menu_href switcher_btn active"><a class="menu_link" href="#">NEW 8.3 Offers</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">WoW Classic</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">BFA Raids</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">Dungeons & Mythic+</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">Leveling & Farm</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">Achievements & FoS</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">PvP</a></li>
+                            <li class="menu_href switcher_btn"><a class="menu_link" href="#">Packages</a></li>
                         </ul>
                     </div>
                 </div>
@@ -727,15 +727,15 @@
     </div>
     <footer class="footer">
     <div class="footer_left">
-        <div class="footer_logo">
-            <img src="img/logo-white.svg" alt="logo">
-        </div>
+        <a href="#" class="footer_logo">
+            <img src="img/logo-white.svg" data-dark="img/logo-black.svg" data-light="img/logo-white.svg" alt="logo">
+        </a>
         <div class="footer_socials">
-            <a href="" class="footer_social">
-                <img src="img/svg/footer_social_fb.svg" alt="fb">
+            <a href="#" class="footer_social">
+                <img data-dark="img/svg/black-footer_social_fb.svg" data-light="img/svg/footer_social_fb.svg" src="img/svg/footer_social_fb.svg" alt="fb">
             </a>
-            <a href="" class="footer_social">
-                <img src="img/svg/footer_social_inst.svg" alt="inst">
+            <a href="#" class="footer_social">
+                <img data-dark="img/svg/black-footer_social_inst.svg" data-light="img/svg/footer_social_inst.svg" src="img/svg/footer_social_inst.svg" alt="inst">
             </a>
         </div>
     </div>

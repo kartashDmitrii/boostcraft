@@ -1,5 +1,17 @@
 main
-  background: url("../img/shop_bg.png") right top / 100% auto no-repeat
+  position: relative
+  transition: all .3s
+  z-index: 0
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    height: 0
+    padding-bottom: 100%
+    background: url("../img/shop_bg.png") right top / 100% auto no-repeat
+    z-index: -1
 body
   font-family: Geometria
   min-height: 100vh
@@ -50,8 +62,7 @@ img
 .btn
   background: $second-color
   border-radius: 5px
-  border: none
-  padding: 7px
+  padding: 5px
   font-weight: 700
   font-size: 12px
   line-height: 15px
@@ -64,6 +75,12 @@ img
   box-sizing: border-box
   cursor: pointer
   outline: none
+  border: 2px solid $second-color
+  transition: all .3s
+  &:hover
+    color: $second-color
+    border-color: $second-color
+    background: #FFFFFF
 
 .block_title
   font-weight: 700
@@ -89,7 +106,7 @@ img
     font-weight: 500
     font-size: 18px
     line-height: 140%
-  b
+  b,strong
     display: block
     font-weight: 700
     font-size: 16px
@@ -113,3 +130,19 @@ img
         left: 0
         border-radius: 50%
         background: $second-color
+
+
+.dark-theme
+  &>.content
+    main
+      background: $dark-body-color
+      &:after
+        background: url("../img/dark-shop_bg.png") right top / 100% auto no-repeat
+  .btn
+    background: $dark-second-color
+    border-color: $dark-second-color
+    transition: all .3s
+    &:hover
+      color: $dark-second-color
+      border-color: $dark-second-color
+      background: #FFFFFF

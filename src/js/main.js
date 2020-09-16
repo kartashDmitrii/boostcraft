@@ -259,16 +259,6 @@ if (document.querySelector('.header_mobile-sidebar-switcher') && document.queryS
 
 /* header mobile sidebar switcher */
 
-/* change color-theme*/
-if (document.querySelector('.user-menu_color-theme')) {
-    document.querySelector('.user-menu_color-theme').addEventListener('click', function () {
-        this.classList.toggle('active')
-        document.body.classList.toggle('dark-theme')
-    })
-}
-
-/* change color-theme*/
-
 /* open/hide seo-text   */
 
 if (document.querySelector('.seo-text_button')) {
@@ -293,13 +283,27 @@ if (document.querySelector('.category_filters')) {
         filter.querySelector('.filter_name').addEventListener('click', function () {
             let filterLinks = filter.querySelector('.filter_links')
             let filterLinksHeight = parseInt(window.getComputedStyle(filterLinks).getPropertyValue('height'))
+            let eventFlag = false
             document.querySelectorAll('.filters_filter').forEach( elem => {
                 if (elem.classList.contains('active')) {
                     elem.classList.remove('active')
                     elem.querySelector('.filter_links').style.height = '0'
                     elem.querySelector('.filter_links').style.padding = '0 20px 0'
+                    if (eventFlag){
+                        document.removeEventListener('click', hideFilter)
+                    }
                 }
             })
+            let hideFilter = (event) => {
+                eventFlag = true
+                if (!event.target.closest('.filters_filter.active')){
+                    filter.classList.remove('active')
+                    filterLinks.style.height = '0'
+                    filterLinks.style.padding = '0 20px 0'
+                    document.removeEventListener('click', hideFilter)
+                }
+
+            }
             filter.classList.toggle('active')
             if (filterLinksHeight === 0) {
                 filterLinks.style.height = `${filterLinks.scrollHeight}px`
@@ -308,11 +312,15 @@ if (document.querySelector('.category_filters')) {
                 filterLinks.style.height = '0'
                 filterLinks.style.padding = '0 20px 0'
             }
+            setTimeout(()=>{
+                document.addEventListener('click', hideFilter)
+            })
+
         })
     })
 }
 
-/* open/hide on full-size   */
+/* open/hide on full-size filters  */
 
 /* best-sellers slider  */
 
@@ -604,7 +612,7 @@ if (document.querySelector('.cart-header')) {
 
 /* shop switch  */
 
-/* custom_switcher  */
+/* custom class switcher  */
 
 if (document.querySelector('.custom-switcher')){
     document.querySelectorAll('.custom-switcher').forEach( switcher => {
@@ -620,4 +628,143 @@ if (document.querySelector('.custom-switcher')){
     })
 }
 
-/* custom_switcher  */
+/* custom class switcher  */
+
+/* custom_multiple select   */
+
+if (document.querySelector('.custom-multiple-select')){
+    document.querySelectorAll('.custom-multiple-select').forEach( select => {
+        select.addEventListener('click', (event)=>{
+            if (event.target.closest('.custom-multiple-option')){
+                event.target.closest('.custom-multiple-option').classList.toggle('active')
+            }
+        })
+    })
+}
+
+/* custom_multiple select   */
+
+/* popup show/hide  */
+
+if (document.querySelector('*[data-popup]')){
+    document.querySelectorAll('.popup').forEach( popup => {
+        popup.querySelector('.popup_close').addEventListener('click', (event)=>{
+            event.preventDefault()
+            popup.classList.remove('active')
+            document.querySelector('.popup-wrapper').classList.remove('active')
+        })
+    })
+    document.querySelector('.popup-wrapper').addEventListener('click', function (event){
+        event.stopPropagation()
+        if (this.classList.contains('active') && !event.target.closest('.popup')){
+            this.classList.remove('active')
+            document.querySelectorAll('.popup').forEach( popup => {
+                popup.classList.remove('active')
+            })
+        }
+    })
+    document.querySelectorAll('*[data-popup]').forEach( btn => {
+        btn.addEventListener('click', function (){
+            document.querySelector('.popup-wrapper').classList.add('active')
+            document.querySelectorAll('.popup').forEach( popup => {
+                popup.classList.remove('active')
+            })
+            document.querySelector(`.popup-wrapper .${this.dataset.popup}`).classList.add('active')
+        })
+    })
+}
+
+/* popup show/hide  */
+
+/* timer    */
+
+if (document.querySelector('.timer')){
+    document.querySelectorAll('.timer').forEach( timer => {
+        document.addEventListener("DOMContentLoaded", function() {
+            timerInterval = setInterval( timerStart, 1000, timer);
+        });
+        let timerInterval;
+        function timerStart (timerName){
+            let currentTimer = timerName;
+            if (currentTimer.querySelector('.hours p')) {
+                var hours = parseInt(currentTimer.querySelector('.hours p').innerText);
+            }
+            if (currentTimer.querySelector('.minute p')) {
+                var minute = parseInt(currentTimer.querySelector('.minute p').innerText);
+            }
+            if (currentTimer.querySelector('.second p')) {
+                var second = parseInt(currentTimer.querySelector('.second p').innerText);
+            }
+            if (currentTimer.querySelector('.millisecond p')) {
+                var millisecond = parseInt(currentTimer.querySelector('.millisecond p').innerText);
+            }
+            let timer = 0;
+            if (hours){
+                timer += (hours * 60 * 60 * 1000)
+            }
+            if (minute){
+                timer += (minute * 60 * 1000)
+            }
+            if (second){
+                timer += (second * 1000)
+            }
+            if (millisecond){
+                timer += (millisecond * 10)
+            }
+            if (timer === 0){
+                clearInterval(timerInterval)
+            } else {
+                timer -= 1000;
+            }
+            if (currentTimer.querySelector('.hours p')) {
+                let result = Math.floor((timer - (timer % 3600000)) / 3600000);
+                while(result.toString().length < 2){
+                    result = '0'+ result
+                }
+                currentTimer.querySelector('.hours p').innerText = result;
+            }
+            if (currentTimer.querySelector('.minute p')) {
+                let result = Math.floor((timer % 3600000) / 60000);
+                while(result.toString().length < 2){
+                    result = '0'+ result
+                }
+                currentTimer.querySelector('.minute p').innerText = result;
+            }
+            if (currentTimer.querySelector('.second p')) {
+                let result = Math.floor((timer % 60000) / 1000);
+                while(result.toString().length < 2){
+                    result = '0'+ result
+                }
+                currentTimer.querySelector('.second p').innerText = result;
+            }
+            if (currentTimer.querySelector('.millisecond p')) {
+                let result = Math.floor((timer % 1000) / 10);
+                while(result.toString().length < 2){
+                    result = '0'+ result
+                }
+                currentTimer.querySelector('.millisecond p').innerText = result;
+            }
+        }
+    })
+}
+
+/* timer    */
+
+/* change color-theme*/
+if (document.querySelector('.user-menu_color-theme')) {
+    document.querySelector('.user-menu_color-theme').addEventListener('click', function () {
+        this.classList.toggle('active')
+        document.body.classList.toggle('dark-theme')
+        if (document.querySelector('img[data-dark]')){
+            document.querySelectorAll('img[data-dark]').forEach( image => {
+                if (document.body.classList.contains('dark-theme')) {
+                    image.src = image.dataset.dark
+                } else {
+                    image.src = image.dataset.light
+                }
+            })
+        }
+    })
+}
+
+/* change color-theme*/

@@ -126,6 +126,7 @@
             margin-left: 0
         &_block
           position: relative
+          transition: all .3s
           background: #FFFFFF
           box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
           border-radius: 5px
@@ -177,13 +178,13 @@
                       height: 35px
                       margin: 0 10px 0 0
                 &_wrapper
+                  &>div>div:last-child .grid_row
+                    margin-right: 0
                   .grid
                     &_row
                       display: flex
                       flex-direction: column
-                      margin-right: 5px
-                      &:last-child
-                        margin-right: 0
+                      margin: 0 2.5px
                     &_elem
                       display: flex
                       justify-content: center
@@ -194,6 +195,10 @@
                       padding: 5px
                       text-decoration: none
                       margin-bottom: 5px
+                      transition: all .3s
+                      &:hover
+                        .grid_text
+                          color: #FFFFFF
                       &:last-child
                         margin-bottom: 0
                       &:before
@@ -203,6 +208,7 @@
                         top: 0
                         bottom: 0
                         margin: auto
+                        transition: all .3s
                     &_text
                       font-weight: 500
                       font-size: 13px
@@ -210,18 +216,27 @@
                       text-transform: uppercase
                       color: #000
                       margin: 0 0 0 10px
+                      transition: all .3s
                     &_alliance
                       border-color: $alliance-color
                       &:before
                         width: 16px
                         height: 20px
                         background: url("../img/svg/alliance-emblem.svg") center center / 100% 100% no-repeat
+                      &:hover
+                        background: $alliance-color
+                        &:before
+                          filter: brightness(0) invert(1)
                     &_horde
                       border-color: $horde-color
                       &:before
                         width: 12px
                         height: 21px
                         background: url("../img/svg/horde-emblem.svg") center center / 100% 100% no-repeat
+                      &:hover
+                        background: $horde-color
+                        &:before
+                          filter: brightness(0) invert(1)
         &_boost-timers
           padding: 11px 18px 22px
           box-sizing: border-box
@@ -278,17 +293,23 @@
                       margin-bottom: 8px
                       div
                         width: 48px
-                        margin-right: 5px
+                        padding-right: 12px
                         position: relative
                         display: flex
                         flex-direction: column
                         justify-content: center
+                        @media (max-width: 600px)
+                          width: 40px
+                          padding-right: 12px
                         p
                           color: $second-color
                           margin: 0
                           font-size: 36px
                           line-height: 34px
                           text-align: center
+                          @media (max-width: 600px)
+                            font-size: 31px
+                            line-height: 30px
                         span
                           color: $text-color-dark
                           font-size: 11px
@@ -299,17 +320,17 @@
                           position: absolute
                           top: 0
                           bottom: 0
-                          right: -3px
+                          right: 4px
                           margin: 0 auto 16px
                           display: flex
                           align-items: center
-                          font-size: 14px
+                          font-size: 18px
                         &:last-child
                           margin-right: 0
                           &:after
                             content: none
                     &_btn
-                      width: 90%
+                      width: 95%
         &_boost-timers2
           display: flex
           flex-direction: column
@@ -367,17 +388,23 @@
                         margin-right: 0
                       div
                         width: 48px
-                        margin-right: 5px
+                        padding-right: 12px
                         position: relative
                         display: flex
                         flex-direction: column
                         justify-content: center
+                        @media (max-width: 600px)
+                          width: 40px
+                          padding-right: 12px
                         p
                           color: $second-color
                           margin: 0
                           font-size: 36px
                           line-height: 34px
                           text-align: center
+                          @media (max-width: 600px)
+                            font-size: 31px
+                            line-height: 30px
                         span
                           color: $text-color-dark
                           font-size: 11px
@@ -388,11 +415,11 @@
                           position: absolute
                           top: 0
                           bottom: 0
-                          right: -3px
+                          right: 4px
                           margin: 0 auto 16px
                           display: flex
                           align-items: center
-                          font-size: 14px
+                          font-size: 18px
                         &:last-child
                           margin-right: 0
                           &:after
@@ -611,7 +638,7 @@
                   text-transform: uppercase
                   display: flex
                   border-bottom: 2px solid $text-color-grey
-                  &.current
+                  &.active
                     border-color: $second-color
                     color: $text-color-dark
                   &:last-child

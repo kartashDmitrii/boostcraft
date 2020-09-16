@@ -1,0 +1,106 @@
+.popup-wrapper
+  position: fixed
+  width: 100vw
+  height: 100vh
+  background: rgba(0, 0, 0, 0.5)
+  backdrop-filter: blur(10px)
+  z-index: 11
+  display: none
+  &.active
+    display: block
+  .popup
+    position: absolute
+    left: 0
+    right: 0
+    top: 155px
+    margin: auto
+    z-index: 12
+    width: 660px
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+    border-radius: 5px
+    background: #FFFFFF
+    box-sizing: border-box
+    display: none
+    &.active
+      display: flex
+  .default-popup
+    flex-direction: column
+    .popup
+      &_head
+        padding: 21px 32px
+        background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%)
+        border-radius: 5px 5px 0 0
+      &_name
+        font-weight: 700
+        font-size: 16px
+        line-height: 140%
+        margin: 0
+        color: $text-color-dark
+      &_body
+        display: flex
+        flex-direction: column
+        padding: 32px 32px 25px
+      &_instruction
+        display: flex
+        flex-direction: column
+        font-weight: 500
+        font-size: 12px
+        line-height: 140%
+        color: $text-color-grey
+        label
+          display: flex
+          flex-direction: column
+          margin-bottom: 16px
+        textarea
+          margin-top: 10px
+          min-height: 95px
+          resize: none
+          box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
+          border-radius: 5px
+          padding: 14px 20px
+          font-weight: 500
+          font-size: 13px
+          outline: none
+          line-height: 140%
+          color: $text-color-dark
+      &_text
+        font-size: 16px
+        line-height: 140%
+        color: $text-color-dark
+        margin: 0 0 32px
+      &_buttons
+        display: flex
+        padding-top: 25px
+        border-top: 1px solid #D8D8D8
+        justify-content: center
+      &_btn
+        margin-right: 16px
+        padding: 14px
+        width: 110px
+        &:last-child
+          margin-right: 0
+      &_cancel
+        background: #efefef
+        border-color: #efefef
+        color: $text-color-dark
+        &:hover
+          background: $text-color-dark
+          color: #EFEFEF
+      &_save
+        color: $text-color-white
+        background: $text-color-dark
+        border-color: $text-color-dark
+        &:hover
+          color: $text-color-dark
+          background-color: $text-color-white
+      &_close
+        position: absolute
+        width: 24px
+        height: 24px
+        top: 20px
+        right: 32px
+        background: url("../img/svg/close_grey.svg") center center / 100% 100% no-repeat
+        cursor: pointer
+        transition: all .1s
+        &:hover
+          filter: brightness(0) invert(1)

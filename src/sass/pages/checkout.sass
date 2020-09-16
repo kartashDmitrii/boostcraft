@@ -53,6 +53,8 @@
                   box-sizing: border-box
                   border: 2px solid #43c8c0
                   padding: 14px
+                  &:hover
+                    background: #FFFFFF
             &_price
               display: flex
               align-items: center
@@ -120,8 +122,10 @@
           .refs
             &_gpay
               background: #000000
+              border-color: #000000
             &_paypal
               background: #FFC43A
+              border-color: #FFC43A
         &_registration
           background: #F8F8F8
           position: relative
@@ -172,6 +176,8 @@
                 &_ref
                   color: $second-color
                   text-decoration: none
+                  &:hover
+                    text-decoration: underline
             &_label
               width: 100%
               font-weight: 500
@@ -263,6 +269,16 @@
                   margin-right: 20px
             &_return
               background: #efefef
+              border-color: #efefef
               color: $text-color-dark
+              &:hover
+                color: #EFEFEF
+                background: $text-color-dark
+                border-color: $text-color-dark
               @media (max-width: 480px)
                 margin-bottom: 16px
+            &_submit
+              &:hover
+                color: #FFFFFF
+                background: $text-color-dark
+                border-color: $text-color-dark

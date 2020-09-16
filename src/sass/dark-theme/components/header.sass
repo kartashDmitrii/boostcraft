@@ -1,0 +1,31 @@
+.dark-theme
+  .header
+    background: #3B3E50
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.13)
+    &_toggle-version
+      .toggle-version
+        &_version
+          &:hover:after
+            background: $dark-second-color-light
+          &.current
+            &:after
+              background: $dark-second-color
+    &_menu
+      .menu
+        &_href
+          color: $dark-text-color-grey
+          &:hover:after
+            background: $dark-second-color-light
+          &.current
+            color: $text-color-white
+            &:after
+              background: $dark-second-color
+    &_user-menu
+      .user-menu
+        &_button
+          img
+            filter: brightness(0) invert(1)
+            &:hover
+              filter: none
+        &_count
+          background: $dark-second-color

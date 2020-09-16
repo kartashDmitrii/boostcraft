@@ -96,10 +96,10 @@
                             </div>
                         </div>
                         <div class="product_edit-block">
-                            <div class="edit-block_count">
-                                <button class="count_btn count_minus">-</button>
-                                <input type="number" class="count_value">
-                                <button class="count_btn count_plus">+</button>
+                            <div class="edit-block_count qty">
+                                <button class="count_btn count_minus minus">-</button>
+                                <input type="number" class="count_value" value="1">
+                                <button class="count_btn count_plus plus">+</button>
                             </div>
                             <div class="edit-block_btns">
                                 <a href="#" class="product_edit">
@@ -186,7 +186,7 @@
                 <li class="current"><span>Some page</span></li>
             </ul>
         </div>
-        <div class="some-page_title block_title">Some text</div>
+        <div class="some-page_title block_title">Popup</div>
         <div class="some-page_text text">
             <p>You will get fast Alterac Valley wins boosting your Honor and reputation with Alterac Valley PvP
                 factions. Our professional player will log into your account and securely complete the required
@@ -255,9 +255,29 @@
         </div>
     </div>
 </footer>
-<div class="wrapper">
+<div class="popup-wrapper">
     <div class="popup default-popup">
-
+        <div class="popup_head">
+            <h2 class="popup_name">Express checkout</h2>
+        </div>
+        <div class="popup_body">
+            <form class="popup_instruction">
+                <label>
+                    SPECIAL INSTRUCTIONS FOR SELLER
+                    <textarea name="instruction"></textarea>
+                </label>
+                <p class="popup_text">
+                    We value your privacy as much as we value the quality of our services. Rest assured, we do not spy
+                    on you. The only information stored on our website is the one freely given by you. And, we keep it
+                    secure and away from prying eyes.
+                </p>
+                <div class="popup_buttons">
+                    <button class="popup_btn btn popup_cancel" type="button">Cancel</button>
+                    <button class="popup_btn btn popup_save" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="popup_close"></div>
     </div>
 </div>
 <script src="js/lib.js"></script>
