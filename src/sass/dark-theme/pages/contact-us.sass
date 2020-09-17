@@ -1,0 +1,36 @@
+.dark-theme
+  .contact-us_main
+    .contact-us
+      &_contact-info
+        .contact-info
+          &_info
+            background: $dark-block-color
+            border-color: $dark-border-color
+            .info
+              &_block
+                color: $text-color-white
+              &_phone
+                &:before
+                  filter: brightness(0) invert(1)
+              &_mail
+                &:before
+                  filter: brightness(0) invert(1)
+              &_social
+                .social
+                  &_text
+                    color: $text-color-white
+                  &_link
+                    filter: brightness(0) invert(1)
+          &_form
+            background: $dark-block-color
+            .form
+              &_title
+                color: $text-color-white
+              &_label
+                color: $dark-text-color-grey
+                &.required
+                  span
+                    &:after
+                      color: $dark-second-color
+              &_required
+                color: $dark-second-color

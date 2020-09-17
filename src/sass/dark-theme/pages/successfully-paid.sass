@@ -1,0 +1,18 @@
+.dark-theme
+  .success
+    background: $dark-block-color
+    .success
+      &_title
+        color: $text-color-white
+      &_text
+        color: $dark-text-color-grey
+      &_social
+        .social
+          &_link
+            color: $text-color-white
+            border-color: $dark-second-color
+            &:hover
+              background: $dark-second-color
+          &_email
+            img
+              filter: brightness(0) invert(1)

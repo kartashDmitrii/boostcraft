@@ -232,10 +232,20 @@ if (document.querySelector('.user-menu_mobile-switch')) {
 
 
 if (document.querySelector('header')) {
+  var mainPadding;
+
+  if (document.querySelector('main')) {
+    mainPadding = parseInt(window.getComputedStyle(document.querySelector('main')).getPropertyValue('padding-top'));
+  }
+
   document.addEventListener('scroll', function () {
     if (pageYOffset > 0) {
       if (document.querySelector('main')) {
-        document.querySelector('main').style.marginTop = '55px';
+        document.querySelector('main').style.paddingTop = "".concat(55 + mainPadding, "px");
+        document.querySelector('main').classList.add('fixed');
+      } else {
+        document.querySelector('.bg').style.paddingTop = "55px";
+        document.querySelector('.bg').classList.add('fixed');
       }
 
       document.querySelector('header').classList.add('fixed');
@@ -245,7 +255,11 @@ if (document.querySelector('header')) {
       }
     } else {
       if (document.querySelector('main')) {
-        document.querySelector('main').style.marginTop = '0';
+        document.querySelector('main').style.paddingTop = "".concat(mainPadding, "px");
+        document.querySelector('main').classList.remove('fixed');
+      } else {
+        document.querySelector('.bg').style.paddingTop = "0";
+        document.querySelector('.bg').classList.remove('fixed');
       }
 
       document.querySelector('header').classList.remove('fixed');
@@ -376,7 +390,7 @@ if (document.querySelector('.best-sellers_slider')) {
     selector: '.best-sellers_slider',
     perPage: {
       0: 1,
-      1140: 2
+      1200: 2
     },
     startIndex: 0,
     loop: true
@@ -520,6 +534,7 @@ if (document.querySelector('.shop_menu .menu_list')) {
   var mouseMoveMenuList = function mouseMoveMenuList(event) {
     this.scrollLeft = this.scrollLeft + (startCordX - event.clientX);
     startCordX = event.clientX;
+    addShadowToMenuList();
     addShadowToMenuList();
   };
 
@@ -866,20 +881,25 @@ if (document.querySelector('.timer')) {
 /* change color-theme*/
 
 
+function checkColorTheme() {
+  if (document.querySelector('img[data-dark]')) {
+    document.querySelectorAll('img[data-dark]').forEach(function (image) {
+      if (document.body.classList.contains('dark-theme')) {
+        image.src = image.dataset.dark;
+      } else {
+        image.src = image.dataset.light;
+      }
+    });
+  }
+}
+
+checkColorTheme();
+
 if (document.querySelector('.user-menu_color-theme')) {
   document.querySelector('.user-menu_color-theme').addEventListener('click', function () {
     this.classList.toggle('active');
     document.body.classList.toggle('dark-theme');
-
-    if (document.querySelector('img[data-dark]')) {
-      document.querySelectorAll('img[data-dark]').forEach(function (image) {
-        if (document.body.classList.contains('dark-theme')) {
-          image.src = image.dataset.dark;
-        } else {
-          image.src = image.dataset.light;
-        }
-      });
-    }
+    checkColorTheme();
   });
 }
 /* change color-theme*/

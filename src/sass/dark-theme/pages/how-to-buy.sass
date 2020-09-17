@@ -1,0 +1,25 @@
+.dark-theme
+  .how-to-buy_main
+    .how-to-buy
+      &_note
+        background: $dark-block-color
+        .note
+          &_text
+            color: $text-color-white
+            &:before
+              background-image: url("../img/svg/how-to-buy_note-dark.svg")
+      &_steps
+        .steps
+          &_step
+            background: rgba(95, 98, 116, .5)
+            &:after
+              background-image: url("../img/svg/how-to-buy_arrow-dark.svg")
+            .step
+              &_number
+                background: $dark-block-color2
+                color: $text-color-white
+              &_image
+                background: $dark-second-color
+              &_text
+                *
+                  color: $dark-text-color-grey

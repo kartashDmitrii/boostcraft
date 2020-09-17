@@ -1,6 +1,6 @@
 main
   position: relative
-  transition: all .3s
+  transition: color .3s, background .3s
   z-index: 0
   &:after
     content: ''
@@ -8,10 +8,12 @@ main
     top: 0
     right: 0
     width: 100%
-    height: 0
-    padding-bottom: 100%
+    height: 100%
     background: url("../img/shop_bg.png") right top / 100% auto no-repeat
     z-index: -1
+  &.fixed
+    &:after
+      top: 55px
 body
   font-family: Geometria
   min-height: 100vh
@@ -24,7 +26,9 @@ body
     @media (max-width: 767px)
       position: relative
     &.bg
-      background: url("../img/bolvar.png") center right / auto 100% no-repeat $second-color
+      background: url("../img/bolvar.png") bottom right / auto 100% no-repeat $second-color
+      &.fixed
+        background-size: auto calc(100% - 55px)
       @media (max-width: 605px)
         background-position: center left
     main
@@ -32,6 +36,11 @@ body
   &.hidden
     height: 100vh
     overflow: hidden
+  &.dark-theme
+    &>.content
+      &.bg
+        background-image: url("../img/bolvar.png")
+        background-color: $dark-second-color
 main
   width: 83%
   box-sizing: border-box
@@ -137,7 +146,7 @@ img
     main
       background: $dark-body-color
       &:after
-        background: url("../img/dark-shop_bg.png") right top / 100% auto no-repeat
+        background-image: url("../img/dark-shop_bg.png")
   .btn
     background: $dark-second-color
     border-color: $dark-second-color
@@ -146,3 +155,13 @@ img
       color: $dark-second-color
       border-color: $dark-second-color
       background: #FFFFFF
+  .block_title
+    color: $text-color-white
+  .text
+    color: $dark-text-color-grey
+    *
+      color: $dark-text-color-grey
+    ul
+      &>li
+        &:before
+          background: $dark-second-color

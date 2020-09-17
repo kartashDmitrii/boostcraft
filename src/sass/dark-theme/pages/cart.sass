@@ -1,0 +1,47 @@
+.dark-theme
+  .cart_main
+    .cart
+      &_products
+        background: $dark-block-color
+        .products
+          &_wrapper
+            scrollbar-color: $dark-border-color #888
+            &::-webkit-scrollbar-thumb
+              background: $dark-border-color
+              border-radius: 3px
+            &::-webkit-scrollbar-thumb:hover
+              background: #4a4a4a
+          &_product
+            border-color: $dark-border-color
+            .product
+              &_name
+                color: $dark-text-color-grey
+              &_price
+                color: $text-color-white
+              &_edit
+                .edit
+                  &_count
+                    .count
+                      &_btn
+                        background: $text-color-dark
+                        color: $text-color-white
+                      &_value
+                        background: $dark-block-color2
+                        color: $text-color-white
+                        border-color: $dark-block-color2
+                  &_btns
+                    a
+                      img
+                        filter: brightness(0) invert(1)
+              &_info
+                .info
+                  &_option
+                    color: $dark-text-color-grey
+                  &_value
+                    color: $text-color-white
+      &_pay
+        .pay
+          &_alert
+            border-color: $dark-second-color
+          &_update-cart
+            border-color: $dark-second-color

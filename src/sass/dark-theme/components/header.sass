@@ -2,6 +2,12 @@
   .header
     background: #3B3E50
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.13)
+    &_logo
+      @media (max-width: 767px)
+        background: $dark-second-color
+    &_mobile-sidebar-switcher
+      img
+        filter: brightness(0) invert(1)
     &_toggle-version
       .toggle-version
         &_version
@@ -20,6 +26,11 @@
             color: $text-color-white
             &:after
               background: $dark-second-color
+    &_social
+      .social
+        &_email
+          img
+            filter: brightness(0) invert(1)
     &_user-menu
       .user-menu
         &_button
@@ -29,3 +40,11 @@
               filter: none
         &_count
           background: $dark-second-color
+        &_color-theme
+          img
+            @media (max-width: 1280px)
+              filter: none
+              border-color: $dark-second-color
+    &_mobile-menu
+      @media (max-width: 1280px)
+        background: $dark-block-color

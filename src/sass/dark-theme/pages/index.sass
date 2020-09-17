@@ -15,14 +15,103 @@
               &_slider
                 .slider
                   &_date
-                    color: $dark-text-color-grey
+                    color: $text-color-white
                   &_title
-                    color: $dark-text-color-grey
+                    color: $text-color-white
                   &_wrapper
                     .grid
                       &_text
                         color: $dark-text-color-grey
                       &_alliance
                         border-color: $light-alliance-color
+                        &:hover
+                          background-color: $light-alliance-color
+                        &:before
+                          background: url("../img/svg/alliance-emblem-light.svg") center center / 100% 100% no-repeat
                       &_horde
                         border-color: $light-horde-color
+                        &:before
+                          background: url("../img/svg/horde-emblem-light.svg") center center / 100% 100% no-repeat
+
+          &_boost-timers
+            .boost-timers
+              &_title
+                color: $text-color-white
+              &_slider
+                .slider
+                  &_slide
+                    .slide
+                      &_text
+                        color: $dark-text-color-grey
+                      &_timer
+                        div
+                          p
+                            color: $dark-second-color
+                          span
+                            color: $dark-text-color-grey
+                          &:after
+                            color: $dark-text-color-grey
+          &_boost-timers2
+            .boost-timers
+              &_title
+                color: $text-color-white
+              &_slide
+                .slide
+                  &_title
+                    color: $dark-text-color-grey
+                  &_info
+                    .info
+                      &_text
+                        color: $dark-text-color-grey
+                      &_timer
+                        div
+                          p
+                            color: $dark-second-color
+                          span
+                            color: $dark-text-color-grey
+                          &:after
+                            color: $dark-text-color-grey
+      &_best-sellers
+        background: $dark-block-color
+        .best-sellers
+          &_title
+            color: $text-color-white
+          &_text
+            color: $dark-text-color-grey
+          &_arrows
+            .arrow
+              background-image: url("../img/svg/black-arrow.svg")
+              transform: none
+              &.prev
+                transform: rotate(180deg)
+          &_slider
+            .slider
+              &_elem
+                background: $dark-block-color2
+                &:before
+                  background: linear-gradient(135deg, #9099b1 0%, #a0a4b5 100%)
+                .elem
+                  &_name
+                    color: $dark-text-color-grey
+                  &_price
+                    color: $text-color-white
+      &_shop
+        background: url("../img/dark-shop_bg.png") right bottom / 100% auto no-repeat
+        .shop
+          &_title
+            color: $text-color-white
+            box-shadow: 0 -1px 0 $dark-second-color
+          &_menu
+            &.shadow-left
+              &:before
+                box-shadow: 0 0 22px 40px $dark-body-color
+            &.shadow-right
+              &:after
+                box-shadow: 0 0 22px 40px $dark-body-color
+            .menu
+              &_href
+                color: $dark-text-color-grey
+                border-color: $dark-block-color
+                &.active
+                  color: $text-color-white
+                  border-color : $dark-second-color

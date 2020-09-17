@@ -185,8 +185,6 @@
           margin-right: 0
         @media (max-width: 1280px)
           margin-right: 20px
-          img
-            filter: brightness(0) invert(1)
   &_user-menu
     display: flex
     align-items: flex-start
@@ -204,9 +202,10 @@
         outline: none
         img
           transition: all .3s
-        &:hover
-          img
-            filter: brightness(0)
+        @media (min-width: 1281px)
+          &:hover
+            img
+              filter: brightness(0)
       &_cart
         position: relative
       &_cart-btn
@@ -229,10 +228,10 @@
         line-height: 12px
       &_color-theme
         &.active
-          img
-            filter: brightness(0) invert(1)
-            &:hover
-              filter: none
+          @media (min-width: 1281px)
+            img
+              &:hover
+                filter: none
         @media (max-width: 1280px)
           position: absolute
           bottom: 40px
@@ -259,7 +258,6 @@
             background: $text-color-dark
             img
               left: calc(100% - 30px)
-              border-color: #FFFFFF
       &_mobile-switch
         width: 24px
         height: 24px

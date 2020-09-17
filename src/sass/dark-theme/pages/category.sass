@@ -1,0 +1,23 @@
+.dark-theme
+  .category_main
+    .category
+      &_filters
+        background: $dark-block-color
+        .filters_filter
+          .filter
+            &_links
+              background: $dark-block-color
+            &_href
+              &:before
+                border-color: $dark-second-color
+              &:after
+                border-color: $text-color-white
+              &.active
+                &:before
+                  background: $dark-second-color
+      &_pagination
+        .pagination
+          &_href
+            color: $dark-text-color-grey
+            &.active
+              color: $dark-second-color

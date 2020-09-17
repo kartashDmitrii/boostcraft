@@ -1,0 +1,44 @@
+.dark-theme
+  .about-us_main
+    background-color: $dark-body-color !important
+    .about-us
+      &_top-block
+        .top-block
+          &_duty
+            .duty
+              &_title
+                color: $text-color-white
+              &_block
+                background: $dark-block-color
+                box-shadow: -1px 0px 0px $dark-second-color, 0px 0px 22px rgba(0, 0, 0, 0.07)
+                color: $dark-text-color-grey
+              &_afterword
+                color: $dark-text-color-grey
+              &_integrity
+                &:before
+                  background: url("../img/svg/duty1-dark.svg") center center / 100% 100% no-repeat
+              &_security
+                &:before
+                  background: url("../img/svg/duty2-dark.svg") center center / 100% 100% no-repeat
+              &_efficiency
+                &:before
+                  background: url("../img/svg/duty3-dark.svg") center center / 100% 100% no-repeat
+      &_company
+        .company
+          &_title
+            color: $text-color-white
+          &_tab
+            background-color: $dark-block-color
+            border-color: $text-color-dark
+            color: $dark-text-color-grey
+            &:before
+              background: url("../img/svg/about-us_arrow-dark.svg") center center / 100% 100% no-repeat
+      &_goals
+        .goals
+          &_title
+            color: $text-color-white
+          &_goal
+            color: $dark-text-color-grey
+            border-color: $text-color-white
+          &_afterword
+            color: $dark-text-color-grey
