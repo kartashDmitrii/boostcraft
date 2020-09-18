@@ -11,3 +11,109 @@
                 color: $text-color-white
               &_text
                 color: $dark-text-color-grey
+          &_settings
+            .setting
+              &_instruction
+                border-color: $dark-border-color
+                .instruction
+                  &_step
+                    color: $dark-text-color-grey
+                    &:after
+                      background-image: url('../img/svg/arrow-down-circle-dark.svg')
+              &_switcher
+                .switcher
+                  &_btn
+                    color: $dark-text-color-grey
+                    background: $dark-block-color2
+                    &.active
+                      background-color: $dark-second-color
+                      color: $text-color-white
+              &_switchers
+                .setting
+                  &_switcher
+                    border-color: $dark-border-color
+                  &_clock
+                    .clock
+                      &_text
+                        color: $text-color-white
+                        background-color: $dark-block-color2
+      &_calendar-switchers
+        .calendar-switchers
+          &_switcher
+            .switcher
+              &_btn
+                background: $dark-block-color2
+                color: $dark-text-color-grey
+                &.active
+                  color: $text-color-white
+                  background: $dark-second-color
+          &_current-time
+            .current-time
+              &_time
+                color: $text-color-white
+              &_date
+                color: $text-color-white
+      &_calendar
+        background: $dark-block-color
+        .calendar
+          &_dates
+            .dates
+              &_arrows
+                .arrows
+                  &_arrow
+                    background-color: $dark-block-color2
+                    border-color: $dark-border-color
+                    background-image: url("../img/svg/arrow-dark.svg")
+              &_wrapper
+                &.shadow-left
+                  &:before
+                    box-shadow: 0 0 100px 100px $dark-block-color
+                &.shadow-right
+                  &:after
+                    box-shadow: 0 0 100px 100px $dark-block-color
+              &_date
+                .date
+                  &_month
+                    background: $dark-block-color2
+                    color: $dark-text-color-grey
+                  &_num
+                    border-color: $dark-block-color2
+                    color: $text-color-white
+                  &_week-day
+                    color: $dark-text-color-grey
+                &.active
+                  .date
+                    &_month
+                      background: $dark-second-color
+                    &_num
+                      border-color: $dark-second-color
+          &_raids
+            .raids
+              &_day
+                border-color: $dark-second-color
+                color: $text-color-white
+              &_raid
+                background: linear-gradient(135deg, #5F6274 0%, #7E849A 100%)
+                .raid
+                  &_sale
+                    background-image: url("../img/svg/raid_sale_BG-dark.svg")
+                  &_date
+                    border-color: $dark-border-color
+                  &_time
+                    color: $text-color-white
+                  &_day
+                    color: $dark-text-color-grey
+                  &_desc
+                    color: $dark-text-color-grey
+                  &_info
+                    .info
+                      &_text
+                        color: $dark-text-color-grey
+                  &_buy
+                    .buy
+                      &_price
+                        .price
+                          &_span
+                            color: $dark-text-color-grey
+                          &_p
+                            color: $text-color-white

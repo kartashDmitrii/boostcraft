@@ -1,4 +1,6 @@
 .tovar_main
+  &:after
+    content: none
   padding-bottom: 60px
   @media (max-width: 1024px)
     padding: 20px 20px 40px
@@ -50,6 +52,9 @@
               .description
                 &_text
                   margin-bottom: 14px
+                  height: 66px
+                  overflow-y: hidden
+                  transition: height .3s
                   *
                     margin: 0 0 5px
                     font-size: 16px
@@ -69,6 +74,7 @@
                   color: $text-color-dark
                   cursor: pointer
                   text-transform: uppercase
+                  outline: none
                   padding: 0
                   img
                     padding-bottom: 8px
@@ -411,4 +417,3 @@
         &_title
           padding: 18px 32px 0
           box-sizing: border-box
-          border-top: 1px solid $second-color

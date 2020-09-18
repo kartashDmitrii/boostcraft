@@ -1,5 +1,6 @@
 .raid-calendar_main
-  background: none
+  &:after
+    content: none
   .raid-calendar
     &_title
       font-size: 33px
@@ -221,14 +222,9 @@
                         min-height: 32px
                         width: auto
                       &.active
-                        &.horde
-                          background: $horde-color
-                          img
-                            filter: brightness(0) invert(1)
-                        &.alliance
-                          background: $alliance-color
-                          img
-                            filter: brightness(0) invert(1)
+                        background: $second-color
+                        img
+                          filter: brightness(0) invert(1)
                 &_clock
                   display: flex
                   flex: 2
@@ -237,7 +233,8 @@
                   .clock
                     &_text
                       flex: 1
-                      margin: 0 24px
+                      padding: 0 24px
+                      margin: 0
                       display: flex
                       align-items: center
                       font-size: 14px
@@ -245,7 +242,7 @@
                       color: $text-color-dark
                       justify-content: center
                       @media (max-width: 576px)
-                        margin: 0 0 16px
+                        padding: 0 16px
                       img
                         width: 24px
                         height: 24px
@@ -265,16 +262,18 @@
                         box-sizing: border-box
                         width: 234px
                         border-radius: 5px 5px 0 0
-                      span
-                        margin-right: 5px
                       p
-                        margin: 0
+                        margin: 0 5px 0 0
                         position: relative
                         &:after
                           content: ':'
-                        &:last-child
+                          margin-left: 5px
+                      div:last-child
+                        p
+                          margin-right: 0
                           &:after
                             content: none
+                            margin-left: 0
                 &_buy
                   border-radius: 0 5px 5px 0
                   flex: 1
@@ -405,7 +404,6 @@
                 left: 0
                 height: 100%
                 width: 0
-                box-shadow: 0 0 100px 100px #FFFFFF
                 z-index: 5
               &:after
                 content: ''
@@ -415,8 +413,17 @@
                 right: 0
                 height: 100%
                 width: 0
-                box-shadow: 0 0 100px 100px #FFFFFF
                 z-index: 5
+              &.shadow-left
+                &:before
+                  box-shadow: 0 0 100px 100px #FFFFFF
+                  @media (max-width: 991px)
+                    box-shadow: 0 0 40px 40px #FFFFFF
+              &.shadow-right
+                &:after
+                  box-shadow: 0 0 100px 100px #FFFFFF
+                  @media (max-width: 991px)
+                    box-shadow: 0 0 40px 40px #FFFFFF
             &_list
               width: calc(100% - 95px)
               @media (max-width: 480px)
@@ -458,6 +465,7 @@
                   &_num
                     border-color: $second-color
             &_arrows
+              margin-left: 5px
               width: 95px
               display: flex
               @media (max-width: 480px)
@@ -644,5 +652,10 @@
                       color: $text-color-white
                       padding: 14px 16px
                       background: $text-color-dark
+                      border-color: $text-color-dark
+                      transition: all .3s
+                      &:hover
+                        background-color: #FFFFFF
+                        color: $text-color-dark
     &_boosting-steps
       margin-bottom: 38px

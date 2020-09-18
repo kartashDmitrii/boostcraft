@@ -177,6 +177,7 @@ body {
     background-color: #F07F16; }
 
 main {
+  margin-top: 55px;
   width: 83%;
   box-sizing: border-box;
   padding: 20px 40px 100px; }
@@ -192,6 +193,7 @@ main {
       width: 100%; } }
 
 aside {
+  margin-top: 55px;
   width: 17%;
   box-sizing: border-box; }
   @media (max-width: 1265px) {
@@ -318,10 +320,8 @@ img {
   justify-content: space-between;
   transition: all .3s;
   width: 100%;
-  z-index: 12; }
-  .header.fixed {
-    position: fixed;
-    z-index: 12; }
+  z-index: 12;
+  position: fixed; }
   @media (max-width: 1365px) {
     .header {
       padding: 0 20px; } }
@@ -379,18 +379,6 @@ img {
           display: block;
           width: 16px;
           height: 22px; } }
-  .header_mobile-sidebar-switcher {
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    display: none; }
-    @media (max-width: 767px) {
-      .header_mobile-sidebar-switcher {
-        display: block; } }
-    @media (max-width: 480px) {
-      .header_mobile-sidebar-switcher {
-        margin-right: 10px; } }
   .header_toggle-version {
     display: flex;
     align-items: center;
@@ -424,21 +412,12 @@ img {
     flex: 1;
     display: flex;
     justify-content: center; }
-    @media (max-width: 1280px) {
-      .header_menu {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 50px; } }
     .header_menu .menu_list {
       padding: 0;
       margin: 0;
       height: 100%;
       display: flex;
       list-style: none; }
-      @media (max-width: 1280px) {
-        .header_menu .menu_list {
-          flex-direction: column;
-          width: 100%; } }
     .header_menu .menu_href {
       display: flex;
       text-transform: uppercase;
@@ -451,12 +430,6 @@ img {
       @media (max-width: 1300px) {
         .header_menu .menu_href {
           margin-right: 20px; } }
-      @media (max-width: 1280px) {
-        .header_menu .menu_href {
-          margin-right: 0;
-          color: #FFFFFF;
-          padding: 5px;
-          margin-bottom: 10px; } }
       .header_menu .menu_href:after {
         content: '';
         position: absolute;
@@ -464,29 +437,14 @@ img {
         left: 0;
         width: 100%;
         height: 2px; }
-        @media (max-width: 1280px) {
-          .header_menu .menu_href:after {
-            height: 1px; } }
       .header_menu .menu_href:hover:after {
         background: #aaeae6; }
-        @media (max-width: 1280px) {
-          .header_menu .menu_href:hover:after {
-            background: #EDEDED; } }
       .header_menu .menu_href:last-child {
         margin-right: 0; }
-        @media (max-width: 1280px) {
-          .header_menu .menu_href:last-child {
-            margin-bottom: 0; } }
       .header_menu .menu_href.current {
         color: #3A3B3E; }
-        @media (max-width: 1280px) {
-          .header_menu .menu_href.current {
-            color: #FFFFFF; } }
         .header_menu .menu_href.current:after {
           background: #43C8C0; }
-          @media (max-width: 1280px) {
-            .header_menu .menu_href.current:after {
-              background: #FFFFFF; } }
     .header_menu .menu_link {
       height: 100%;
       display: flex;
@@ -498,11 +456,6 @@ img {
     display: flex;
     align-items: center;
     margin-right: 44px; }
-    @media (max-width: 1280px) {
-      .header_social {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px; } }
     .header_social .social_link {
       width: 20px;
       height: 20px;
@@ -512,28 +465,26 @@ img {
       justify-content: center; }
       .header_social .social_link:last-child {
         margin-right: 0; }
-      @media (max-width: 1280px) {
-        .header_social .social_link {
-          margin-right: 20px; } }
   .header_user-menu {
     display: flex;
     align-items: flex-start;
     height: 30px; }
-    @media (max-width: 1280px) {
-      .header_user-menu:not(.static) {
-        flex-direction: column; } }
     .header_user-menu .user-menu_button {
       margin-right: 12px;
       border: none;
       background: transparent;
       cursor: pointer;
       box-sizing: border-box;
-      outline: none; }
+      outline: none;
+      position: relative; }
       .header_user-menu .user-menu_button img {
         transition: all .3s; }
       @media (min-width: 1281px) {
         .header_user-menu .user-menu_button:hover img {
           filter: brightness(0); } }
+      @media (max-width: 1280px) {
+        .header_user-menu .user-menu_button {
+          margin-right: 0; } }
     .header_user-menu .user-menu_cart {
       position: relative; }
     .header_user-menu .user-menu_cart-btn {
@@ -557,34 +508,7 @@ img {
     @media (min-width: 1281px) {
       .header_user-menu .user-menu_color-theme.active img:hover {
         filter: none; } }
-    @media (max-width: 1280px) {
-      .header_user-menu .user-menu_color-theme {
-        position: absolute;
-        bottom: 40px;
-        left: 20px;
-        width: 55px;
-        height: 30px;
-        background: #aaeae6;
-        border-radius: 30px;
-        transition: all .3s;
-        outline: none; }
-        .header_user-menu .user-menu_color-theme img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 30px;
-          height: 30px;
-          padding: 5px;
-          box-sizing: border-box;
-          border-radius: 50%;
-          border: 1px solid #FFFFFF;
-          filter: brightness(0) invert(1);
-          transition: all .3s; }
-        .header_user-menu .user-menu_color-theme.active {
-          background: #3A3B3E; }
-          .header_user-menu .user-menu_color-theme.active img {
-            left: calc(100% - 30px); } }
-    .header_user-menu .user-menu_mobile-switch {
+    .header_user-menu .user-menu_mobile-sidebar-switcher {
       width: 24px;
       height: 24px;
       padding: 3px;
@@ -593,16 +517,16 @@ img {
       position: relative;
       outline: none;
       display: none; }
-      @media (max-width: 1280px) {
-        .header_user-menu .user-menu_mobile-switch {
+      @media (max-width: 767px) {
+        .header_user-menu .user-menu_mobile-sidebar-switcher {
           display: block; } }
-      .header_user-menu .user-menu_mobile-switch span {
+      .header_user-menu .user-menu_mobile-sidebar-switcher span {
         display: block;
         width: 18px;
         height: 2px;
         background: #9D9EA4;
         transition: all .3s; }
-        .header_user-menu .user-menu_mobile-switch span:before {
+        .header_user-menu .user-menu_mobile-sidebar-switcher span:before {
           content: '';
           position: absolute;
           width: 18px;
@@ -614,7 +538,7 @@ img {
           background: #9D9EA4;
           transition: all .3s;
           transform: rotate(0); }
-        .header_user-menu .user-menu_mobile-switch span:after {
+        .header_user-menu .user-menu_mobile-sidebar-switcher span:after {
           content: '';
           position: absolute;
           width: 18px;
@@ -626,12 +550,12 @@ img {
           background: #9D9EA4;
           transition: all .3s;
           transform: rotate(0); }
-      .header_user-menu .user-menu_mobile-switch.active span {
+      .header_user-menu .user-menu_mobile-sidebar-switcher.active span {
         width: 0; }
-        .header_user-menu .user-menu_mobile-switch.active span:before {
+        .header_user-menu .user-menu_mobile-sidebar-switcher.active span:before {
           top: 11px;
           transform: rotate(45deg); }
-        .header_user-menu .user-menu_mobile-switch.active span:after {
+        .header_user-menu .user-menu_mobile-sidebar-switcher.active span:after {
           bottom: 11px;
           transform: rotate(-45deg); }
     .header_user-menu .user-menu_search {
@@ -663,27 +587,6 @@ img {
         border-width: 1px; }
       .header_user-menu .user-menu_search.active .search_button {
         padding-left: 10px; }
-      @media (max-width: 1280px) {
-        .header_user-menu .user-menu_search {
-          margin-right: 0;
-          position: absolute;
-          width: calc(100% - 40px);
-          top: 40px;
-          left: 20px; }
-          .header_user-menu .user-menu_search .search_field {
-            padding: 5px;
-            width: calc(100% - 40px);
-            border-width: 1px; }
-          .header_user-menu .user-menu_search .search_button {
-            padding-left: 20px; }
-            .header_user-menu .user-menu_search .search_button img {
-              filter: brightness(0) invert(1); }
-          .header_user-menu .user-menu_search.active .search_field {
-            padding: 5px;
-            width: calc(100% - 40px);
-            border-width: 1px; }
-          .header_user-menu .user-menu_search.active .search_button {
-            padding-left: 20px; } }
   .header_mobile-menu {
     display: flex;
     align-items: center;
@@ -692,26 +595,7 @@ img {
     flex: 1; }
     @media (max-width: 1280px) {
       .header_mobile-menu {
-        position: fixed;
-        flex-direction: column;
-        padding: 40px 20px;
-        box-sizing: border-box;
-        right: 0;
-        top: 55px;
-        transform: translateX(120%);
-        width: 20%;
-        height: calc(100vh - 55px);
-        background: #43C8C0;
-        z-index: 1;
-        transition: all .3s; }
-        .header_mobile-menu.active {
-          transform: translateX(0); } }
-    @media (max-width: 1024px) {
-      .header_mobile-menu {
-        width: 30%; } }
-    @media (max-width: 767px) {
-      .header_mobile-menu {
-        width: 100%; } }
+        display: none; } }
 
 .aside {
   background: #cfdddd;
@@ -719,7 +603,6 @@ img {
   @media (max-width: 767px) {
     .aside {
       position: fixed;
-      top: 55px;
       left: -120%;
       height: calc(100vh - 55px);
       transition: all .3s;
@@ -729,18 +612,35 @@ img {
         left: 0; } }
   .aside_wrapper {
     position: sticky;
+    max-height: calc(100vh - 55px);
+    overflow-y: scroll;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
     top: 0; }
+    .aside_wrapper::-webkit-scrollbar {
+      width: 2px; }
+    .aside_wrapper::-webkit-scrollbar-track {
+      background: #f1f1f1; }
+    .aside_wrapper::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px; }
+    .aside_wrapper::-webkit-scrollbar-thumb:hover {
+      background: #555; }
   .aside_menu {
     padding: 40px 20px 34px 40px;
     border-bottom: 2px solid #B7C5C5;
     margin-bottom: 19px; }
     @media (max-width: 1265px) {
       .aside_menu {
-        padding: 20px 20px 15px 20px; } }
+        padding: 40px 20px 15px 20px; } }
     .aside_menu .menu_list {
       padding: 0;
       margin: 0;
       list-style: none; }
+      @media (max-width: 1280px) {
+        .aside_menu .menu_list {
+          margin-top: 20px; } }
     .aside_menu .menu_href {
       color: #3A3B3E;
       font-weight: 500;
@@ -803,6 +703,198 @@ img {
       font-size: 12px;
       line-height: 15px;
       color: #3A3B3E; }
+  .aside_second-menu {
+    height: 100%;
+    flex: 1;
+    display: none;
+    justify-content: center;
+    padding: 0 20px 20px 40px;
+    box-sizing: border-box; }
+    @media (max-width: 1280px) {
+      .aside_second-menu {
+        display: flex;
+        flex-direction: column; } }
+    .aside_second-menu .menu_list {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      display: flex;
+      list-style: none; }
+      @media (max-width: 1280px) {
+        .aside_second-menu .menu_list {
+          flex-direction: column; } }
+    .aside_second-menu .menu_href {
+      display: flex;
+      text-transform: uppercase;
+      color: #3A3B3E;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      position: relative; }
+      @media (max-width: 1300px) {
+        .aside_second-menu .menu_href {
+          margin-right: 20px; } }
+      @media (max-width: 1280px) {
+        .aside_second-menu .menu_href {
+          padding: 5px;
+          margin-bottom: 10px; } }
+      .aside_second-menu .menu_href:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px; }
+        @media (max-width: 1280px) {
+          .aside_second-menu .menu_href:after {
+            height: 1px; } }
+      .aside_second-menu .menu_href:hover:after {
+        background: #aaeae6; }
+        @media (max-width: 1280px) {
+          .aside_second-menu .menu_href:hover:after {
+            background: #EDEDED; } }
+      .aside_second-menu .menu_href:last-child {
+        margin-right: 0; }
+        @media (max-width: 1280px) {
+          .aside_second-menu .menu_href:last-child {
+            margin-bottom: 0; } }
+      .aside_second-menu .menu_href.current:after {
+        background: #3A3B3E; }
+    .aside_second-menu .menu_link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: inherit; }
+  .aside_social {
+    display: none;
+    align-items: center;
+    padding-left: 40px;
+    justify-content: space-around;
+    margin-bottom: 20px; }
+    @media (max-width: 1280px) {
+      .aside_social {
+        display: flex; } }
+    @media (max-width: 1265px) {
+      .aside_social {
+        padding-left: 20px; } }
+    @media (max-width: 767px) {
+      .aside_social {
+        display: inline-flex;
+        justify-content: flex-start; } }
+    .aside_social .social_link {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media (max-width: 1280px) {
+        .aside_social .social_link {
+          margin-right: 20px; } }
+      @media (max-width: 767px) {
+        .aside_social .social_link {
+          width: 25px;
+          height: 25px; } }
+  .aside_user-menu {
+    display: none;
+    align-items: flex-start;
+    padding-left: 40px;
+    flex-direction: column; }
+    @media (max-width: 1280px) {
+      .aside_user-menu {
+        display: flex; } }
+    @media (max-width: 1265px) {
+      .aside_user-menu {
+        padding-left: 20px; } }
+    .aside_user-menu .user-menu_button {
+      margin-right: 12px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      box-sizing: border-box;
+      outline: none; }
+      .aside_user-menu .user-menu_button img {
+        transition: all .3s; }
+      @media (min-width: 1281px) {
+        .aside_user-menu .user-menu_button:hover img {
+          filter: brightness(0); } }
+    .aside_user-menu .user-menu_color-theme {
+      width: 55px;
+      height: 30px;
+      background: #aaeae6;
+      border-radius: 30px;
+      transition: all .3s;
+      outline: none;
+      position: relative;
+      margin-bottom: 12px; }
+      .aside_user-menu .user-menu_color-theme img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        filter: brightness(0) invert(1);
+        transition: all .3s; }
+      .aside_user-menu .user-menu_color-theme.active {
+        background: #3A3B3E; }
+        .aside_user-menu .user-menu_color-theme.active img {
+          left: calc(100% - 30px); }
+    .aside_user-menu .user-menu_search {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      outline: none;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: calc(100% - 40px); }
+      .aside_user-menu .user-menu_search .search_field {
+        width: 0;
+        border-radius: 5px;
+        padding: 5px 0;
+        border: 0 solid #efefef;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #3A3B3E;
+        outline: none;
+        transition: all .3s; }
+      .aside_user-menu .user-menu_search .search_button {
+        border: none;
+        width: 20px;
+        height: 25px;
+        outline: none;
+        transition: all .5s; }
+      .aside_user-menu .user-menu_search.active .search_field {
+        width: 100px;
+        padding: 5px;
+        border-width: 1px; }
+      .aside_user-menu .user-menu_search.active .search_button {
+        padding-left: 10px; }
+      @media (max-width: 1280px) {
+        .aside_user-menu .user-menu_search {
+          margin-right: 0;
+          width: calc(100% - 40px); }
+          .aside_user-menu .user-menu_search .search_field {
+            padding: 5px;
+            width: calc(100% - 40px);
+            border-width: 1px; }
+          .aside_user-menu .user-menu_search .search_button {
+            padding-left: 20px; }
+            .aside_user-menu .user-menu_search .search_button img {
+              filter: brightness(0) invert(1); }
+          .aside_user-menu .user-menu_search.active .search_field {
+            padding: 5px;
+            width: calc(100% - 40px);
+            border-width: 1px; }
+          .aside_user-menu .user-menu_search.active .search_button {
+            padding-left: 20px; } }
 
 .footer {
   display: flex;
@@ -810,7 +902,7 @@ img {
   background: url("../img/footer_image.png") 42% bottom no-repeat #343A45;
   box-sizing: border-box;
   position: relative;
-  z-index: 11;
+  z-index: 10;
   transition: all .3s; }
   @media (max-width: 1024px) {
     .footer {
@@ -884,10 +976,11 @@ img {
       text-align: center; }
   .footer .footer_menus {
     display: flex; }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       .footer .footer_menus {
+        margin-left: 20px;
         flex-wrap: wrap;
-        justify-content: space-around; } }
+        justify-content: center; } }
     @media (max-width: 480px) {
       .footer .footer_menus {
         justify-content: space-between; } }
@@ -896,11 +989,25 @@ img {
       flex-direction: column;
       text-transform: uppercase;
       margin-right: 140px; }
-      .footer .footer_menus .menus_menu:last-child {
-        margin-right: 0; }
+      @media (min-width: 992px) {
+        .footer .footer_menus .menus_menu:last-child {
+          margin-right: 0; } }
+      @media (max-width: 1280px) {
+        .footer .footer_menus .menus_menu {
+          margin-right: 50px; } }
       @media (max-width: 1024px) {
         .footer .footer_menus .menus_menu {
           margin-right: 20px; } }
+      @media (max-width: 991px) {
+        .footer .footer_menus .menus_menu {
+          width: calc(50% - 20px);
+          margin: 0 auto 10px; } }
+      @media (max-width: 768px) {
+        .footer .footer_menus .menus_menu {
+          width: calc(33% - 20px); } }
+      @media (max-width: 620px) {
+        .footer .footer_menus .menus_menu {
+          width: calc(50% - 20px); } }
       @media (max-width: 480px) {
         .footer .footer_menus .menus_menu {
           margin-right: 5px;
@@ -927,6 +1034,11 @@ img {
     .footer .footer_menus .menus_link {
       color: inherit;
       text-decoration: none; }
+    .footer .footer_menus .menus_links {
+      display: none; }
+      @media (max-width: 1280px) {
+        .footer .footer_menus .menus_links {
+          display: flex; } }
   .footer .footer_term-of-use {
     font-weight: 300;
     font-size: 9px;
@@ -1133,6 +1245,7 @@ img {
         cursor: pointer;
         outline: none; }
       .form-components form .qty .counter input {
+        padding: 14px;
         width: 55px;
         height: 100%;
         margin: 0 3px;
@@ -1148,7 +1261,8 @@ img {
         .form-components form .qty .counter input::-webkit-outer-spin-button, .form-components form .qty .counter input::-webkit-inner-spin-button {
           appearance: none;
           margin: 0; }
-  .form-components form .line-3 a {
+  .form-components form .line-3 button, .form-components form .line-3 input[type='submit'] {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1159,25 +1273,34 @@ img {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border: none;
+    transition: all .3s; }
     @media (max-width: 1280px) {
-      .form-components form .line-3 a {
+      .form-components form .line-3 button, .form-components form .line-3 input[type='submit'] {
         width: calc(50% - 4px);
         font-size: 12px;
         line-height: 16px;
         padding: 12px 5px; } }
     @media (max-width: 480px) {
-      .form-components form .line-3 a {
+      .form-components form .line-3 button, .form-components form .line-3 input[type='submit'] {
         width: 100%;
         margin: 0 0 5px; } }
-    .form-components form .line-3 a img {
+    .form-components form .line-3 button img, .form-components form .line-3 input[type='submit'] img {
       max-width: 30px;
       max-height: 20px;
       margin-right: 20px; }
-    .form-components form .line-3 a.buy-now {
+    .form-components form .line-3 button.buy-now, .form-components form .line-3 input[type='submit'].buy-now {
       background: #43C8C0; }
-    .form-components form .line-3 a.add-to-cart {
-      background: #3A3B3E; }
+      .form-components form .line-3 button.buy-now:hover, .form-components form .line-3 input[type='submit'].buy-now:hover {
+        background: #aaeae6; }
+    .form-components form .line-3 button.add-to-cart, .form-components form .line-3 input[type='submit'].add-to-cart {
+      padding: 12px 12px 12px 45px;
+      background: url("../img/svg/tovar_add-to-cart_btn.svg") 10px center/30px 21px no-repeat #3A3B3E; }
+      .form-components form .line-3 button.add-to-cart:hover, .form-components form .line-3 input[type='submit'].add-to-cart:hover {
+        background-color: #9D9EA4; }
+  .form-components form .custom-select {
+    margin-bottom: 10px; }
 
 .boosting-steps {
   display: flex;
@@ -1823,6 +1946,14 @@ img {
     border: 2px solid #FFFFFF; }
   .cart-header .cart-header_check-out {
     background: #3A3B3E; }
+  .cart-header .cart-header_close {
+    position: absolute;
+    top: 43px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    background: url("../img/svg/close_white.svg") center center/100% 100% no-repeat;
+    cursor: pointer; }
 
 .custom-table .custom-table_desc {
   display: grid;
@@ -2690,6 +2821,8 @@ img {
 
 .tovar_main {
   padding-bottom: 60px; }
+  .tovar_main:after {
+    content: none; }
   @media (max-width: 1024px) {
     .tovar_main {
       padding: 20px 20px 40px; } }
@@ -2740,7 +2873,10 @@ img {
         flex-direction: column;
         margin-bottom: 32px; }
         .tovar_main .tovar_content .content_left .left_description .description_text {
-          margin-bottom: 14px; }
+          margin-bottom: 14px;
+          height: 66px;
+          overflow-y: hidden;
+          transition: height .3s; }
           .tovar_main .tovar_content .content_left .left_description .description_text * {
             margin: 0 0 5px;
             font-size: 16px;
@@ -2760,6 +2896,7 @@ img {
           color: #3A3B3E;
           cursor: pointer;
           text-transform: uppercase;
+          outline: none;
           padding: 0; }
           .tovar_main .tovar_content .content_left .left_description .description_revelation img {
             padding-bottom: 8px;
@@ -3108,8 +3245,7 @@ img {
     align-items: center; }
     .tovar_main .tovar_boosting-steps .boosting-steps_title {
       padding: 18px 32px 0;
-      box-sizing: border-box;
-      border-top: 1px solid #43C8C0; }
+      box-sizing: border-box; }
 
 .category_main {
   background: none; }
@@ -3322,6 +3458,8 @@ img {
 
 .contact-us_main {
   background: none; }
+  .contact-us_main:after {
+    content: none; }
   .contact-us_main .contact-us_top-block {
     width: 100%;
     height: 350px;
@@ -4096,665 +4234,683 @@ img {
       color: #3A3B3E;
       margin: 0; }
 
-.raid-calendar_main {
-  background: none; }
-  .raid-calendar_main .raid-calendar_title {
-    font-size: 33px;
-    line-height: 42px;
-    margin-bottom: 32px; }
-  .raid-calendar_main .raid-calendar_top-select {
-    display: flex;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
-    padding: 8px 16px 8px 8px;
-    margin-bottom: 32px; }
-    @media (max-width: 1200px) {
-      .raid-calendar_main .raid-calendar_top-select {
-        flex-direction: column;
-        padding: 8px; } }
-    .raid-calendar_main .raid-calendar_top-select .top-select_info {
-      display: flex;
+.raid-calendar_main:after {
+  content: none; }
+
+.raid-calendar_main .raid-calendar_title {
+  font-size: 33px;
+  line-height: 42px;
+  margin-bottom: 32px; }
+
+.raid-calendar_main .raid-calendar_top-select {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+  padding: 8px 16px 8px 8px;
+  margin-bottom: 32px; }
+  @media (max-width: 1200px) {
+    .raid-calendar_main .raid-calendar_top-select {
       flex-direction: column;
-      align-items: center;
-      padding: 47px 24px;
-      min-width: 330px;
-      box-sizing: border-box;
-      background: url("../img/top-select_info_BG.png") center center/cover no-repeat;
-      margin-right: 32px; }
-      @media (max-width: 1200px) {
-        .raid-calendar_main .raid-calendar_top-select .top-select_info {
-          min-width: auto;
-          width: 100%;
-          padding: 10px 24px;
-          margin-right: 0;
-          margin-bottom: 10px; } }
-      .raid-calendar_main .raid-calendar_top-select .top-select_info .info_image {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 16px; }
-      .raid-calendar_main .raid-calendar_top-select .top-select_info .info_title {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 30px;
-        color: #3A3B3E;
-        margin: 0 0 8px; }
-      .raid-calendar_main .raid-calendar_top-select .top-select_info .info_text {
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 140%;
-        color: #3A3B3E;
-        margin: 0; }
-    .raid-calendar_main .raid-calendar_top-select .top-select_settings {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      flex: 1; }
-      @media (max-width: 1200px) {
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings {
-          width: 100%; } }
-      @media (max-width: 576px) {
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings {
-          padding: 0 16px 16px;
-          box-sizing: border-box; } }
-      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
-        display: flex;
-        padding-bottom: 17px;
-        border-bottom: 1px solid #efefef;
-        margin-bottom: 24px;
-        width: 100%; }
-        @media (max-width: 1280px) {
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
-            flex-wrap: wrap;
-            margin-bottom: 19px;
-            align-items: center; } }
-        @media (max-width: 1140px) {
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
-            flex-direction: column;
-            align-items: center; } }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
-          font-size: 16px;
-          line-height: 140%;
-          color: #3A3B3E;
-          margin: 0 16px 0 0;
-          padding-right: 35px;
-          position: relative;
-          text-align: center;
-          box-sizing: border-box; }
-          @media (max-width: 1280px) {
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
-              width: calc( 50% - 16px);
-              margin-bottom: 5px; } }
-          @media (max-width: 1200px) {
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
-              width: calc( 25% - 16px); } }
-          @media (max-width: 1140px) {
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
-              text-align: left;
-              width: 100%;
-              margin: 0 0 16px;
-              padding-right: 0;
-              padding-left: 40px; } }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            width: 24px;
-            height: 24px;
-            background: url("../img/svg/arrow-down-circle.svg") center center/100% 100% no-repeat;
-            transform: rotate(-90deg); }
-            @media (max-width: 1140px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
-                right: auto;
-                left: 0;
-                transform: none; } }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
-            margin-right: 0;
-            padding-right: 0; }
-            @media (max-width: 1280px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
-                width: 50%; } }
-            @media (max-width: 1200px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
-                width: 25%; } }
-            @media (max-width: 1140px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
-                width: 100%; } }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child:after {
-              content: none; }
-      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher {
-        padding: 0;
-        margin: 0 0 24px;
-        list-style: none;
-        display: flex;
-        width: 100%; }
-        @media (max-width: 576px) {
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher {
-            flex-direction: column; } }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn {
-          flex: 1;
-          justify-content: center;
-          font-weight: 500;
-          font-size: 13px;
-          line-height: 140%;
-          color: #5f6062;
-          background: #EDEDED;
-          box-sizing: border-box;
-          display: flex;
-          text-align: center; }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:first-child {
-            border-radius: 5px 0 0 5px; }
-            @media (max-width: 576px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:first-child {
-                border-radius: 5px 5px 0 0; } }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:last-child {
-            border-radius: 0 5px 5px 0; }
-            @media (max-width: 576px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:last-child {
-                border-radius: 0 0 5px 5px; } }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn.active {
-            background: #43C8C0;
-            color: #FFFFFF; }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn a {
-            width: 100%;
-            text-decoration: none;
-            color: inherit;
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center; }
-      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers {
-        display: flex;
-        justify-content: flex-start;
-        box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
-        width: 100%; }
-        @media (max-width: 576px) {
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers {
-            padding: 24px;
-            flex-direction: column;
-            box-sizing: border-box;
-            align-items: center; } }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
-          margin-bottom: 0;
-          border-right: 1px solid #efefef;
-          width: auto; }
-          @media (max-width: 576px) {
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
-              flex-direction: row;
-              margin-bottom: 16px; } }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn {
-            background: #FFFFFF;
-            max-width: 68px;
-            width: 68px; }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn a {
-              padding: 8px 16px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-              box-sizing: border-box;
-              width: 100%; }
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn a:after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                width: 1px;
-                height: 60%;
-                background: #D8D8D8; }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:first-child {
-              border-radius: 5px 0 0 5px; }
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:first-child a {
-                padding: 8px 16px 8px 24px; }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child {
-              border-radius: 0 5px 5px 0; }
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child a {
-                padding: 8px 24px 8px 16px; }
-                .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child a:after {
-                  content: none; }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher:first-child .switcher_btn:first-child {
-            border-radius: 5px 0 0 5px; }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn img {
-          min-height: 32px;
-          width: auto; }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.horde {
-          background: #D24F58; }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.horde img {
-            filter: brightness(0) invert(1); }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.alliance {
-          background: #3E7CD9; }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active.alliance img {
-            filter: brightness(0) invert(1); }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock {
-          display: flex;
-          flex: 2; }
-          @media (max-width: 576px) {
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock {
-              flex-direction: column; } }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
-            flex: 1;
-            margin: 0 24px;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            line-height: 18px;
-            color: #3A3B3E;
-            justify-content: center; }
-            @media (max-width: 576px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
-                margin: 0 0 16px; } }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text img {
-              width: 24px;
-              height: 24px;
-              margin-right: 8px; }
-          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%);
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 140%;
-            color: #3A3B3E;
-            justify-content: center; }
-            @media (max-width: 576px) {
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time {
-                box-sizing: border-box;
-                width: 234px;
-                border-radius: 5px 5px 0 0; } }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time span {
-              margin-right: 5px; }
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p {
-              margin: 0;
-              position: relative; }
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p:after {
-                content: ':'; }
-              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p:last-child:after {
-                content: none; }
-        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_buy {
-          border-radius: 0 5px 5px 0;
-          flex: 1; }
-          @media (max-width: 576px) {
-            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_buy {
-              padding: 14px;
-              width: 234px;
-              border-radius: 0 0 5px 5px; } }
-  .raid-calendar_main .raid-calendar_calendar-switchers {
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px; }
-    @media (max-width: 991px) {
-      .raid-calendar_main .raid-calendar_calendar-switchers {
-        margin-bottom: 16px; } }
-    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
-      width: 80%;
-      display: flex;
-      flex-wrap: wrap; }
-      @media (max-width: 1280px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
-          width: 85%; } }
-      @media (max-width: 1140px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
-          width: 100%; } }
-      @media (max-width: 991px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
-          justify-content: center; } }
-    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
-      padding: 0;
-      margin: 0 24px 0 0;
-      list-style: none;
-      display: flex;
-      width: calc(33% - 24px); }
-      @media (max-width: 1280px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
-          margin-right: 10px;
-          width: calc(33% - 10px); } }
-      @media (max-width: 991px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
-          width: calc( 50% - 10px);
-          margin-bottom: 16px; }
-          .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher:nth-child(even) {
-            margin-right: 0; } }
-      @media (max-width: 480px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
-          width: 100%;
-          margin: 0 0 16px; } }
-      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn {
-        display: flex;
-        box-sizing: border-box;
-        flex: 1;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 140%;
-        color: #5f6062;
-        background: #DFDFDF; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn:first-child {
-          border-radius: 5px 0 0 5px; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn:last-child {
-          border-radius: 0 5px 5px 0; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn img {
-          max-width: 36px;
-          max-height: 24px;
-          margin-right: 30px; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn a {
-          width: 100%;
-          color: inherit;
-          text-decoration: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 11px 16px; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn.active {
-          background: #43C8C0;
-          color: #FFFFFF; }
-    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
-      width: 20%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center; }
-      @media (max-width: 1280px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
-          width: 15%; } }
-      @media (max-width: 1140px) {
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
-          display: none; } }
-      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_text {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        margin-right: 8px; }
-      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time {
-        font-size: 16px;
-        line-height: 20px;
-        color: #3A3B3E;
-        margin: 0 0 2px;
-        text-align: right; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time span:after {
-          content: ':'; }
-        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time span:last-child:after {
-          content: none; }
-      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_date {
-        font-size: 11px;
-        line-height: 140%;
-        color: #3A3B3E;
-        margin: 0; }
-      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_image {
-        width: 24px;
-        height: 24px; }
-  .raid-calendar_main .raid-calendar_calendar {
-    margin-bottom: 47px;
+      padding: 8px; } }
+  .raid-calendar_main .raid-calendar_top-select .top-select_info {
     display: flex;
     flex-direction: column;
-    padding: 34px;
-    background: #FFFFFF;
-    box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
-    border-radius: 5px; }
+    align-items: center;
+    padding: 47px 24px;
+    min-width: 330px;
+    box-sizing: border-box;
+    background: url("../img/top-select_info_BG.png") center center/cover no-repeat;
+    margin-right: 32px; }
+    @media (max-width: 1200px) {
+      .raid-calendar_main .raid-calendar_top-select .top-select_info {
+        min-width: auto;
+        width: 100%;
+        padding: 10px 24px;
+        margin-right: 0;
+        margin-bottom: 10px; } }
+    .raid-calendar_main .raid-calendar_top-select .top-select_info .info_image {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px; }
+    .raid-calendar_main .raid-calendar_top-select .top-select_info .info_title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      color: #3A3B3E;
+      margin: 0 0 8px; }
+    .raid-calendar_main .raid-calendar_top-select .top-select_info .info_text {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 140%;
+      color: #3A3B3E;
+      margin: 0; }
+  .raid-calendar_main .raid-calendar_top-select .top-select_settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1; }
+    @media (max-width: 1200px) {
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings {
+        width: 100%; } }
     @media (max-width: 576px) {
-      .raid-calendar_main .raid-calendar_calendar {
-        padding: 16px; } }
-    .raid-calendar_main .raid-calendar_calendar .calendar_dates {
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings {
+        padding: 0 16px 16px;
+        box-sizing: border-box; } }
+    .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
       display: flex;
-      margin-bottom: 34px; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper {
+      padding-bottom: 17px;
+      border-bottom: 1px solid #efefef;
+      margin-bottom: 24px;
+      width: 100%; }
+      @media (max-width: 1280px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
+          flex-wrap: wrap;
+          margin-bottom: 19px;
+          align-items: center; } }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
+          flex-direction: column;
+          align-items: center; } }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+        font-size: 16px;
+        line-height: 140%;
+        color: #3A3B3E;
+        margin: 0 16px 0 0;
+        padding-right: 35px;
         position: relative;
-        overflow: hidden; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          height: 100%;
-          width: 0;
-          box-shadow: 0 0 100px 100px #FFFFFF;
-          z-index: 5; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper:after {
+        text-align: center;
+        box-sizing: border-box; }
+        @media (max-width: 1280px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+            width: calc( 50% - 16px);
+            margin-bottom: 5px; } }
+        @media (max-width: 1200px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+            width: calc( 25% - 16px); } }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+            text-align: left;
+            width: 100%;
+            margin: 0 0 16px;
+            padding-right: 0;
+            padding-left: 40px; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
           content: '';
           position: absolute;
           top: 0;
           bottom: 0;
           right: 0;
-          height: 100%;
-          width: 0;
-          box-shadow: 0 0 100px 100px #FFFFFF;
-          z-index: 5; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_list {
-        width: calc(100% - 95px); }
-        @media (max-width: 480px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_list {
-            width: calc(100% - 65px); } }
-      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date {
+          margin: auto;
+          width: 24px;
+          height: 24px;
+          background: url("../img/svg/arrow-down-circle.svg") center center/100% 100% no-repeat;
+          transform: rotate(-90deg); }
+          @media (max-width: 1140px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
+              right: auto;
+              left: 0;
+              transform: none; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+          margin-right: 0;
+          padding-right: 0; }
+          @media (max-width: 1280px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+              width: 50%; } }
+          @media (max-width: 1200px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+              width: 25%; } }
+          @media (max-width: 1140px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child {
+              width: 100%; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:last-child:after {
+            content: none; }
+    .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher {
+      padding: 0;
+      margin: 0 0 24px;
+      list-style: none;
+      display: flex;
+      width: 100%; }
+      @media (max-width: 576px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher {
+          flex-direction: column; } }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn {
+        flex: 1;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #5f6062;
+        background: #EDEDED;
+        box-sizing: border-box;
         display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        padding: 0 4px; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_month {
-          font-weight: 500;
-          font-size: 13px;
-          line-height: 140%;
-          color: #5f6062;
-          background: #efefef;
-          border-radius: 5px 5px 0 0;
-          text-align: center; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_num {
-          font-weight: 700;
-          font-size: 33px;
-          line-height: 42px;
-          color: #3A3B3E;
-          border: 1px solid #efefef;
-          border-radius: 0 0 5px 5px;
-          margin: 0 0 12px;
-          text-align: center; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_week-day {
-          font-weight: 500;
-          font-size: 13px;
-          line-height: 140%;
-          color: #5F6062;
-          text-align: center; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.active .date_month {
+        text-align: center; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:first-child {
+          border-radius: 5px 0 0 5px; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:first-child {
+              border-radius: 5px 5px 0 0; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:last-child {
+          border-radius: 0 5px 5px 0; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn:last-child {
+              border-radius: 0 0 5px 5px; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn.active {
           background: #43C8C0;
           color: #FFFFFF; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.active .date_num {
-          border-color: #43C8C0; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows {
-        width: 95px;
-        display: flex; }
-        @media (max-width: 480px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows {
-            width: 65px; } }
-        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn a {
+          width: 100%;
+          text-decoration: none;
+          color: inherit;
+          padding: 14px 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+    .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers {
+      display: flex;
+      justify-content: flex-start;
+      box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+      width: 100%; }
+      @media (max-width: 576px) {
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers {
+          padding: 24px;
+          flex-direction: column;
+          box-sizing: border-box;
+          align-items: center; } }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
+        margin-bottom: 0;
+        border-right: 1px solid #efefef;
+        width: auto; }
+        @media (max-width: 576px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
+            flex-direction: row;
+            margin-bottom: 16px; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn {
+          background: #FFFFFF;
+          max-width: 68px;
+          width: 68px; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn a {
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            width: 100%; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn a:after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              width: 1px;
+              height: 60%;
+              background: #D8D8D8; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:first-child {
+            border-radius: 5px 0 0 5px; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:first-child a {
+              padding: 8px 16px 8px 24px; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child {
+            border-radius: 0 5px 5px 0; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child a {
+              padding: 8px 24px 8px 16px; }
+              .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher .switcher_btn:last-child a:after {
+                content: none; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher:first-child .switcher_btn:first-child {
+          border-radius: 5px 0 0 5px; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn img {
+        min-height: 32px;
+        width: auto; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active {
+        background: #43C8C0; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_fraction-switcher .switcher_btn.active img {
+          filter: brightness(0) invert(1); }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock {
+        display: flex;
+        flex: 2; }
+        @media (max-width: 576px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock {
+            flex-direction: column; } }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
           flex: 1;
-          border: 1px solid #D8D8D8;
-          background: url("../img/svg/arrow.svg") center center/24px 24px no-repeat;
-          border-radius: 0 5px 5px 0;
-          cursor: pointer; }
-          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow.prev {
-            transform: rotate(180deg); }
-    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-gap: 8px;
-      margin-bottom: 34px; }
-      @media (max-width: 1280px) {
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
-          grid-template-columns: repeat(4, 1fr); } }
-      @media (max-width: 1200px) {
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
-          grid-template-columns: 21% calc(26% - 8px) calc(26% - 8px) calc(26% - 8px); } }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row:last-child {
-        margin-bottom: 0; }
-      @media (max-width: 1140px) {
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
-          grid-template-columns: auto;
-          grid-row-gap: 8px; } }
-    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
-      box-sizing: border-box;
-      border-radius: 5px;
-      border: 2px solid #43C8C0;
-      padding: 32px 5px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #3A3B3E;
-      position: relative; }
-      @media (max-width: 1140px) {
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
-          padding: 5px 32px;
-          flex-direction: row; } }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_num {
-        font-size: 73px;
-        line-height: 92px;
-        margin: 0; }
-        @media (max-width: 1140px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_num {
-            margin-right: 16px; } }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_month {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 30px;
-        margin: 0;
+          padding: 0 24px;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          line-height: 18px;
+          color: #3A3B3E;
+          justify-content: center; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
+              padding: 0 16px; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px; }
+        .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          padding: 12px 24px;
+          background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 140%;
+          color: #3A3B3E;
+          justify-content: center; }
+          @media (max-width: 576px) {
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time {
+              box-sizing: border-box;
+              width: 234px;
+              border-radius: 5px 5px 0 0; } }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p {
+            margin: 0 5px 0 0;
+            position: relative; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time p:after {
+              content: ':';
+              margin-left: 5px; }
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time div:last-child p {
+            margin-right: 0; }
+            .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_time div:last-child p:after {
+              content: none;
+              margin-left: 0; }
+      .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_buy {
+        border-radius: 0 5px 5px 0;
         flex: 1; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_image {
-        width: 48px;
-        height: 48px; }
-        @media (max-width: 1140px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_image {
-            display: none; } }
-    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid {
+        @media (max-width: 576px) {
+          .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_buy {
+            padding: 14px;
+            width: 234px;
+            border-radius: 0 0 5px 5px; } }
+
+.raid-calendar_main .raid-calendar_calendar-switchers {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px; }
+  @media (max-width: 991px) {
+    .raid-calendar_main .raid-calendar_calendar-switchers {
+      margin-bottom: 16px; } }
+  .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap; }
+    @media (max-width: 1280px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+        width: 85%; } }
+    @media (max-width: 1140px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+        width: 100%; } }
+    @media (max-width: 991px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switchers {
+        justify-content: center; } }
+  .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+    padding: 0;
+    margin: 0 24px 0 0;
+    list-style: none;
+    display: flex;
+    width: calc(33% - 24px); }
+    @media (max-width: 1280px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+        margin-right: 10px;
+        width: calc(33% - 10px); } }
+    @media (max-width: 991px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+        width: calc( 50% - 10px);
+        margin-bottom: 16px; }
+        .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher:nth-child(even) {
+          margin-right: 0; } }
+    @media (max-width: 480px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher {
+        width: 100%;
+        margin: 0 0 16px; } }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn {
+      display: flex;
+      box-sizing: border-box;
+      flex: 1;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 140%;
+      color: #5f6062;
+      background: #DFDFDF; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn:first-child {
+        border-radius: 5px 0 0 5px; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn:last-child {
+        border-radius: 0 5px 5px 0; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn img {
+        max-width: 36px;
+        max-height: 24px;
+        margin-right: 30px; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn a {
+        width: 100%;
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 11px 16px; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn.active {
+        background: #43C8C0;
+        color: #FFFFFF; }
+  .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    @media (max-width: 1280px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
+        width: 15%; } }
+    @media (max-width: 1140px) {
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time {
+        display: none; } }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_text {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      margin-right: 8px; }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time {
+      font-size: 16px;
+      line-height: 20px;
+      color: #3A3B3E;
+      margin: 0 0 2px;
+      text-align: right; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time span:after {
+        content: ':'; }
+      .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time span:last-child:after {
+        content: none; }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_date {
+      font-size: 11px;
+      line-height: 140%;
+      color: #3A3B3E;
+      margin: 0; }
+    .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_image {
+      width: 24px;
+      height: 24px; }
+
+.raid-calendar_main .raid-calendar_calendar {
+  margin-bottom: 47px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background: #FFFFFF;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.07);
+  border-radius: 5px; }
+  @media (max-width: 576px) {
+    .raid-calendar_main .raid-calendar_calendar {
+      padding: 16px; } }
+  .raid-calendar_main .raid-calendar_calendar .calendar_dates {
+    display: flex;
+    margin-bottom: 34px; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper {
+      position: relative;
+      overflow: hidden; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        z-index: 5; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 0;
+        z-index: 5; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper.shadow-left:before {
+        box-shadow: 0 0 100px 100px #FFFFFF; }
+        @media (max-width: 991px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper.shadow-left:before {
+            box-shadow: 0 0 40px 40px #FFFFFF; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper.shadow-right:after {
+        box-shadow: 0 0 100px 100px #FFFFFF; }
+        @media (max-width: 991px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper.shadow-right:after {
+            box-shadow: 0 0 40px 40px #FFFFFF; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_list {
+      width: calc(100% - 95px); }
+      @media (max-width: 480px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_list {
+          width: calc(100% - 65px); } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date {
       display: flex;
       flex-direction: column;
-      position: relative;
-      border-radius: 5px;
-      padding: 16px;
-      background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%); }
-      @media (max-width: 1280px) {
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid:last-child {
+      text-decoration: none;
+      padding: 0 4px; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_month {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #5f6062;
+        background: #efefef;
+        border-radius: 5px 5px 0 0;
+        text-align: center; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_num {
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 42px;
+        color: #3A3B3E;
+        border: 1px solid #efefef;
+        border-radius: 0 0 5px 5px;
+        margin: 0 0 12px;
+        text-align: center; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_week-day {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #5F6062;
+        text-align: center; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.active .date_month {
+        background: #43C8C0;
+        color: #FFFFFF; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.active .date_num {
+        border-color: #43C8C0; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows {
+      margin-left: 5px;
+      width: 95px;
+      display: flex; }
+      @media (max-width: 480px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows {
+          width: 65px; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow {
+        flex: 1;
+        border: 1px solid #D8D8D8;
+        background: url("../img/svg/arrow.svg") center center/24px 24px no-repeat;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow.prev {
+          transform: rotate(180deg); }
+  .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 8px;
+    margin-bottom: 34px; }
+    @media (max-width: 1280px) {
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+        grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 1200px) {
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+        grid-template-columns: 21% calc(26% - 8px) calc(26% - 8px) calc(26% - 8px); } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row:last-child {
+      margin-bottom: 0; }
+    @media (max-width: 1140px) {
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_row {
+        grid-template-columns: auto;
+        grid-row-gap: 8px; } }
+  .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #43C8C0;
+    padding: 32px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3A3B3E;
+    position: relative; }
+    @media (max-width: 1140px) {
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
+        padding: 5px 32px;
+        flex-direction: row; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_num {
+      font-size: 73px;
+      line-height: 92px;
+      margin: 0; }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_num {
+          margin-right: 16px; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_month {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0;
+      flex: 1; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_image {
+      width: 48px;
+      height: 48px; }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day .day_image {
           display: none; } }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale {
-        position: absolute;
-        width: 68px;
-        height: 68px;
-        top: 0;
-        left: 0;
-        padding: 6px;
+  .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    padding: 16px;
+    background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%); }
+    @media (max-width: 1280px) {
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid:last-child {
+        display: none; } }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale {
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      top: 0;
+      left: 0;
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-radius: 5px 0 0 0;
+      background: url("../img/svg/raid_sale_BG.svg") center center/100% 100% no-repeat; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 14px;
+        color: #FFFFFF; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #b7c5c5;
+      margin-bottom: 16px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
+          padding-bottom: 5px;
+          margin-bottom: 5px; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date .date_block {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        border-radius: 5px 0 0 0;
-        background: url("../img/svg/raid_sale_BG.svg") center center/100% 100% no-repeat; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale p {
-          margin: 0;
+        align-items: center; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_time {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      color: #3A3B3E;
+      margin: 0; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_day {
+      font-size: 16px;
+      line-height: 140%;
+      color: #3A3B3E;
+      margin: 0; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_fraction {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 48px; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_desc {
+      font-size: 16px;
+      line-height: 140%;
+      color: #3A3B3E;
+      margin: 0 0 16px; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
+      position: relative;
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 1140px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
+          flex-direction: row; } }
+      @media (max-width: 576px) {
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
+          flex-direction: column; } }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px; }
+        @media (max-width: 1140px) {
+          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block {
+            margin-right: 15px; } }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block:last-child {
+          margin-bottom: 0; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_image {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: #3A3B3E;
+        margin: 0; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_server {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 36px;
+      height: auto; }
+    .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price {
+        display: flex;
+        flex-direction: column; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_span {
           font-weight: 500;
           font-size: 13px;
           line-height: 14px;
-          color: #FFFFFF; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
-        padding-bottom: 16px;
-        border-bottom: 1px solid #b7c5c5;
-        margin-bottom: 16px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        @media (max-width: 1140px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
-            padding-bottom: 5px;
-            margin-bottom: 5px; } }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date .date_block {
-          display: flex;
-          flex-direction: column;
-          align-items: center; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_time {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 30px;
-        color: #3A3B3E;
-        margin: 0; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_day {
-        font-size: 16px;
-        line-height: 140%;
-        color: #3A3B3E;
-        margin: 0; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_fraction {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 38px;
-        height: 48px; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_desc {
-        font-size: 16px;
-        line-height: 140%;
-        color: #3A3B3E;
-        margin: 0 0 16px; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
-        position: relative;
-        display: flex;
-        flex-direction: column; }
-        @media (max-width: 1140px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
-            flex-direction: row; } }
-        @media (max-width: 576px) {
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info {
-            flex-direction: column; } }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block {
-          display: flex;
-          align-items: center;
-          margin-bottom: 8px; }
-          @media (max-width: 1140px) {
-            .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block {
-              margin-right: 15px; } }
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_block:last-child {
-            margin-bottom: 0; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_image {
-          width: 24px;
-          height: 24px;
-          margin-right: 8px; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_text {
+          color: #3A3B3E;
+          margin: 0 0 4px; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_p {
           font-weight: 700;
           font-size: 14px;
           line-height: 18px;
           color: #3A3B3E;
           margin: 0; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_server {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 36px;
-        height: auto; }
-      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price {
-          display: flex;
-          flex-direction: column; }
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_span {
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 14px;
-            color: #3A3B3E;
-            margin: 0 0 4px; }
-          .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_p {
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 18px;
-            color: #3A3B3E;
-            margin: 0; }
-        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_btn {
-          width: 100px;
-          color: #FFFFFF;
-          padding: 14px 16px;
-          background: #3A3B3E; }
-  .raid-calendar_main .raid-calendar_boosting-steps {
-    margin-bottom: 38px; }
+      .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_btn {
+        width: 100px;
+        color: #FFFFFF;
+        padding: 14px 16px;
+        background: #3A3B3E;
+        border-color: #3A3B3E;
+        transition: all .3s; }
+        .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_btn:hover {
+          background-color: #FFFFFF;
+          color: #3A3B3E; }
+
+.raid-calendar_main .raid-calendar_boosting-steps {
+  margin-bottom: 38px; }
 
 .error {
   color: #FFFFFF;
@@ -4766,13 +4922,13 @@ img {
       left: 10%; } }
   @media (max-width: 767px) {
     .error {
-      position: static;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       left: 0;
       right: 0;
-      top: 0;
+      top: 100px;
       margin: 0 auto 170px; } }
   @media (max-width: 576px) {
     .error {
@@ -5138,25 +5294,27 @@ img {
     justify-content: space-between; }
     @media (max-width: 380px) {
       .cart_main .cart_pay .pay_btns {
-        flex-direction: column; } }
-    .cart_main .cart_pay .pay_btns .btn {
-      padding: 12px; }
-      .cart_main .cart_pay .pay_btns .btn img {
-        width: 30px;
-        height: 21px;
-        margin-right: 20px; }
+        flex-direction: column; }
+        .cart_main .cart_pay .pay_btns img {
+          width: 30px;
+          height: 21px;
+          margin-right: 20px; } }
   .cart_main .cart_pay .pay_update-cart {
     background: transparent;
-    border: 2px solid #43C8C0; }
+    border: 2px solid #43C8C0;
+    padding: 14px; }
     .cart_main .cart_pay .pay_update-cart:hover {
       background: #FFFFFF; }
     @media (max-width: 380px) {
       .cart_main .cart_pay .pay_update-cart {
         margin-bottom: 10px; } }
-  .cart_main .cart_pay .pay_check-out:hover {
-    color: #FFFFFF;
-    background: #3A3B3E;
-    border-color: #FFFFFF; }
+  .cart_main .cart_pay .pay_check-out {
+    background: url("../img/svg/step3.svg") 10px center/30px 21px no-repeat #43C8C0;
+    padding: 14px 14px 14px 50px; }
+    .cart_main .cart_pay .pay_check-out:hover {
+      color: #FFFFFF;
+      background-color: #3A3B3E;
+      border-color: #FFFFFF; }
 
 .checkout_main .checkout_content {
   display: grid;
@@ -5428,16 +5586,11 @@ img {
       @media (max-width: 480px) {
         .checkout_main .checkout_express .express_registration .registration_btns {
           flex-direction: column; } }
-      .checkout_main .checkout_express .express_registration .registration_btns .btn {
-        padding: 14px; }
-        .checkout_main .checkout_express .express_registration .registration_btns .btn img {
-          width: 24px;
-          height: 24px;
-          margin-right: 20px; }
     .checkout_main .checkout_express .express_registration .registration_return {
       background: #efefef;
       border-color: #efefef;
-      color: #3A3B3E; }
+      color: #3A3B3E;
+      padding: 14px; }
       .checkout_main .checkout_express .express_registration .registration_return:hover {
         color: #EFEFEF;
         background: #3A3B3E;
@@ -5445,10 +5598,13 @@ img {
       @media (max-width: 480px) {
         .checkout_main .checkout_express .express_registration .registration_return {
           margin-bottom: 16px; } }
-    .checkout_main .checkout_express .express_registration .registration_submit:hover {
-      color: #FFFFFF;
-      background: #3A3B3E;
-      border-color: #3A3B3E; }
+    .checkout_main .checkout_express .express_registration .registration_submit {
+      padding: 14px 14px 14px 45px;
+      background: url("../img/svg/step3.svg") 10px center/30px 21px no-repeat #43C8C0; }
+      .checkout_main .checkout_express .express_registration .registration_submit:hover {
+        color: #FFFFFF;
+        background-color: #3A3B3E;
+        border-color: #3A3B3E; }
 
 .success {
   margin: 100px auto 185px;
@@ -5468,7 +5624,9 @@ img {
       padding: 24px 24px 32px; } }
   .success .success_image {
     width: 202px;
-    margin-bottom: 24px; }
+    margin-bottom: 24px;
+    border-radius: 50%;
+    animation: pulse 2s 5; }
   .success .success_title {
     font-weight: 700;
     font-size: 24px;
@@ -5516,6 +5674,14 @@ img {
         height: 24px;
         margin-right: 8px; }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(67, 200, 192, 0.4); }
+  70% {
+    box-shadow: 0 0 0 35px rgba(67, 200, 192, 0); }
+  100% {
+    box-shadow: 0 0 0 0 rgba(67, 200, 192, 0); } }
+
 .dark-theme .header {
   background: #3B3E50;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.13); }
@@ -5554,6 +5720,12 @@ img {
 
 .dark-theme .aside {
   background: #2D2F3A; }
+  .dark-theme .aside_wrapper {
+    scrollbar-color: #3B3E50 #2D2F3A; }
+    .dark-theme .aside_wrapper::-webkit-scrollbar-track {
+      background: #2D2F3A; }
+    .dark-theme .aside_wrapper::-webkit-scrollbar-thumb {
+      background: #3B3E50; }
   .dark-theme .aside_menu {
     border-color: #3B3E50; }
     .dark-theme .aside_menu .menu_href {
@@ -5570,11 +5742,11 @@ img {
   .dark-theme .footer_review .review_menus .menus_title {
     color: #D3D4DD; }
 
-.dark-theme .boosting-steps_title {
+.dark-theme .boosting-steps .boosting-steps_title {
   color: #FFFFFF;
   box-shadow: 0px -1px 0px #F07F16; }
 
-.dark-theme .boosting-steps_step .step_number {
+.dark-theme .boosting-steps .boosting-steps_step .step_number {
   color: #F07F16; }
 
 .dark-theme .grid-shop-elem .grid_elem {
@@ -5633,6 +5805,56 @@ img {
 
 .dark-theme .popup-wrapper .default-popup .popup_close {
   filter: brightness(0) invert(1); }
+
+.dark-theme .events-calendar .calendar .calendar_title {
+  color: #FFFFFF; }
+
+.dark-theme .events-calendar .calendar .calendar_dates-name {
+  color: #D3D4DD; }
+
+.dark-theme .events-calendar .calendar .calendar_dates .dates_label span {
+  color: #D3D4DD;
+  border-color: #7E849A; }
+
+.dark-theme .events-calendar .calendar .calendar_dates .dates_label input:checked ~ span {
+  color: #FFFFFF;
+  border-color: #F07F16; }
+
+.dark-theme .events-calendar .calendar_raids .raids_horde .raids_time {
+  border-color: #F82E3C; }
+  .dark-theme .events-calendar .calendar_raids .raids_horde .raids_time.active {
+    background: #F82E3C; }
+
+.dark-theme .events-calendar .calendar_raids .raids_alliance .raids_time {
+  border-color: #6AA6FF; }
+  .dark-theme .events-calendar .calendar_raids .raids_alliance .raids_time.active {
+    background: #6AA6FF; }
+
+.dark-theme .events-calendar .calendar_raids .raids_time.disabled {
+  background: #7E849A;
+  border-color: #7E849A;
+  color: #D3D4DD; }
+
+.dark-theme .form-components form .radio-choose .radio_label img {
+  border-color: #F07F16; }
+
+.dark-theme .form-components form .form-title {
+  color: #FFFFFF; }
+
+.dark-theme .form-components form .form-text {
+  color: #D3D4DD; }
+
+.dark-theme .form-components form .color-radio-choose .color-radio-choose_labels label input:checked ~ span {
+  background: #F07F16;
+  color: #FFFFFF; }
+
+.dark-theme .form-components form .qty .counter button {
+  color: #7E849A; }
+
+.dark-theme .form-components form .line-3 button.buy-now, .dark-theme .form-components form .line-3 input[type='submit'].buy-now {
+  background-color: #F07F16; }
+  .dark-theme .form-components form .line-3 button.buy-now:hover, .dark-theme .form-components form .line-3 input[type='submit'].buy-now:hover {
+    background-color: #f1ba87; }
 
 .dark-theme .cart-header {
   background: #5F6274;
@@ -5841,6 +6063,11 @@ img {
 .dark-theme .cart_main .cart_pay .pay_update-cart {
   border-color: #F07F16; }
 
+.dark-theme .cart_main .cart_pay .pay_check-out {
+  background-color: #F07F16; }
+  .dark-theme .cart_main .cart_pay .pay_check-out:hover {
+    background-color: #3A3B3E; }
+
 .dark-theme .category_main .category_filters {
   background: #5F6274; }
   .dark-theme .category_main .category_filters .filters_filter .filter_links {
@@ -5880,6 +6107,10 @@ img {
       color: #FFFFFF; }
       .dark-theme .checkout_main .checkout_express .express_registration .registration_checkbox span:after {
         border-color: #F07F16; }
+    .dark-theme .checkout_main .checkout_express .express_registration .registration_submit {
+      background-color: #F07F16; }
+      .dark-theme .checkout_main .checkout_express .express_registration .registration_submit:hover {
+        background-color: #3A3B3E; }
 
 .dark-theme .contact-us_main .contact-us_contact-info .contact-info_info {
   background: #5F6274;
@@ -5917,6 +6148,68 @@ img {
   .dark-theme .faq_main .faq_tab .tab_text * {
     color: #D3D4DD; }
 
+.dark-theme .tovar_main .tovar_content .content_left .left_description .description_text * {
+  color: #D3D4DD; }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_description .description_revelation {
+  color: #FFFFFF; }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_boosting-steps .boosting-steps_title {
+  color: #FFFFFF; }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_boosting-steps .boosting-steps_border {
+  border-color: #D3D4DD; }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_boosting-steps .boosting-steps_step:before {
+  background-image: url("../img/svg/arrow-down-circle-dark.svg"); }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_boosting-steps .boosting-steps_step:first-child:before {
+  border-color: #F07F16; }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_boosting-steps .boosting-steps_step:last-child:before {
+  background-color: #F07F16; }
+
+.dark-theme .tovar_main .tovar_content .content_left .left_boosting-steps .boosting-steps_text {
+  color: #D3D4DD; }
+
+.dark-theme .tovar_main .tovar_content .content_right {
+  background-color: #5F6274; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_features .features_feature {
+    border-color: #F07F16; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_features .features_text {
+    color: #D3D4DD; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_title {
+    color: #FFFFFF; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_payment .payment_price .price_old {
+    color: #D3D4DD; }
+    .dark-theme .tovar_main .tovar_content .content_right .right_payment .payment_price .price_old:before {
+      background-color: #D3D4DD; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_payment .payment_price .price_new {
+    color: #FFFFFF; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_payment .payment_trust-score p {
+    color: #D3D4DD; }
+    .dark-theme .tovar_main .tovar_content .content_right .right_payment .payment_trust-score p span {
+      color: #FFFFFF; }
+  .dark-theme .tovar_main .tovar_content .content_right .right_tabs .tabs_link {
+    color: #D3D4DD;
+    border-color: #3B3E50; }
+    .dark-theme .tovar_main .tovar_content .content_right .right_tabs .tabs_link.current {
+      color: #FFFFFF;
+      border-color: #F07F16; }
+
+.dark-theme .tovar_main .tovar_tabs .tabs_link {
+  color: #D3D4DD;
+  border-color: #D3D4DD; }
+  .dark-theme .tovar_main .tovar_tabs .tabs_link.current {
+    color: #FFFFFF;
+    border-color: #F07F16; }
+
+.dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_description .description_title, .dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_description .loot-info_title, .dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_loot-info .description_title, .dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_loot-info .loot-info_title {
+  color: #FFFFFF; }
+
+.dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_description .description_text *, .dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_description .loot-info_text *, .dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_loot-info .description_text *, .dark-theme .tovar_main .tovar_tabs .tabs_tab .tab_loot-info .loot-info_text * {
+  color: #D3D4DD; }
+
 .dark-theme .raid-calendar_main .raid-calendar_top-select {
   background: #5F6274; }
   .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_info {
@@ -5925,6 +6218,80 @@ img {
       color: #FFFFFF; }
     .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_info .info_text {
       color: #D3D4DD; }
+  .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction {
+    border-color: #3B3E50; }
+    .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step {
+      color: #D3D4DD; }
+      .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_instruction .instruction_step:after {
+        background-image: url("../img/svg/arrow-down-circle-dark.svg"); }
+  .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn {
+    color: #D3D4DD;
+    background: #7E849A; }
+    .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switcher .switcher_btn.active {
+      background-color: #F07F16;
+      color: #FFFFFF; }
+  .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_switcher {
+    border-color: #3B3E50; }
+  .dark-theme .raid-calendar_main .raid-calendar_top-select .top-select_settings .setting_switchers .setting_clock .clock_text {
+    color: #FFFFFF;
+    background-color: #7E849A; }
+
+.dark-theme .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn {
+  background: #7E849A;
+  color: #D3D4DD; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_switcher .switcher_btn.active {
+    color: #FFFFFF;
+    background: #F07F16; }
+
+.dark-theme .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_time {
+  color: #FFFFFF; }
+
+.dark-theme .raid-calendar_main .raid-calendar_calendar-switchers .calendar-switchers_current-time .current-time_date {
+  color: #FFFFFF; }
+
+.dark-theme .raid-calendar_main .raid-calendar_calendar {
+  background: #5F6274; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_arrows .arrows_arrow {
+    background-color: #7E849A;
+    border-color: #3B3E50;
+    background-image: url("../img/svg/arrow-dark.svg"); }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper.shadow-left:before {
+    box-shadow: 0 0 100px 100px #5F6274; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_wrapper.shadow-right:after {
+    box-shadow: 0 0 100px 100px #5F6274; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_month {
+    background: #7E849A;
+    color: #D3D4DD; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_num {
+    border-color: #7E849A;
+    color: #FFFFFF; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date .date_week-day {
+    color: #D3D4DD; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.active .date_month {
+    background: #F07F16; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_dates .dates_date.active .date_num {
+    border-color: #F07F16; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_day {
+    border-color: #F07F16;
+    color: #FFFFFF; }
+  .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid {
+    background: linear-gradient(135deg, #5F6274 0%, #7E849A 100%); }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_sale {
+      background-image: url("../img/svg/raid_sale_BG-dark.svg"); }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_date {
+      border-color: #3B3E50; }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_time {
+      color: #FFFFFF; }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_day {
+      color: #D3D4DD; }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_desc {
+      color: #D3D4DD; }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_info .info_text {
+      color: #D3D4DD; }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_span {
+      color: #D3D4DD; }
+    .dark-theme .raid-calendar_main .raid-calendar_calendar .calendar_raids .raids_raid .raid_buy .buy_price .price_p {
+      color: #FFFFFF; }
 
 .dark-theme .success {
   background: #5F6274; }

@@ -1,0 +1,28 @@
+.dark-theme
+  .form-components
+    form
+      .radio-choose
+        .radio_label
+          img
+            border-color: $dark-second-color
+      .form-title
+        color: $text-color-white
+      .form-text
+        color: $dark-text-color-grey
+      .color-radio-choose
+        .color-radio-choose_labels
+          label
+            input
+              &:checked ~ span
+                background: $dark-second-color
+                color: $text-color-white
+      .qty
+        .counter
+          button
+            color: $dark-block-color2
+      .line-3
+        button, input[type='submit']
+          &.buy-now
+            background-color: $dark-second-color
+            &:hover
+              background-color: $dark-second-color-light

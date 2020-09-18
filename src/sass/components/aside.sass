@@ -3,7 +3,6 @@
   transition: all .3s
   @media (max-width: 767px)
     position: fixed
-    top: 55px
     left: -120%
     height: calc(100vh - 55px)
     transition: all .3s
@@ -13,18 +12,34 @@
       left: 0
   &_wrapper
     position: sticky
+    max-height: calc(100vh - 55px)
+    overflow-y: scroll
+    box-sizing: border-box
+    scrollbar-width: thin
+    scrollbar-color: #888 #f1f1f1
     top: 0
+    &::-webkit-scrollbar
+      width: 2px
+    &::-webkit-scrollbar-track
+      background: #f1f1f1
+    &::-webkit-scrollbar-thumb
+      background: #888
+      border-radius: 5px
+    &::-webkit-scrollbar-thumb:hover
+      background: #555
   &_menu
     padding: 40px 20px 34px 40px
     border-bottom: 2px solid $border-color
     margin-bottom: 19px
     @media (max-width: 1265px)
-      padding: 20px 20px 15px 20px
+      padding: 40px 20px 15px 20px
     .menu
       &_list
         padding: 0
         margin: 0
         list-style: none
+        @media (max-width: 1280px)
+          margin-top: 20px
       &_href
         color: $text-color-dark
         font-weight: 500
@@ -88,3 +103,191 @@
         font-size: 12px
         line-height: 15px
         color: $text-color-dark
+  &_second-menu
+    height: 100%
+    flex: 1
+    display: none
+    justify-content: center
+    padding: 0 20px 20px 40px
+    box-sizing: border-box
+    @media (max-width: 1280px)
+      display: flex
+      flex-direction: column
+    .menu
+      &_list
+        padding: 0
+        margin: 0
+        height: 100%
+        display: flex
+        list-style: none
+        @media (max-width: 1280px)
+          flex-direction: column
+      &_href
+        display: flex
+        text-transform: uppercase
+        color: $text-color-dark
+        font-weight: 500
+        font-size: 13px
+        line-height: 16px
+        position: relative
+        @media (max-width: 1300px)
+          margin-right: 20px
+        @media (max-width: 1280px)
+          padding: 5px
+          margin-bottom: 10px
+        &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 2px
+          @media (max-width: 1280px)
+            height: 1px
+        &:hover:after
+          background: $second-color-light
+          @media (max-width: 1280px)
+            background: #EDEDED
+        &:last-child
+          margin-right: 0
+          @media (max-width: 1280px)
+            margin-bottom: 0
+        &.current
+          &:after
+            background: $text-color-dark
+      &_link
+        height: 100%
+        display: flex
+        align-items: center
+        text-align: center
+        text-decoration: none
+        color: inherit
+  &_social
+    display: none
+    align-items: center
+    padding-left: 40px
+    justify-content: space-around
+    margin-bottom: 20px
+    @media (max-width: 1280px)
+      display: flex
+    @media (max-width: 1265px)
+      padding-left: 20px
+    @media (max-width: 767px)
+      display: inline-flex
+      justify-content: flex-start
+    .social
+      &_link
+        width: 20px
+        height: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 1280px)
+          margin-right: 20px
+        @media (max-width: 767px)
+          width: 25px
+          height: 25px
+  &_user-menu
+    display: none
+    align-items: flex-start
+    padding-left: 40px
+    flex-direction: column
+    @media (max-width: 1280px)
+      display: flex
+    @media (max-width: 1265px)
+      padding-left: 20px
+    .user-menu
+      &_button
+        margin-right: 12px
+        border: none
+        background: transparent
+        cursor: pointer
+        box-sizing: border-box
+        outline: none
+        img
+          transition: all .3s
+        @media (min-width: 1281px)
+          &:hover
+            img
+              filter: brightness(0)
+      &_color-theme
+        width: 55px
+        height: 30px
+        background: $second-color-light
+        border-radius: 30px
+        transition: all .3s
+        outline: none
+        position: relative
+        margin-bottom: 12px
+        img
+          position: absolute
+          top: 0
+          left: 0
+          width: 30px
+          height: 30px
+          padding: 5px
+          box-sizing: border-box
+          border-radius: 50%
+          border: 1px solid $text-color-white
+          filter: brightness(0) invert(1)
+          transition: all .3s
+        &.active
+          background: $text-color-dark
+          img
+            left: calc(100% - 30px)
+      &_search
+        height: 30px
+        display: flex
+        align-items: center
+        outline: none
+        position: absolute
+        top: 20px
+        left: 20px
+        width: calc(100% - 40px)
+        .search
+          &_field
+            width: 0
+            border-radius: 5px
+            padding: 5px 0
+            border: 0 solid #efefef
+            box-sizing: border-box
+            font-weight: 500
+            font-size: 13px
+            line-height: 140%
+            color: $text-color-dark
+            outline: none
+            transition: all .3s
+          &_button
+            border: none
+            width: 20px
+            height: 25px
+            outline: none
+            transition: all .5s
+        &.active
+          .search
+            &_field
+              width: 100px
+              padding: 5px
+              border-width: 1px
+            &_button
+              padding-left: 10px
+        @media (max-width: 1280px)
+          margin-right: 0
+          width: calc(100% - 40px)
+          .search
+            &_field
+              padding: 5px
+              width: calc(100% - 40px)
+              border-width: 1px
+            &_button
+              padding-left: 20px
+              img
+                filter: brightness(0) invert(1)
+          &.active
+            .search
+              &_field
+                padding: 5px
+                width: calc(100% - 40px)
+                border-width: 1px
+              &_button
+                padding-left: 20px

@@ -261,16 +261,11 @@
               justify-content: space-between
               @media (max-width: 480px)
                 flex-direction: column
-              .btn
-                padding: 14px
-                img
-                  width: 24px
-                  height: 24px
-                  margin-right: 20px
             &_return
               background: #efefef
               border-color: #efefef
               color: $text-color-dark
+              padding: 14px
               &:hover
                 color: #EFEFEF
                 background: $text-color-dark
@@ -278,7 +273,9 @@
               @media (max-width: 480px)
                 margin-bottom: 16px
             &_submit
+              padding: 14px 14px 14px 45px
+              background: url("../img/svg/step3.svg") 10px center / 30px 21px no-repeat $second-color
               &:hover
                 color: #FFFFFF
-                background: $text-color-dark
+                background-color: $text-color-dark
                 border-color: $text-color-dark

@@ -15,9 +15,6 @@
         <img class="logo_image" data-dark="img/logo-black.svg" data-light="img/logo.svg" src="img/logo.svg" alt="logo">
         <img class="logo_mobile-image" src="img/logo-mobile.svg" alt="logo">
     </a>
-    <div class="header_mobile-sidebar-switcher">
-        <img src="img/svg/mobile-sidebar-switcher.svg" alt="mob-switcher">
-    </div>
     <div class="header_toggle-version">
         <a href="#" class="toggle-version_version">
             <img class="toggle-version_image" src="img/svg/logo-classic.svg" alt="classic">
@@ -97,9 +94,9 @@
                         </div>
                         <div class="product_edit-block">
                             <div class="edit-block_count qty">
-                                <button class="count_btn count_minus minus">-</button>
-                                <input type="number" class="count_value" value="1">
                                 <button class="count_btn count_plus plus">+</button>
+                                <input type="number" class="count_value" value="1">
+                                <button class="count_btn count_minus minus">-</button>
                             </div>
                             <div class="edit-block_btns">
                                 <a href="#" class="product_edit">
@@ -126,12 +123,12 @@
                 <p class="cart-header_alert">Shipping, taxes, and discounts calculated at checkout.</p>
                 <div class="cart-header_btns">
                     <a href="#" class="cart-header_ref btn">shopping cart</a>
-                    <a href="#" class="cart-header_check-out btn">check out</a>
+                    <input type="submit" class="cart-header_check-out btn" value="check out">
                 </div>
-                <div class="cart-header_close"></div>
+                <div class="cart-header_close user-menu_cart-btn"></div>
             </div>
         </div>
-        <button class="user-menu_mobile-switch menu-bar-btn user-menu_button">
+        <button class="menu-bar-btn user-menu_button user-menu_mobile-sidebar-switcher">
             <span class="switch"></span>
         </button>
     </div>
@@ -168,6 +165,26 @@
                     <li class="menu_href"><a class="menu_link" href="tovar.html">tovar</a></li>
                 </ul>
             </div>
+            <div class="aside_social">
+                <a href="#" class=" social_email social_link">
+                    <img class="social_image" src="img/svg/email.svg" alt="email">
+                </a>
+                <a href="#" class=" social_skype social_link">
+                    <img class="social_image" src="img/svg/skype.svg" alt="skype">
+                </a>
+                <a href="#" class=" social_discord social_link">
+                    <img class="social_image" src="img/svg/discord.svg" alt="discord">
+                </a>
+            </div>
+            <div class="aside_user-menu">
+                <button class="user-menu_color-theme user-menu_button">
+                    <img class="user-menu_image" data-dark="img/svg/color-theme-empty-dark.svg" data-light="img/svg/color-theme-empty.svg" src="img/svg/color-theme-empty.svg" alt="color-theme">
+                </button>
+                <div class="user-menu_search user-menu_button">
+                    <input class="search_field" type="text" name="search" placeholder="Search">
+                    <a class="search_button"><img class="user-menu_image" src="img/svg/search.svg" alt="search"></a>
+                </div>
+            </div>
             <div class="aside_login">
                 <a class="login_link" href="#">Register</a>
                 <span class="login_separate">or</span>
@@ -192,33 +209,48 @@
                 <div class="left_image">
                     <img src="img/tovar_image_img.png" alt="i1" class="image_img">
                 </div>
-                <div class="left_description">
-                    <div class="description_text">
+                <div class="left_description description-block">
+                    <div class="description_text description-text">
+                        <p>
+                            You will get fast Alterac Valley wins boosting your Honor and reputation with Alterac
+                            Valley PvP factions. Our professional player will log into your account and securely
+                            complete the required amount of AV wins.
+                        </p>
+                        <p>
+                            You will get fast Alterac Valley wins boosting your Honor and reputation with Alterac
+                            Valley PvP factions. Our professional player will log into your account and securely
+                            complete the required amount of AV wins.
+                        </p>
+                        <p>
+                            You will get fast Alterac Valley wins boosting your Honor and reputation with Alterac
+                            Valley PvP factions. Our professional player will log into your account and securely
+                            complete the required amount of AV wins.
+                        </p>
                         <p>
                             You will get fast Alterac Valley wins boosting your Honor and reputation with Alterac
                             Valley PvP factions. Our professional player will log into your account and securely
                             complete the required amount of AV wins.
                         </p>
                     </div>
-                    <button class="description_revelation">FULL DESCRIPTION <img src="img/svg/arrow.svg" alt="arr"></button>
+                    <button class="description_revelation description-button">FULL DESCRIPTION <img src="img/svg/arrow.svg" alt="arr"></button>
                 </div>
                 <div class="left_boosting-steps">
                     <h4 class="boosting-steps_title">Four Easy Boosting Steps</h4>
                     <div class="boosting-steps_border">
                         <div class="boosting-steps_step">
-                            <img class="boosting-steps_image" src="img/svg/boosting-steps1.svg" alt="bs1">
+                            <img class="boosting-steps_image" data-light="img/svg/boosting-steps1.svg" data-dark="img/svg/boosting-steps1-dark.svg" src="img/svg/boosting-steps1.svg" alt="bs1">
                             <p class="boosting-steps_text"><span>1.</span>Make your choice</p>
                         </div>
                         <div class="boosting-steps_step">
-                            <img class="boosting-steps_image" src="img/svg/boosting-steps2.svg" alt="bs2">
+                            <img class="boosting-steps_image" data-light="img/svg/boosting-steps2.svg" data-dark="img/svg/boosting-steps2-dark.svg" src="img/svg/boosting-steps2.svg" alt="bs2">
                             <p class="boosting-steps_text"><span>2.</span>Select additional options</p>
                         </div>
                         <div class="boosting-steps_step">
-                            <img class="boosting-steps_image" src="img/svg/boosting-steps3.svg" alt="bs3">
+                            <img class="boosting-steps_image" data-light="img/svg/boosting-steps3.svg" data-dark="img/svg/boosting-steps3-dark.svg" src="img/svg/boosting-steps3.svg" alt="bs3">
                             <p class="boosting-steps_text"><span>3.</span>Add items to cart and finish payment</p>
                         </div>
                         <div class="boosting-steps_step">
-                            <img class="boosting-steps_image" src="img/svg/boosting-steps4.svg" alt="bs4">
+                            <img class="boosting-steps_image" data-light="img/svg/boosting-steps4.svg" data-dark="img/svg/boosting-steps4-dark.svg" src="img/svg/boosting-steps4.svg" alt="bs4">
                             <p class="boosting-steps_text"><span>4.</span>Contact us and get your boost</p>
                         </div>
                     </div>
@@ -227,23 +259,23 @@
             <div class="content_right">
                 <div class="right_features">
                     <div class="features_feature">
-                        <img class="features_image" src="img/svg/tovar_feature1.svg" alt="tf1">
+                        <img class="features_image" data-light="img/svg/tovar_feature1.svg" data-dark="img/svg/tovar_feature1-dark.svg" src="img/svg/tovar_feature1.svg" alt="tf1">
                         <p class="features_text">100% Protection</p>
                     </div>
                     <div class="features_feature">
-                        <img class="features_image" src="img/svg/tovar_feature2.svg" alt="tf2">
+                        <img class="features_image" data-light="img/svg/tovar_feature2.svg" data-dark="img/svg/tovar_feature2-dark.svg" src="img/svg/tovar_feature2.svg" alt="tf2">
                         <p class="features_text">24/7 Support</p>
                     </div>
                     <div class="features_feature">
-                        <img class="features_image" src="img/svg/tovar_feature3.svg" alt="tf3">
+                        <img class="features_image" data-light="img/svg/tovar_feature3.svg" data-dark="img/svg/tovar_feature3-dark.svg" src="img/svg/tovar_feature3.svg" alt="tf3">
                         <p class="features_text">Easy Refund</p>
                     </div>
                     <div class="features_feature">
-                        <img class="features_image" src="img/svg/tovar_feature4.svg" alt="tf4">
+                        <img class="features_image" data-light="img/svg/tovar_feature4.svg" data-dark="img/svg/tovar_feature4-dark.svg" src="img/svg/tovar_feature4.svg" alt="tf4">
                         <p class="features_text">Fast</p>
                     </div>
                     <div class="features_feature">
-                        <img class="features_image" src="img/svg/tovar_feature5.svg" alt="tf5">
+                        <img class="features_image" data-light="img/svg/tovar_feature5.svg" data-dark="img/svg/tovar_feature5-dark.svg" src="img/svg/tovar_feature5.svg" alt="tf5">
                         <p class="features_text">Discounts and Gifs</p>
                     </div>
                 </div>
@@ -292,11 +324,11 @@
                                     <div class="order-form_fraction radio-choose">
                                         <label class="radio_label">
                                             <input type="radio" name="fraction" value="horde" checked>
-                                            <img src="img/svg/horde-emblem.svg" alt="horde">
+                                            <img data-light="img/svg/horde-emblem.svg" data-dark="img/svg/horde-emblem-light.svg" src="img/svg/horde-emblem.svg" alt="horde">
                                         </label>
                                         <label class="radio_label">
                                             <input type="radio" name="fraction" value="alliance">
-                                            <img src="img/svg/alliance-emblem.svg" alt="alliance">
+                                            <img data-light="img/svg/alliance-emblem.svg" data-dark="img/svg/alliance-emblem-light.svg" src="img/svg/alliance-emblem.svg" alt="alliance">
                                         </label>
                                         <p class="radio_text form-title">Choose your Fraction</p>
                                     </div>
@@ -411,14 +443,11 @@
                                             <button class="minus">-</button>
                                         </div>
                                     </div>
-                                    <a href="#" class="buy-now">
+                                    <button class="buy-now" type="button">
                                         <img src="img/svg/tovar_buy-now_btn.svg" alt="bnb">
                                         Buy now
-                                    </a>
-                                    <a href="#" class="add-to-cart">
-                                        <img src="img/svg/tovar_add-to-cart_btn.svg" alt="atcb">
-                                        add to cart
-                                    </a>
+                                    </button>
+                                    <input type="submit" class="add-to-cart" value="add to cart">
                                 </div>
                             </form>
                         </div>
@@ -439,11 +468,11 @@
                                     <div class="order-form_fraction radio-choose">
                                         <label class="radio_label">
                                             <input type="radio" name="fraction" value="horde" checked>
-                                            <img src="img/svg/horde-emblem.svg" alt="horde">
+                                            <img data-light="img/svg/horde-emblem.svg" data-dark="img/svg/horde-emblem-light.svg" src="img/svg/horde-emblem.svg" alt="horde">
                                         </label>
                                         <label class="radio_label">
                                             <input type="radio" name="fraction" value="alliance">
-                                            <img src="img/svg/alliance-emblem.svg" alt="alliance">
+                                            <img data-light="img/svg/alliance-emblem.svg" data-dark="img/svg/alliance-emblem-light.svg" src="img/svg/alliance-emblem.svg" alt="alliance">
                                         </label>
                                         <p class="radio_text form-title">Choose your Fraction</p>
                                     </div>
@@ -582,14 +611,11 @@
                                             <button class="minus">-</button>
                                         </div>
                                     </div>
-                                    <a href="#" class="buy-now">
+                                    <button class="buy-now" type="button">
                                         <img src="img/svg/tovar_buy-now_btn.svg" alt="bnb">
                                         Buy now
-                                    </a>
-                                    <a href="#" class="add-to-cart">
-                                        <img src="img/svg/tovar_add-to-cart_btn.svg" alt="atcb">
-                                        add to cart
-                                    </a>
+                                    </button>
+                                    <input type="submit" class="add-to-cart" value="add to cart">
                                 </div>
                             </form>
                         </div>
@@ -819,6 +845,17 @@
                     <p class="menus_title">NAVIGATION</p>
                     <ul class="menus_list">
                         <li class="menus_href"><a class="menus_link" href="">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="menus_menu menus_links">
+                    <p class="menus_title">menu</p>
+                    <ul class="menus_list">
+                        <li class="menus_href"><a class="menus_link" href="#">RAID CALENDAR</a></li>
+                        <li class="menus_href"><a class="menus_link" href="#">How to buy</a></li>
+                        <li class="menus_href"><a class="menus_link" href="#">ABOUT US</a></li>
+                        <li class="menus_href"><a class="menus_link" href="#">guarantees</a></li>
+                        <li class="menus_href"><a class="menus_link" href="#">FAQ</a></li>
+                        <li class="menus_href"><a class="menus_link" href="#">CONTACT US</a></li>
                     </ul>
                 </div>
             </div>

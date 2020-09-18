@@ -155,6 +155,7 @@
           cursor: pointer
           outline: none
         input
+          padding: 14px
           width: 55px
           height: 100%
           margin: 0 3px
@@ -171,7 +172,8 @@
             appearance: none
             margin: 0
     .line-3
-      a
+      button, input[type='submit']
+        cursor: pointer
         display: flex
         align-items: center
         justify-content: center
@@ -183,6 +185,8 @@
         text-decoration: none
         border-radius: 5px
         text-transform: uppercase
+        border: none
+        transition: all .3s
         @media (max-width: 1280px)
           width: calc(50% - 4px)
           font-size: 12px
@@ -197,6 +201,12 @@
           margin-right: 20px
         &.buy-now
           background: $second-color
+          &:hover
+            background: $second-color-light
         &.add-to-cart
-          background: $text-color-dark
-
+          padding: 12px 12px 12px 45px
+          background: url("../img/svg/tovar_add-to-cart_btn.svg") 10px center / 30px 21px no-repeat $text-color-dark
+          &:hover
+            background-color: $text-color-grey
+    .custom-select
+      margin-bottom: 10px

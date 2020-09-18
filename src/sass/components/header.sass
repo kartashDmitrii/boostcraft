@@ -10,9 +10,7 @@
   transition: all .3s
   width: 100%
   z-index: 12
-  &.fixed
-    position: fixed
-    z-index: 12
+  position: fixed
   @media (max-width: 1365px)
     padding: 0 20px
   @media (max-width: 1280px)
@@ -59,16 +57,6 @@
           display: block
           width: 16px
           height: 22px
-  &_mobile-sidebar-switcher
-    width: 20px
-    height: 20px
-    margin-right: 20px
-    cursor: pointer
-    display: none
-    @media (max-width: 767px)
-      display: block
-    @media (max-width: 480px)
-      margin-right: 10px
   &_toggle-version
     display: flex
     align-items: center
@@ -103,10 +91,6 @@
     flex: 1
     display: flex
     justify-content: center
-    @media (max-width: 1280px)
-      flex-direction: column
-      width: 100%
-      margin-top: 50px
     .menu
       &_list
         padding: 0
@@ -114,9 +98,6 @@
         height: 100%
         display: flex
         list-style: none
-        @media (max-width: 1280px)
-          flex-direction: column
-          width: 100%
       &_href
         display: flex
         text-transform: uppercase
@@ -128,11 +109,6 @@
         position: relative
         @media (max-width: 1300px)
           margin-right: 20px
-        @media (max-width: 1280px)
-          margin-right: 0
-          color: $text-color-white
-          padding: 5px
-          margin-bottom: 10px
         &:after
           content: ''
           position: absolute
@@ -140,24 +116,14 @@
           left: 0
           width: 100%
           height: 2px
-          @media (max-width: 1280px)
-            height: 1px
         &:hover:after
           background: $second-color-light
-          @media (max-width: 1280px)
-            background: #EDEDED
         &:last-child
           margin-right: 0
-          @media (max-width: 1280px)
-            margin-bottom: 0
         &.current
           color: $text-color-dark
-          @media (max-width: 1280px)
-            color: $text-color-white
           &:after
             background: $second-color
-            @media (max-width: 1280px)
-              background: $text-color-white
       &_link
         height: 100%
         display: flex
@@ -169,10 +135,6 @@
     display: flex
     align-items: center
     margin-right: 44px
-    @media (max-width: 1280px)
-      width: 100%
-      margin-right: 0
-      margin-bottom: 20px
     .social
       &_link
         width: 20px
@@ -183,15 +145,10 @@
         justify-content: center
         &:last-child
           margin-right: 0
-        @media (max-width: 1280px)
-          margin-right: 20px
   &_user-menu
     display: flex
     align-items: flex-start
     height: 30px
-    @media (max-width: 1280px)
-      &:not(.static)
-        flex-direction: column
     .user-menu
       &_button
         margin-right: 12px
@@ -200,12 +157,15 @@
         cursor: pointer
         box-sizing: border-box
         outline: none
+        position: relative
         img
           transition: all .3s
         @media (min-width: 1281px)
           &:hover
             img
               filter: brightness(0)
+        @media (max-width: 1280px)
+          margin-right: 0
       &_cart
         position: relative
       &_cart-btn
@@ -232,33 +192,7 @@
             img
               &:hover
                 filter: none
-        @media (max-width: 1280px)
-          position: absolute
-          bottom: 40px
-          left: 20px
-          width: 55px
-          height: 30px
-          background: $second-color-light
-          border-radius: 30px
-          transition: all .3s
-          outline: none
-          img
-            position: absolute
-            top: 0
-            left: 0
-            width: 30px
-            height: 30px
-            padding: 5px
-            box-sizing: border-box
-            border-radius: 50%
-            border: 1px solid $text-color-white
-            filter: brightness(0) invert(1)
-            transition: all .3s
-          &.active
-            background: $text-color-dark
-            img
-              left: calc(100% - 30px)
-      &_mobile-switch
+      &_mobile-sidebar-switcher
         width: 24px
         height: 24px
         padding: 3px
@@ -267,7 +201,7 @@
         position: relative
         outline: none
         display: none
-        @media (max-width: 1280px)
+        @media (max-width: 767px)
           display: block
         span
           display: block
@@ -340,29 +274,6 @@
               border-width: 1px
             &_button
               padding-left: 10px
-        @media (max-width: 1280px)
-          margin-right: 0
-          position: absolute
-          width: calc(100% - 40px)
-          top: 40px
-          left: 20px
-          .search
-            &_field
-              padding: 5px
-              width: calc(100% - 40px)
-              border-width: 1px
-            &_button
-              padding-left: 20px
-              img
-                filter: brightness(0) invert(1)
-          &.active
-            .search
-              &_field
-                padding: 5px
-                width: calc(100% - 40px)
-                border-width: 1px
-              &_button
-                padding-left: 20px
   &_mobile-menu
     display: flex
     align-items: center
@@ -370,21 +281,4 @@
     height: 100%
     flex: 1
     @media (max-width: 1280px)
-      position: fixed
-      flex-direction: column
-      padding: 40px 20px
-      box-sizing: border-box
-      right: 0
-      top: 55px
-      transform: translateX(120%)
-      width: 20%
-      height: calc(100vh - 55px)
-      background: $second-color
-      z-index: 1
-      transition: all .3s
-      &.active
-        transform: translateX(0)
-    @media (max-width: 1024px)
-      width: 30%
-    @media (max-width: 767px)
-      width: 100%
+      display: none

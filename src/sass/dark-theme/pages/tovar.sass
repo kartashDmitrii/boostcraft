@@ -1,0 +1,82 @@
+.dark-theme
+  .tovar_main
+    .tovar
+      &_content
+        .content
+          &_left
+            .left
+              &_description
+                .description
+                  &_text
+                    *
+                      color: $dark-text-color-grey
+                  &_revelation
+                    color: $text-color-white
+              &_boosting-steps
+                .boosting-steps
+                  &_title
+                    color: $text-color-white
+                  &_border
+                    border-color: $dark-text-color-grey
+                  &_step
+                    &:before
+                      background-image: url("../img/svg/arrow-down-circle-dark.svg")
+                    &:first-child
+                      &:before
+                        border-color: $dark-second-color
+                    &:last-child
+                      &:before
+                        background-color: $dark-second-color
+                  &_text
+                    color: $dark-text-color-grey
+          &_right
+            background-color: $dark-block-color
+            .right
+              &_features
+                .features
+                  &_feature
+                    border-color: $dark-second-color
+                  &_text
+                    color: $dark-text-color-grey
+              &_title
+                color: $text-color-white
+              &_payment
+                .payment
+                  &_price
+                    .price
+                      &_old
+                        color: $dark-text-color-grey
+                        &:before
+                          background-color: $dark-text-color-grey
+                      &_new
+                        color: $text-color-white
+                  &_trust-score
+                    p
+                      color: $dark-text-color-grey
+                      span
+                        color: $text-color-white
+              &_tabs
+                .tabs
+                  &_link
+                    color: $dark-text-color-grey
+                    border-color: $dark-border-color
+                    &.current
+                      color: $text-color-white
+                      border-color: $dark-second-color
+      &_tabs
+        .tabs
+          &_link
+            color: $dark-text-color-grey
+            border-color: $dark-text-color-grey
+            &.current
+              color: $text-color-white
+              border-color: $dark-second-color
+          &_tab
+            .tab
+              &_description, &_loot-info
+                .description, .loot-info
+                  &_title
+                    color: $text-color-white
+                  &_text
+                    *
+                      color: $dark-text-color-grey

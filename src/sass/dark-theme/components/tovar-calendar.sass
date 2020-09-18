@@ -1,0 +1,34 @@
+.dark-theme
+  .events-calendar
+    .calendar
+      .calendar
+        &_title
+          color: $text-color-white
+        &_dates-name
+          color: $dark-text-color-grey
+        &_dates
+          .dates_label
+            span
+              color: $dark-text-color-grey
+              border-color: $dark-block-color2
+            input
+              &:checked ~ span
+                color: $text-color-white
+                border-color: $dark-second-color
+      &_raids
+        .raids
+          &_horde
+            .raids_time
+              border-color: $light-horde-color
+              &.active
+                background: $light-horde-color
+          &_alliance
+            .raids_time
+              border-color: $light-alliance-color
+              &.active
+                background: $light-alliance-color
+          &_time
+            &.disabled
+              background: $dark-block-color2
+              border-color: $dark-block-color2
+              color: $dark-text-color-grey

@@ -1,6 +1,12 @@
 .dark-theme
   .aside
     background: $dark-aside-color
+    &_wrapper
+      scrollbar-color: $dark-border-color $dark-aside-color
+      &::-webkit-scrollbar-track
+        background: $dark-aside-color
+      &::-webkit-scrollbar-thumb
+        background: $dark-border-color
     &_menu
       border-color: $dark-border-color
       .menu
