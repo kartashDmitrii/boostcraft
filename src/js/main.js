@@ -679,10 +679,12 @@ if (document.querySelector('.custom-multiple-select')){
 
 if (document.querySelector('*[data-popup]')){
     document.querySelectorAll('.popup').forEach( popup => {
-        popup.querySelector('.popup_close').addEventListener('click', (event)=>{
-            event.preventDefault()
-            popup.classList.remove('active')
-            document.querySelector('.popup-wrapper').classList.remove('active')
+        popup.querySelectorAll('.popup_close').forEach((close)=>{
+            close.addEventListener('click', (event)=>{
+                event.preventDefault()
+                popup.classList.remove('active')
+                document.querySelector('.popup-wrapper').classList.remove('active')
+            })
         })
     })
     document.querySelector('.popup-wrapper').addEventListener('click', function (event){

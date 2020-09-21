@@ -27,6 +27,15 @@ body
       position: relative
     &.bg
       background: url("../img/bolvar.png") bottom right / auto 100% no-repeat $second-color
+      .aside
+        position: fixed
+        left: -120%
+        height: calc(100vh - 55px)
+        transition: all .3s
+        z-index: 11
+        overflow-y: scroll
+        &.active
+          left: 0
       &.fixed
         background-size: auto calc(100% - 55px)
       @media (max-width: 605px)

@@ -47,14 +47,7 @@
         line-height: 16px
         margin-bottom: 18px
         text-transform: uppercase
-        &:last-child
-          margin-bottom: 0
-      &_link
-        text-decoration: none
-        color: inherit
         position: relative
-        width: 100%
-        display: inline-block
         &:after
           content: ''
           width: 8px
@@ -62,8 +55,42 @@
           position: absolute
           top: 0
           bottom: 0
-          right: -8px
+          right: 0
           background: url("../img/svg/arrow.svg") center center / 100% 100% no-repeat
+          transition: all .3s
+        &:last-child
+          margin-bottom: 0
+        &.has-child
+          ul
+            max-height: 0
+            overflow-y: hidden
+            max-width: 100%
+            box-sizing: border-box
+            padding: 0
+            margin: 0
+            list-style: none
+            transition: max-height 0.3s ease-out
+            li
+              padding: 7px 0
+              border-bottom: 1px solid $border-color
+              &:first-child
+                margin-top: 10px
+                border-top: 1px solid $border-color
+          &:hover
+            &:after
+              transform: rotate(90deg)
+            ul
+              max-height: 400px
+              transition: max-height 0.45s ease-in
+      &_link
+        text-decoration: none
+        color: inherit
+        position: relative
+        width: max-content
+        max-width: 100%
+        display: inline-block
+        padding-right: 8px
+        box-sizing: border-box
   &_login
     display: flex
     justify-content: center
@@ -279,8 +306,12 @@
               padding: 5px
               width: calc(100% - 40px)
               border-width: 1px
+              @media (max-width: 991px)
+                width: 100%
             &_button
               padding-left: 20px
+              @media (max-width: 991px)
+                display: none
               img
                 filter: brightness(0) invert(1)
           &.active

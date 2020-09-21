@@ -755,10 +755,12 @@ if (document.querySelector('.custom-multiple-select')) {
 
 if (document.querySelector('*[data-popup]')) {
   document.querySelectorAll('.popup').forEach(function (popup) {
-    popup.querySelector('.popup_close').addEventListener('click', function (event) {
-      event.preventDefault();
-      popup.classList.remove('active');
-      document.querySelector('.popup-wrapper').classList.remove('active');
+    popup.querySelectorAll('.popup_close').forEach(function (close) {
+      close.addEventListener('click', function (event) {
+        event.preventDefault();
+        popup.classList.remove('active');
+        document.querySelector('.popup-wrapper').classList.remove('active');
+      });
     });
   });
   document.querySelector('.popup-wrapper').addEventListener('click', function (event) {

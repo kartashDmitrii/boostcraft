@@ -15,7 +15,8 @@
     top: 155px
     margin: auto
     z-index: 12
-    width: 660px
+    width: calc(100% - 30px)
+    max-width: 660px
     box-shadow: 0 0 22px rgba(0, 0, 0, 0.07)
     border-radius: 5px
     background: #FFFFFF
@@ -104,3 +105,112 @@
         transition: all .1s
         &:hover
           filter: brightness(0) invert(1)
+  .login-popup
+    flex-direction: column
+    .popup
+      &_head
+        padding: 21px 32px
+        background: linear-gradient(135deg, #EEF7F7 0%, #CFDDDD 100%)
+        border-radius: 5px 5px 0 0
+      &_name
+        font-weight: 700
+        font-size: 16px
+        line-height: 140%
+        margin: 0
+        color: $text-color-dark
+      &_body
+        display: flex
+        flex-direction: column
+        padding: 32px 32px 25px
+        @media (max-width: 480px)
+          padding: 16px 16px 12px
+      &_tabs
+        .tabs
+          &_links
+            padding: 0
+            margin: 0 0 15px
+            list-style: none
+            display: flex
+          &_ref
+            font-weight: 500
+            font-size: 14px
+            line-height: 16px
+            margin-right: 15px
+            color: $text-color-dark
+            text-transform: uppercase
+            &.current
+              color: $second-color
+              text-decoration: underline
+      &_tab-field
+        .tab
+          display: none
+          &.current
+            display: flex
+        .popup
+          &_login-form
+            flex-direction: column
+            label
+              display: flex
+              flex-direction: column
+              margin-bottom: 15px
+              color: $text-color-dark
+              input
+                width: 100%
+                border-radius: 5px
+                box-sizing: border-box
+                padding: 14px 20px
+                font-weight: 500
+                font-size: 13px
+                line-height: 140%
+                color: $text-color-dark
+                border: 1px solid $border-color
+                outline: none
+                margin-top: 10px
+                @media (max-width: 480px)
+                  padding: 5px 12px
+          &_register-form
+            flex-wrap: wrap
+            justify-content: space-between
+            label
+              width: calc(50% - 10px)
+              display: flex
+              flex-direction: column
+              margin-bottom: 15px
+              @media (max-width: 480px)
+                width: 100%
+              input
+                width: 100%
+                border-radius: 5px
+                box-sizing: border-box
+                padding: 14px 20px
+                font-weight: 500
+                font-size: 13px
+                line-height: 140%
+                color: $text-color-dark
+                border: 1px solid $border-color
+                outline: none
+                margin-top: 10px
+                @media (max-width: 480px)
+                  padding: 5px 12px
+      &_buttons
+        display: flex
+        .btn
+          width: 100px
+          margin-right: 15px
+          padding: 14px
+          &:last-child
+            margin-right: 0
+      &_cancel
+        background: #efefef
+        border-color: #efefef
+        color: $text-color-dark
+        &:hover
+          background: $text-color-dark
+          color: #EFEFEF
+      &_login
+        color: $text-color-white
+        background: $text-color-dark
+        border-color: $text-color-dark
+        &:hover
+          color: $text-color-dark
+          background-color: $text-color-white

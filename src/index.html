@@ -56,7 +56,7 @@
         </div>
     </div>
     <div class="header_user-menu static">
-        <button class="user-menu_user user-menu_button">
+        <button class="user-menu_user user-menu_button" data-popup="login-popup">
             <img class="user-menu_image" src="img/svg/user.svg" alt="user">
         </button>
         <div class="user-menu_cart">
@@ -138,14 +138,6 @@
             <div class="aside_wrapper">
                 <div class="aside_menu">
                     <ul class="menu_list">
-                        <!--<li class="menu_href"><a class="menu_link" href="#">BFA OFFERS</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">NEW 8.3 OFFERS</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">PVP SERVICES</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">PVE SERVICES</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">POWERLEVELING</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">FARMING</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">ACHIEVEMENTS</a></li>
-                        <li class="menu_href"><a class="menu_link" href="#">MOUNTS</a></li>-->
                         <li class="menu_href"><a class="menu_link" href="404.html">404 page</a></li>
                         <li class="menu_href"><a class="menu_link" href="about-us.html">about-us</a></li>
                         <li class="menu_href"><a class="menu_link" href="cart.html">cart</a></li>
@@ -160,7 +152,14 @@
                         <li class="menu_href"><a class="menu_link" href="privacy-policy.html">privacy-policy</a></li>
                         <li class="menu_href"><a class="menu_link" href="raid-calendar.html">raid-calendar</a></li>
                         <li class="menu_href"><a class="menu_link" href="refund-policy.html">refund-policy</a></li>
-                        <li class="menu_href"><a class="menu_link" href="some-page.html">some-page</a></li>
+                        <li class="menu_href has-child">
+                            <a class="menu_link" href="some-page.html">some-page</a>
+                            <ul>
+                                <li><a class="menu_link" href="some-page.html">some-page1</a></li>
+                                <li><a class="menu_link" href="some-page.html">some-page2</a></li>
+                                <li><a class="menu_link" href="some-page.html">some-page3</a></li>
+                            </ul>
+                        </li>
                         <li class="menu_href"><a class="menu_link" href="successfully-paid.html">successfully-paid</a></li>
                         <li class="menu_href"><a class="menu_link" href="tovar.html">tovar</a></li>
                     </ul>
@@ -811,6 +810,60 @@
         </div>
     </div>
 </footer>
+    <div class="popup-wrapper">
+        <div class="popup login-popup">
+            <div class="popup_head">
+                <h2 class="popup_name">Login/Register</h2>
+            </div>
+            <div class="popup_body tabs">
+                <div class="popup_tabs">
+                    <ul class="tabs_links links">
+                        <li class="tabs_ref current">Login</li>
+                        <li class="tabs_ref">Register</li>
+                    </ul>
+                </div>
+                <div class="popup_tab-field tab-field">
+                    <form class="popup_login-form tab current">
+                        <label>
+                            Name
+                            <input type="text" name="login" required>
+                        </label>
+                        <label>
+                            Password
+                            <input type="password" name="password" required>
+                        </label>
+                        <div class="popup_buttons">
+                            <button class="popup_btn btn popup_cancel popup_close" type="button">Cancel</button>
+                            <input class="popup_btn btn popup_login" type="submit" value="Login">
+                        </div>
+                    </form>
+                    <form class="popup_register-form tab">
+                        <label>
+                            Name
+                            <input type="text" name="login" required>
+                        </label>
+                        <label>
+                            Email
+                            <input type="email" name="email" required>
+                        </label>
+                        <label>
+                            Password
+                            <input type="password" name="password" required>
+                        </label>
+                        <label>
+                            Confirm Password
+                            <input type="password" name="confirm_password" required>
+                        </label>
+                        <div class="popup_buttons">
+                            <button class="popup_btn btn popup_cancel popup_close" type="button">Cancel</button>
+                            <input class="popup_btn btn popup_login" type="submit" value="Register">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="popup_close"></div>
+        </div>
+    </div>
     <script src="js/lib.js"></script>
     <script src="js/main.js"></script>
 </body>

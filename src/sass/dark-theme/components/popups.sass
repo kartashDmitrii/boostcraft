@@ -2,15 +2,27 @@
   .popup-wrapper
     .popup
       background: $dark-block-color
-    .default-popup
+      &_head
+        background: linear-gradient(135deg, $time-color 0%, $dark-second-color 100%)
+      &_name
+        color: $text-color-white
+      &_instruction
+        color: $dark-text-color-grey
+      &_text
+        color: $dark-text-color-grey
+      &_close
+        filter: brightness(0) invert(1)
+    .login-popup
       .popup
-        &_head
-          background: linear-gradient(135deg, $time-color 0%, $dark-second-color 100%)
-        &_name
-          color: $text-color-white
-        &_instruction
-          color: $dark-text-color-grey
-        &_text
-          color: $dark-text-color-grey
+        &_tabs
+          .tabs
+            &_ref
+              color: $dark-text-color-grey
+              &.current
+                color: $dark-second-color
+        &_login-form, &_register-form
+          label
+            color: $text-color-white
         &_close
-          filter: brightness(0) invert(1)
+          filter: none
+

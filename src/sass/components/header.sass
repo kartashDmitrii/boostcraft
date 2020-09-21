@@ -166,26 +166,40 @@
               filter: brightness(0)
         @media (max-width: 1280px)
           margin-right: 0
+      &_user
+        margin-right: 4px
       &_cart
         position: relative
       &_cart-btn
         position: relative
+        padding: 0 8px 0 0
+        margin-left: 0
       &_count
         position: absolute
-        border-radius: 50%
-        background: $second-color
         top: 0
         right: 0
-        width: 17px
-        height: 17px
         text-align: center
+        vertical-align: center
         display: flex
         align-items: center
         justify-content: center
         color: $text-color-white
-        font-weight: 500
-        font-size: 10px
-        line-height: 12px
+        font-weight: 400
+        font-size: 9px
+        line-height: 9px
+        z-index: 1
+        &:after
+          content: ''
+          position: absolute
+          width: 17px
+          height: 17px
+          border-radius: 50%
+          background: $second-color
+          top: -3px
+          right: -5px
+          z-index: -1
+          @media screen and (max-width: 576px)
+            top: -5px
       &_color-theme
         &.active
           @media (min-width: 1281px)
@@ -195,16 +209,20 @@
       &_mobile-sidebar-switcher
         width: 24px
         height: 24px
-        padding: 3px
+        padding: 5px
         box-sizing: border-box
         cursor: pointer
         position: relative
+        justify-content: center
+        align-items: center
         outline: none
         display: none
+        margin-left: 10px
         @media (max-width: 767px)
-          display: block
+          display: flex
         span
           display: block
+          min-width: 18px
           width: 18px
           height: 2px
           background: $text-color-grey
@@ -235,6 +253,7 @@
             transform: rotate(0)
         &.active
           span
+            min-width: 0
             width: 0
             &:before
               top: 11px
